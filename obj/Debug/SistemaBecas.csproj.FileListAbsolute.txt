@@ -1,0 +1,11 @@
+C:\Users\usuario\source\repos\SistemaBecas\bin\Debug\SistemaBecas.exe.config
+C:\Users\usuario\source\repos\SistemaBecas\bin\Debug\SistemaBecas.exe
+C:\Users\usuario\source\repos\SistemaBecas\bin\Debug\SistemaBecas.pdb
+C:\Users\usuario\source\repos\SistemaBecas\obj\Debug\SistemaBecas.Properties.Resources.resources
+C:\Users\usuario\source\repos\SistemaBecas\obj\Debug\SistemaBecas.csproj.GenerateResource.cache
+C:\Users\usuario\source\repos\SistemaBecas\obj\Debug\SistemaBecas.csproj.CoreCompileInputs.cache
+C:\Users\usuario\source\repos\SistemaBecas\obj\Debug\SistemaBecas.exe
+C:\Users\usuario\source\repos\SistemaBecas\obj\Debug\SistemaBecas.pdb
+C:\Users\usuario\source\repos\SistemaBecas\obj\Debug\SistemaBecas.frmInicioSesion.resources
+C:\Users\usuario\source\repos\SistemaBecas\obj\Debug\SistemaBecas.csprojAssemblyReference.cache
+C:\Users\usuario\source\repos\SistemaBecas\obj\Debug\SistemaBecas.View.frmAdmin.resources
