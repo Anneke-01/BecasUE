@@ -16,5 +16,15 @@ namespace SistemaBecas.View
         {
             InitializeComponent();
         }
+
+        private void frmEstudiante_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
