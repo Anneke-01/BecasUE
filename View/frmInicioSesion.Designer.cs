@@ -42,9 +42,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnMinimizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -55,7 +55,7 @@
             // 
             this.txtContraseña.BackColor = System.Drawing.Color.White;
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.Font = new System.Drawing.Font("Franklin Gothic Book", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.Black;
             this.txtContraseña.HideSelection = false;
             this.txtContraseña.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -65,15 +65,16 @@
             this.txtContraseña.Size = new System.Drawing.Size(350, 29);
             this.txtContraseña.TabIndex = 0;
             this.txtContraseña.UseWaitCursor = true;
+            this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
             // 
             // btnSesion
             // 
-            this.btnSesion.BackColor = System.Drawing.Color.Teal;
+            this.btnSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(180)))), ((int)(((byte)(63)))));
             this.btnSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(119)))), ((int)(((byte)(112)))));
             this.btnSesion.FlatAppearance.BorderSize = 0;
             this.btnSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSesion.Font = new System.Drawing.Font("Franklin Gothic Book", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSesion.ForeColor = System.Drawing.Color.Snow;
             this.btnSesion.Location = new System.Drawing.Point(240, 0);
             this.btnSesion.Name = "btnSesion";
@@ -90,7 +91,7 @@
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.White;
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Font = new System.Drawing.Font("Franklin Gothic Book", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.Black;
             this.txtUsuario.Location = new System.Drawing.Point(371, 163);
             this.txtUsuario.Name = "txtUsuario";
@@ -159,6 +160,7 @@
             // TipoUsuario
             // 
             this.TipoUsuario.BackColor = System.Drawing.Color.White;
+            this.TipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TipoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TipoUsuario.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TipoUsuario.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -172,6 +174,7 @@
             this.TipoUsuario.TabIndex = 7;
             this.TipoUsuario.Tag = "";
             this.TipoUsuario.UseWaitCursor = true;
+            this.TipoUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TipoUsuario_KeyPress);
             // 
             // panel1
             // 
@@ -185,7 +188,6 @@
             this.panel1.Size = new System.Drawing.Size(352, 537);
             this.panel1.TabIndex = 8;
             this.panel1.UseWaitCursor = true;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label5
             // 
@@ -202,7 +204,6 @@
             this.label5.Text = "Becas y financiamiento para estudiantes";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label5.UseWaitCursor = true;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -214,7 +215,6 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Comisión Europea";
             this.label4.UseWaitCursor = true;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox1
             // 
@@ -226,7 +226,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.UseWaitCursor = true;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
@@ -241,28 +240,6 @@
             this.panel2.TabIndex = 9;
             this.panel2.UseWaitCursor = true;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Linen;
-            this.label6.Location = new System.Drawing.Point(367, 302);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 21);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Tipo de usuario";
-            this.label6.UseWaitCursor = true;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnSesion);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(352, 432);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(408, 105);
-            this.panel3.TabIndex = 11;
-            // 
             // btnMinimizar
             // 
             this.btnMinimizar.BackColor = System.Drawing.Color.DarkBlue;
@@ -276,6 +253,29 @@
             this.btnMinimizar.TabStop = false;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.UseWaitCursor = true;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Linen;
+            this.label6.Location = new System.Drawing.Point(367, 302);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 21);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Tipo de usuario";
+            this.label6.UseWaitCursor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnSesion);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(352, 432);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(408, 105);
+            this.panel3.TabIndex = 11;
+            this.panel3.UseWaitCursor = true;
             // 
             // frmInicioSesion
             // 
@@ -303,7 +303,6 @@
             this.Text = "frmInicioSesion";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.UseWaitCursor = true;
-            this.Load += new System.EventHandler(this.frmInicioSesion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

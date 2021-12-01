@@ -47,19 +47,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\CUsuario.cs" />
+    <Compile Include="Data\DPrograma.cs" />
     <Compile Include="Data\Conexión.cs" />
     <Compile Include="Data\DUsuario.cs" />
-    <Compile Include="View\frmEstudiante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmEstudiante.Designer.cs">
-      <DependentUpon>frmEstudiante.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmEstudiante.Designer.cs">
+      <DependentUpon>frmEstudiante.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmInicioSesion.cs">
       <SubType>Form</SubType>
@@ -69,6 +70,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\frmMessageBoxOk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmMessageBoxOk.Designer.cs">
+      <DependentUpon>frmMessageBoxOk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmPrograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPrograma.Designer.cs">
+      <DependentUpon>frmPrograma.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +100,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmMessageBoxOk.resx">
+      <DependentUpon>frmMessageBoxOk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPrograma.resx">
+      <DependentUpon>frmPrograma.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

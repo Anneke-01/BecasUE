@@ -17,94 +17,164 @@ namespace SistemaBecas
         public frmInicioSesion()
         {
             InitializeComponent();
+            TipoUsuario.SelectedIndex = 0;
         }
         private void btnSesion_Click(object sender, EventArgs e)
         {
             if (txtUsuario.Text == "" || txtContraseña.Text == "" || TipoUsuario.SelectedItem == null)
             {
-                MessageBox.Show("Debes rellenar todos los campos.", "Mensaje de error", MessageBoxButtons.OK,
-                   MessageBoxIcon.Error);
-
+                
+                MessageBox.Show("Debes rellenar todos los campos.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                DataTable dato;
-                dato = CUsuario.Validar_Acceso(this.txtUsuario.Text, this.txtContraseña.Text, this.TipoUsuario.SelectedItem.ToString());
+                
+                DataTable dato = CUsuario.Validar_Acceso(this.txtUsuario.Text, this.txtContraseña.Text, this.TipoUsuario.SelectedItem.ToString());
                 if (dato.Rows.Count > 0)
                 {
-                    DataRow dr;
-                    dr = dato.Rows[0];
+                    DataRow dr = dato.Rows[0];
                     if (dr["Resultado"].ToString() == "Acceso Exitoso")
                     {
-                        MessageBox.Show("Bienvenido al Sistema", "Sistema de Becas", MessageBoxButtons.OK, MessageBoxIcon.Information);                 
+                        //MessageBox.Show("Bienvenido al Sistema", "Sistema de Becas", MessageBoxButtons.OK, MessageBoxIcon.Information);      
+                        frmMessageBoxOk ok = new frmMessageBoxOk();
+                        ok.Show();
+                        this.Hide();
                         if (TipoUsuario.SelectedItem.ToString() == "Estudiante")
                         {
-                            frmEstudiante fc = new frmEstudiante();
-                            fc.Show();
-                            this.Hide();
+
+                            //frmEstudiante fc = new frmEstudiante();
+                            //fc.Show();
+                            //this.Hide();
                         }
                         else
                         {
                             frmAdmin fa = new frmAdmin();
                             fa.Show();
                             this.Hide();
-                        }
-                        
+                        }                       
                     }
                     else
                     {
-                        MessageBox.Show("Nombre de usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                     
+                        MessageBox.Show("Nombre de usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                  
                     }
                 }
 
             }
         }
-        private void nums(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsDigit(e.KeyChar)) e.Handled = false;
-            MessageBox.Show("Solo se puede rellenar con numeros. ", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+       
+       
 
-        }
-        private void letras(object sender, KeyPressEventArgs e)
+        private void TipoUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar)) e.Handled = false;
-            MessageBox.Show("Solo se puede rellenar con números. ", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (txtUsuario.Text == "" || txtContraseña.Text == "" || TipoUsuario.SelectedItem == null)
+                {
+                    MessageBox.Show("Debes rellenar todos los campos.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DataTable dato = CUsuario.Validar_Acceso(this.txtUsuario.Text, this.txtContraseña.Text, this.TipoUsuario.SelectedItem.ToString());
+                    if (dato.Rows.Count > 0)
+                    {
+                        DataRow dr = dato.Rows[0];
+                        if (dr["Resultado"].ToString() == "Acceso Exitoso")
+                        {
+                            //MessageBox.Show("Bienvenido al Sistema", "Sistema de Becas", MessageBoxButtons.OK, MessageBoxIcon.Information);      
+                            frmMessageBoxOk ok = new frmMessageBoxOk();
+                            ok.Show();
+                            this.Hide();
+                            if (TipoUsuario.SelectedItem.ToString() == "Estudiante")
+                            {
+
+                                frmEstudiante fc = new frmEstudiante();
+                                fc.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                frmAdmin fa = new frmAdmin();
+                                fa.Show();
+                                this.Hide();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Nombre de usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                }
+            }
         }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (txtUsuario.Text == "" || txtContraseña.Text == "" || TipoUsuario.SelectedItem == null)
+                {
+                    MessageBox.Show("Debes rellenar todos los campos.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DataTable dato = CUsuario.Validar_Acceso(this.txtUsuario.Text, this.txtContraseña.Text, this.TipoUsuario.SelectedItem.ToString());
+                    if (dato.Rows.Count > 0)
+                    {
+                        DataRow dr = dato.Rows[0];
+                        if (dr["Resultado"].ToString() == "Acceso Exitoso")
+                        {
+                            //MessageBox.Show("Bienvenido al Sistema", "Sistema de Becas", MessageBoxButtons.OK, MessageBoxIcon.Information);      
+                            frmMessageBoxOk ok = new frmMessageBoxOk();
+                            ok.Show();
+                            this.Hide();
+                            if (TipoUsuario.SelectedItem.ToString() == "Estudiante")
+                            {
+
+                                frmEstudiante fc = new frmEstudiante();
+                                fc.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                frmAdmin fa = new frmAdmin();
+                                fa.Show();
+                                this.Hide();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Nombre de usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                }
+            }
+        }
+
+
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void frmInicioSesion_Load(object sender, EventArgs e)
+        private void btnMinimizar_Click(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Minimized;
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void nums(object sender, KeyPressEventArgs e)
         {
+            if (char.IsDigit(e.KeyChar)) e.Handled = false;
+            MessageBox.Show("Solo se puede rellenar con numeros. ", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
-
-        private void label4_Click(object sender, EventArgs e)
+        public static void letras(object sender, KeyPressEventArgs e)
         {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            if (char.IsLetter(e.KeyChar)) e.Handled = false;
+            MessageBox.Show("Solo se puede rellenar con letras. ", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

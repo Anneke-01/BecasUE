@@ -21,3 +21,5 @@ C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.csproj.CoreCompileI
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.exe
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.pdb
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmEstudiante.resources
+C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmMessageBoxOk.resources
+C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmPrograma.resources
