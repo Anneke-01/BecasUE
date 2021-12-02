@@ -14,11 +14,12 @@ namespace SistemaBecas.View
 {
     public partial class frmMessageBoxOk : Form
     {
-        int variable;
-        public frmMessageBoxOk(int v)
+        int variable, IdUser;
+        public frmMessageBoxOk(int v, int idUser)
         {
             InitializeComponent();
             variable = v;
+            IdUser = idUser;
         }
         
 
@@ -28,13 +29,13 @@ namespace SistemaBecas.View
 
             if(variable == 0)
             {
-                frmEstudiante fc = new frmEstudiante();
+                frmEstudiante fc = new frmEstudiante(IdUser);
                 fc.Show();
                 this.Hide();
             }
             else
             {
-                frmAdmin ad = new frmAdmin();
+                frmAdmin ad = new frmAdmin(IdUser);
                 ad.Show();
                 this.Hide();
             }

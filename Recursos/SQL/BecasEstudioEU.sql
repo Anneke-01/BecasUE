@@ -127,12 +127,15 @@ as
 if exists (select Usuario from Usuario where
 CAST(DECRYPTBYPASSPHRASE(@Contrasena, Contraseña) as nvarchar(30)) = @Contrasena and
 Usuario=@Usuario and Rol=@Rol and Estado='Habilitado')
-select 'Acceso Exitoso' as Resultado
+select 'Acceso Exitoso' as Resultado,
+(select top 1 IDUsuario from Usuario where Usuario=@Usuario and Rol=@Rol) as IdUsuario 
 else
 select 'Acceso Denegado' as Resultado
 
-Execute Validar_Acceso 'Anneke','123','Administrador'
+Execute Validar_Acceso 'Anneke','123','Estudiante'
 
+select * from Usuario
+--- No insertar datos repetidos con unique constraint en la columna Usuario
 create login AdminBecas with password = 'Becas2021*'
 sp_adduser AdminBecas,AdminBecas
 Grant execute on Validar_Acceso to AdminBecas
@@ -140,6 +143,7 @@ SELECT * FROM Usuario
 
 SELECT LEN(Contraseña) FROM Usuario WHERE IDUsuario = 1
 SELECT CAST(DECRYPTBYPASSPHRASE('123', Contraseña) AS nvarchar) FROM Usuario WHERE IDUsuario = 1
+
 create procedure Listar_Pais
 as
 select * from Pais order by NombrePais asc
@@ -183,13 +187,29 @@ as insert into Candidato
 values(@PrimerNombre,@SegundoNombre,@PrimerApellido,@SegundoApellido,
 @Correo,@NoPasaporte,@IDUsuario,@IDPais)
 
+alter procedure EditarDatos_Candidatos
+@IDUsuario int, @PrimerNombre nvarchar(50), @SegundoNombre nvarchar(50), @PrimerApellido nvarchar(50),
+@SegundoApellido nvarchar(50),@Correo nvarchar(50), @NoPasaporte nvarchar(50), @IDPais int
+as update Candidato set  PrimerNombre=@PrimerNombre, SegundoNombre=@SegundoNombre,PrimerApellido=@PrimerApellido,
+SegundoApellido=@SegundoApellido, Correo=@Correo,NoPasaporte=@NoPasaporte,IDPais=@IDPais 
+where IDUsuario=@IDUsuario
+
+create procedure Listar_Candidatos
+as select * from Candidato order by PrimerNombre asc
 
 ------------- PRUEBAS
 Execute Insertar_Candidatos 'Anneke', 'Paulina','Morales','López','annekemorales@gmail.com','C1359690',5,7
+Select * from Candidato
+Execute EditarDatos_Candidatos 5, 'Ana','Paulina','Mora','Colapso','anamorales@gmail.com','C1359690',5,7
+Execute Listar_Candidatos
 
-create procedure EditarDatos_Candidatos
-@IDCandidato int, @PrimerNombre nvarchar(50), @SegundoNombre nvarchar(50), @PrimerApellido nvarchar(50),
-@SegundoApellido nvarchar(50),@Correo nvarchar(50), @NoPasaporte nvarchar(50), @IDUsuario int, @IDPais int
-as update Candidato set  PrimerNombre=@PrimerNombre, SegundoNombre=@SegundoNombre,PrimerApellido=@PrimerApellido,
-SegundoApellido=@SegundoApellido, Correo=@Correo,NoPasaporte=@NoPasaporte,IDPais=@IDPais 
-where IDCandidato=@IDCandidato
+
+/* PROCEDIMIENTO ALMACENADOS PARA CANDIDATO */
+
+alter procedure Obtener_Candidato
+@IDCandidato int
+as select c.*, p.NombrePais from Candidato c
+inner join Pais p on c.IDPais = p.IDPais
+where IDUsuario=@IDCandidato 
+
+Execute Obtener_Candidato 5

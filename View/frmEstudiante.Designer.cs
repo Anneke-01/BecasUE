@@ -39,8 +39,8 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.cmbPais = new System.Windows.Forms.ComboBox();
             this.txtPasaporte = new System.Windows.Forms.TextBox();
-            this.textPNombre = new System.Windows.Forms.TextBox();
+            this.txtPNombre = new System.Windows.Forms.TextBox();
             this.txtSNombre = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtSApellido = new System.Windows.Forms.TextBox();
@@ -196,46 +196,48 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button2);
-            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.btnEditar);
+            this.panel6.Controls.Add(this.btnGuardar);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(256, 584);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(666, 68);
             this.panel6.TabIndex = 13;
             // 
-            // button2
+            // btnEditar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(180)))), ((int)(((byte)(63)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(389, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 43);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Editar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(180)))), ((int)(((byte)(63)))));
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(389, 13);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(103, 43);
+            this.btnEditar.TabIndex = 0;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // button1
+            // btnGuardar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(180)))), ((int)(((byte)(63)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(510, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 43);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Guardar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(180)))), ((int)(((byte)(63)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(510, 13);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(116, 43);
+            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label4
             // 
@@ -308,7 +310,7 @@
             this.panel5.Controls.Add(this.cmbPais);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.txtPasaporte);
-            this.panel5.Controls.Add(this.textPNombre);
+            this.panel5.Controls.Add(this.txtPNombre);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.txtSNombre);
             this.panel5.Controls.Add(this.txtCorreo);
@@ -349,13 +351,13 @@
             this.txtPasaporte.Size = new System.Drawing.Size(215, 22);
             this.txtPasaporte.TabIndex = 5;
             // 
-            // textPNombre
+            // txtPNombre
             // 
-            this.textPNombre.Location = new System.Drawing.Point(286, 20);
-            this.textPNombre.Margin = new System.Windows.Forms.Padding(4);
-            this.textPNombre.Name = "textPNombre";
-            this.textPNombre.Size = new System.Drawing.Size(215, 22);
-            this.textPNombre.TabIndex = 1;
+            this.txtPNombre.Location = new System.Drawing.Point(286, 20);
+            this.txtPNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPNombre.Name = "txtPNombre";
+            this.txtPNombre.Size = new System.Drawing.Size(215, 22);
+            this.txtPNombre.TabIndex = 1;
             // 
             // txtSNombre
             // 
@@ -522,8 +524,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label4;
@@ -534,7 +536,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtPasaporte;
-        private System.Windows.Forms.TextBox textPNombre;
+        private System.Windows.Forms.TextBox txtPNombre;
         private System.Windows.Forms.TextBox txtSNombre;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtSApellido;

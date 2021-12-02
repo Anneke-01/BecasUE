@@ -155,13 +155,12 @@
             // btnCrearP
             // 
             this.btnCrearP.BackColor = System.Drawing.Color.DarkBlue;
-            this.btnCrearP.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnCrearP.FlatAppearance.BorderSize = 0;
             this.btnCrearP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearP.ForeColor = System.Drawing.Color.White;
-            this.btnCrearP.Location = new System.Drawing.Point(0, 44);
+            this.btnCrearP.Location = new System.Drawing.Point(0, 56);
             this.btnCrearP.Name = "btnCrearP";
-            this.btnCrearP.Size = new System.Drawing.Size(256, 38);
+            this.btnCrearP.Size = new System.Drawing.Size(256, 26);
             this.btnCrearP.TabIndex = 1;
             this.btnCrearP.Text = "Crear programa";
             this.btnCrearP.UseVisualStyleBackColor = false;
@@ -304,6 +303,7 @@
             this.panelprincipal.Name = "panelprincipal";
             this.panelprincipal.Size = new System.Drawing.Size(666, 657);
             this.panelprincipal.TabIndex = 2;
+            this.panelprincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelprincipal_Paint);
             // 
             // frmAdmin
             // 

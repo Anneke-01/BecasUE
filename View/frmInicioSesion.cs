@@ -39,16 +39,16 @@ namespace SistemaBecas
                     DataRow dr = dato.Rows[0];
                     if (dr["Resultado"].ToString() == "Acceso Exitoso")
                     {
-                                   
+                        int idUser = int.Parse(dr["IdUsuario"].ToString());                  
                         if (TipoUsuario.SelectedItem.ToString() == "Estudiante")
                         {
-                            frmMessageBoxOk ok = new frmMessageBoxOk(0);
+                            frmMessageBoxOk ok = new frmMessageBoxOk(0,idUser);
                             ok.Show();
                             this.Hide();
                         }
                         else 
                         {
-                            frmMessageBoxOk ok = new frmMessageBoxOk(1);
+                            frmMessageBoxOk ok = new frmMessageBoxOk(1,idUser);
                             ok.Show();
                             this.Hide();                         
                         }                       
@@ -83,16 +83,16 @@ namespace SistemaBecas
                         DataRow dr = dato.Rows[0];
                         if (dr["Resultado"].ToString() == "Acceso Exitoso")
                         {
-
+                            int idUser = int.Parse(dr["IdUsuario"].ToString());
                             if (TipoUsuario.SelectedItem.ToString() == "Estudiante")
                             {
-                                frmMessageBoxOk ok = new frmMessageBoxOk(0);
+                                frmMessageBoxOk ok = new frmMessageBoxOk(0,idUser);
                                 ok.Show();
                                 this.Hide();
                             }
                             else
                             {
-                                frmMessageBoxOk ok = new frmMessageBoxOk(1);
+                                frmMessageBoxOk ok = new frmMessageBoxOk(1,idUser);
                                 ok.Show();
                                 this.Hide();
                             }
@@ -125,18 +125,19 @@ namespace SistemaBecas
                     {
 
                         DataRow dr = dato.Rows[0];
+
                         if (dr["Resultado"].ToString() == "Acceso Exitoso")
                         {
-
+                            int idUser = int.Parse(dr["IdUsuario"].ToString());
                             if (TipoUsuario.SelectedItem.ToString() == "Estudiante")
                             {
-                                frmMessageBoxOk ok = new frmMessageBoxOk(0);
+                                frmMessageBoxOk ok = new frmMessageBoxOk(0,idUser);
                                 ok.Show();
                                 this.Hide();
                             }
                             else
                             {
-                                frmMessageBoxOk ok = new frmMessageBoxOk(1);
+                                frmMessageBoxOk ok = new frmMessageBoxOk(1,idUser);
                                 ok.Show();
                                 this.Hide();
                             }

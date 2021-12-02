@@ -190,7 +190,7 @@
         GAXDBvwnA0C1joJRAAQMDAA7/jPNe57/BQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnEditar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAZtJREFUWEft
         lbEuREEYhTfZhFVqlmIrRELWtgqtxGMQq+QtFDqdZqPzAkJ4CSoKDUoJUaIzvjP7z83cGxS7MySb/ZKT
@@ -203,7 +203,7 @@
         rkJggg==
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnGuardar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAARRJREFUWEft
         l1sKwjAQRaur81N0Df4Igq5Xv3Qf1jvTk1Bpa9M2IkIODHTuPHJFKrEqBOq6XisuiptiKU/FkdVpaMAO

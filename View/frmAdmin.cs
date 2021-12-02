@@ -12,9 +12,11 @@ namespace SistemaBecas.View
 {
     public partial class frmAdmin : Form
     {
-        public frmAdmin()
+        int IdUser;
+        public frmAdmin(int idUser)
         {
             InitializeComponent();
+            IdUser = idUser;
             disfracesDiseño();
         }
         public void loadform(Object Form)
@@ -92,6 +94,11 @@ namespace SistemaBecas.View
         }
 
         private void btnCrearP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelprincipal_Paint(object sender, PaintEventArgs e)
         {
 
         }
