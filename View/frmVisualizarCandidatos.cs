@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaBecas.Controller;
 
 namespace SistemaBecas.View
 {
@@ -15,6 +16,16 @@ namespace SistemaBecas.View
         public frmVisualizarCandidatos()
         {
             InitializeComponent();
+        }
+
+        private void dtVerCandidatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frmVisualizarCandidatos_Load(object sender, EventArgs e)
+        {
+            this.dtVerCandidatos.DataSource = CCandidato.Mostrar_Candidatos();
         }
     }
 }

@@ -54,6 +54,7 @@
             this.dtVerCandidatos.Name = "dtVerCandidatos";
             this.dtVerCandidatos.Size = new System.Drawing.Size(635, 297);
             this.dtVerCandidatos.TabIndex = 4;
+            this.dtVerCandidatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtVerCandidatos_CellContentClick);
             // 
             // btnCancelar
             // 
@@ -113,6 +114,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVisualizarCandidatos";
             this.Text = "frmVisualizarCandidatos";
+            this.Load += new System.EventHandler(this.frmVisualizarCandidatos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtVerCandidatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

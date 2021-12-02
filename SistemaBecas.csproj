@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CCandidato.cs" />
     <Compile Include="Controller\CUsuario.cs" />
+    <Compile Include="Data\DCandidato.cs" />
     <Compile Include="Data\DPrograma.cs" />
     <Compile Include="Data\Conexión.cs" />
     <Compile Include="Data\DUsuario.cs" />
