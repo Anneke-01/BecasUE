@@ -16,5 +16,10 @@ namespace SistemaBecas.View
         {
             InitializeComponent();
         }
+
+        private void frmProgramasDiponibles_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -343,7 +343,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnPrograma;
-        private System.Windows.Forms.Panel panelprincipal;
         private System.Windows.Forms.Button btnOfertas;
         private System.Windows.Forms.Panel panelSubMenuProgramas;
         private System.Windows.Forms.Button btnCrearP;
@@ -351,5 +350,6 @@
         private System.Windows.Forms.Panel panelSubmenuOfertas;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelprincipal;
     }
 }

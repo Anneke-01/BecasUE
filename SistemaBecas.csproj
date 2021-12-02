@@ -56,11 +56,23 @@
     <Compile Include="View\frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmCambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCambiarContraseña.Designer.cs">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmEstudiante.Designer.cs">
       <DependentUpon>frmEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmHistorialEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmHistorialEstudiante.Designer.cs">
+      <DependentUpon>frmHistorialEstudiante.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmInicioSesion.cs">
       <SubType>Form</SubType>
@@ -82,6 +94,12 @@
     <Compile Include="View\frmOfertasDisponibles.Designer.cs">
       <DependentUpon>frmOfertasDisponibles.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmPerfilEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPerfilEstudiante.Designer.cs">
+      <DependentUpon>frmPerfilEstudiante.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmPrograma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,8 +115,14 @@
     <EmbeddedResource Include="View\frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCambiarContraseña.resx">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmEstudiante.resx">
       <DependentUpon>frmEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmHistorialEstudiante.resx">
+      <DependentUpon>frmHistorialEstudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
@@ -117,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmOfertasDisponibles.resx">
       <DependentUpon>frmOfertasDisponibles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPerfilEstudiante.resx">
+      <DependentUpon>frmPerfilEstudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPrograma.resx">
       <DependentUpon>frmPrograma.cs</DependentUpon>

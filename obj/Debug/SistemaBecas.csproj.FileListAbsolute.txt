@@ -25,3 +25,6 @@ C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmMessageBoxO
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmPrograma.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmOfertasDisponibles.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmProgramasDiponibles.resources
+C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmPerfilEstudiante.resources
+C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmHistorialEstudiante.resources
+C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmCambiarContraseña.resources

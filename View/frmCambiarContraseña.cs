@@ -10,19 +10,16 @@ using System.Windows.Forms;
 
 namespace SistemaBecas.View
 {
-    public partial class frmOfertasDisponibles : Form
+    public partial class frmCambiarContraseña : Form
     {
-        public frmOfertasDisponibles()
+        int IdUser;
+        public frmCambiarContraseña(int idUser)
         {
             InitializeComponent();
+            IdUser = idUser;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmOfertasDisponibles_Load(object sender, EventArgs e)
+        private void frmCambiarContraseña_Load(object sender, EventArgs e)
         {
 
         }
