@@ -29,9 +29,9 @@ namespace SistemaBecas.Data
         private Conexión cn = new Conexión();
         private SqlCommand cm = new SqlCommand();
 
-        public string Insertar(DPrograma Programa)
+        public DataTable Insertar_Programa(string TituloPrograma, string TipoEspecialidad, int creditos,int diplomados,string duracion)
         {
-            string respuesta = "";
+            DataTable dt = new DataTable("InsertarPrograma");
             using (SqlConnection SqlCon = new SqlConnection(Conexión.Cn))
             {
                 try
@@ -39,18 +39,43 @@ namespace SistemaBecas.Data
                    
                     SqlCommand SqlCmd = new SqlCommand("Insertar_Programas", SqlCon);
                     SqlCmd.CommandType = CommandType.StoredProcedure;
-                    //   Cargando los parámetros del procedimiento almacenado
+                    SqlParameter p = new SqlParameter();
+                    p.ParameterName = "@TituloPrograma";
+                    p.SqlDbType = SqlDbType.NVarChar;
+                    p.Size = 70;
+                    p.Value = TituloPrograma;
+                    SqlCmd.Parameters.Add(p);
 
-                    SqlParameter[] parametros = new SqlParameter[3];
-                    //parametros[0] = new SqlParameter("@Usuario", SqlDbType.NVarChar, 30);
-                    //parametros[0].Value = usuario;
-                    //parametros[1] = new SqlParameter("@Contrasena", SqlDbType.NVarChar, 30);
-                    //parametros[1].Value = contraseña;
-                    //parametros[2] = new SqlParameter("@Rol", SqlDbType.NVarChar, 25);
-                    //parametros[2].Value = rol;
+                    SqlParameter p1 = new SqlParameter();
+                    p1.ParameterName = "@TipoEspecialidad";
+                    p1.SqlDbType = SqlDbType.NVarChar;
+                    p1.Size = 70;
+                    p1.Value = TipoEspecialidad;
+                    SqlCmd.Parameters.Add(p1);
 
-                    //SqlCmd.Parameters.Add(parametros);
+                    SqlParameter p2 = new SqlParameter();
+                    p2.ParameterName = "@Creditos";
+                    p2.SqlDbType = SqlDbType.Int;
+                    p2.Value = creditos;
+                    SqlCmd.Parameters.Add(p2);
 
+                    SqlParameter p3 = new SqlParameter();
+                    p3.ParameterName = "@Diplomados";
+                    p3.SqlDbType = SqlDbType.Int;
+                    p3.Value = creditos;
+                    SqlCmd.Parameters.Add(p3);
+
+                    SqlParameter p4 = new SqlParameter();
+                    p4.ParameterName = "@Duracion";
+                    p4.SqlDbType = SqlDbType.NVarChar;
+                    p4.Size = 15;
+                    p4.Value = duracion;
+                    SqlCmd.Parameters.Add(p4);
+
+                    SqlCmd.Connection.Open();
+
+                    SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                    SqlDat.Fill(dt);
 
                 }
                 catch (Exception ex)
@@ -59,11 +84,37 @@ namespace SistemaBecas.Data
 
 
                 }
-                return respuesta;
+                return dt;
             }
         }
 
 
-        
+        public DataTable Leer_Programa()
+        {
+            DataTable DtResultado = new DataTable("InsertarPrograma");
+            using (SqlConnection SqlCon = new SqlConnection(Conexión.Cn))
+            {
+                try
+                {
+
+                    SqlCommand SqlCmd = new SqlCommand("Leer_Programas", SqlCon);
+                    SqlCmd.CommandType = CommandType.StoredProcedure;
+                    SqlCmd.Connection.Open();
+                    SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                    SqlDat.Fill(DtResultado);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.GetBaseException().Message);
+                    DtResultado = null;
+
+                }
+            }
+
+            return DtResultado;
+
+        }
+
+
     }
 }

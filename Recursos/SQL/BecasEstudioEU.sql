@@ -120,11 +120,22 @@ as
 if exists (select Usuario from Usuario where
 CAST(DECRYPTBYPASSPHRASE(@Contrasena, Contraseña) as nvarchar(30)) = @Contrasena and
 Usuario=@Usuario and Rol=@Rol and Estado='Habilitado')
+begin
+declare @IdUsuario int
+set @IdUsuario = (select top 1 IDUsuario from Usuario where Usuario=@Usuario and Rol=@Rol)
 select 'Acceso Exitoso' as Resultado,
-(select top 1 IDUsuario from Usuario where Usuario=@Usuario and Rol=@Rol) as IdUsuario 
+(select top 1 IDUsuario from Usuario where Usuario=@Usuario and Rol=@Rol) as IdUsuario,
+(select top 1 c.IDCandidato from Candidato c where IDUsuario=@IdUsuario) as IdCandidato
+end
 else
+begin
 select 'Acceso Denegado' as Resultado
+end
 
+
+select top 1 IDUsuario from Usuario where Usu= 14
+execute Validar_Acceso 'Casimiro','123','Estudiante'
+select * from Candidato
 
 /*PROCEDIMIENTO PARA LISTAR PAISES*/
 create procedure Listar_Pais
@@ -133,8 +144,11 @@ select * from Pais order by NombrePais asc
 
 /*PROCEDIMIENTOS ALMACENADOS PARA PROGRAMAS*/
 
-create procedure Leer_Programas
-as select TituloPrograma,TipoEspecialidad,Creditos,Diplomados,Duracion from Programa 
+create or alter procedure Leer_Programas
+as select TituloPrograma as [Título del Programa],
+TipoEspecialidad as [Tipo de especialidad],
+Creditos as [Créditos],
+Diplomados as [Diplomados],Duracion as [Duración] from Programa 
 -------------------------------------------
 create procedure Insertar_Programas
 @TituloPrograma nvarchar(70), @TipoEspecialidad nvarchar(40), @Creditos int,
@@ -152,6 +166,27 @@ where IDPrograma=@IDPrograma
 create procedure Eliminar_Programa
 @IDPrograma int 
 as delete from Programa where IDPrograma=@IDPrograma
+
+Create procedure Buscar_Programa
+@Dato varchar(70)
+as
+SELECT TOP (50) [id_empleado]
+    ,[p_nom] as [Primer Nombre]
+    ,[s_nom] as [Segundo Nombre]
+    ,[p_apell] as [Primer Apellido]
+    ,[s_apell] as [Segundo Apellido]
+    ,[direccion] as Dirección
+    ,[tel] as Teléfono
+    ,[correo] as Correo,
+	Estado as Estado
+FROM [NuevoHotel].[dbo].[empleado]
+where 
+[p_nom] like @Dato +'%' or
+[s_nom] like @Dato +'%' or
+[p_apell] like @Dato +'%' or   
+[s_apell] like @Dato +'%' or   
+Tel like @Dato +'%' or
+Correo like @Dato +'%'
 ---------------------------
  /*PROCEDIMIENTOS ALMACENADOS PARA CANDIDATOS*/
  create procedure Insertar_Candidatos
@@ -166,17 +201,36 @@ values(@PrimerNombre,@SegundoNombre,@PrimerApellido,@SegundoApellido,
 alter procedure EditarDatos_Candidatos
 @IDUsuario int, @PrimerNombre nvarchar(50), @SegundoNombre nvarchar(50), @PrimerApellido nvarchar(50),
 @SegundoApellido nvarchar(50),@Correo nvarchar(50), @NoPasaporte nvarchar(50), @IDPais int
-as update Candidato set  PrimerNombre=@PrimerNombre, SegundoNombre=@SegundoNombre,PrimerApellido=@PrimerApellido,
+as 
+if exists (select * from Candidato where IDCandidato=@IDUsuario)
+begin
+update Candidato set  PrimerNombre=@PrimerNombre, SegundoNombre=@SegundoNombre,PrimerApellido=@PrimerApellido,
 SegundoApellido=@SegundoApellido, Correo=@Correo,NoPasaporte=@NoPasaporte,IDPais=@IDPais 
 where IDUsuario=@IDUsuario
+end
+else
+begin
+execute Insertar_Candidatos @PrimerNombre,@SegundoNombre,@PrimerApellido,@SegundoApellido,@Correo,@NoPasaporte,@IDUsuario,@IDPais
+end
+
+Execute EditarDatos_Candidatos 13,'primerNombre','SegundoNombre','PApellido','SApellido','Correo','NoPass',7
+select * from Usuario
+Execute Insertar_Usuario 'Casimiro','123','Estudiante'
+
+Execute Validar_Acceso 'Casimiro','123','Estudiante'
+select * from Candidato
 
 ----
 alter procedure Obtener_Candidato
-@IDCandidato int
+@IDUsuario int
 as select c.*, p.NombrePais from Candidato c
 inner join Pais p on c.IDPais = p.IDPais
-where IDUsuario=@IDCandidato
+where IDUsuario=@IDUsuario
 ----
+Execute Obtener_Candidato 5
+
+
+
 create procedure ListarDatosCompletosCandidatos
 as
 select c.PrimerNombre,c.SegundoNombre,c.PrimerApellido,c.SegundoApellido,
@@ -192,6 +246,21 @@ create procedure InsertarHistorial_Academico
 @IDCandidato int,@TituloObtenido nvarchar(75),@FechaInicio date,@FechaFin date
 as insert into HistorialAcademico values(@IDCandidato,@TituloObtenido,@FechaInicio,@FechaFin)
 
+Execute InsertarHistorial_Academico 3,'Bachiller','2005-02-02','2019-02-02'
+
+create or alter procedure Mostrar_HistorialAcademic
+as
+select h.IDCandidato, h.TituloObtenido,h.FechaInicio,h.FechaFin from HistorialAcademico h
+inner join Candidato c on c.IDCandidato = h.IDCandidato
+
+select * from HistorialAcademico
+
+create procedure InsertarHistorial_Laboral
+@Puesto nvarchar(75),@Entidad nvarchar(50), @FechaInicio date, @FechaFin date,@IDCandidato int
+as insert into HistorialLaboral values(@Puesto,@Entidad,@FechaInicio,@FechaFin,@IDCandidato)
+select * from Usuario
+
+
 
 
 
@@ -202,7 +271,7 @@ Execute EditarDatos_Candidatos 5, 'Ana','Paulina','Mora','Colapso','anamorales@g
 Execute Listar_Candidatos
 
 
-
+select * from Usuario
 
 
 
@@ -243,5 +312,36 @@ sp_adduser AdminBecas,AdminBecas
 Grant execute on Validar_Acceso to AdminBecas
 SELECT * FROM Usuario
 
-SELECT LEN(Contraseña) FROM Usuario WHERE IDUsuario = 1
-SELECT CAST(DECRYPTBYPASSPHRASE('123', Contraseña) AS nvarchar) FROM Usuario WHERE IDUsuario = 5
+SELECT LEN(Contraseña) FROM Usuario WHERE IDUsuario = 9
+SELECT CAST(DECRYPTBYPASSPHRASE('123', Contraseña) AS nvarchar) FROM Usuario WHERE IDUsuario = 9
+update Usuario set Contraseña  = '123' where IDUsuario= 9
+
+select * from Usuario
+create or alter procedure Cambiar_contraseña
+@IDUsuario int,
+@Contrasena nvarchar(30),
+as
+select Usuario from Usuario where
+CAST(DECRYPTBYPASSPHRASE(@Contrasena, Contraseña) as nvarchar(30)) = @Contrasena
+if ()
+
+begin
+update Usuario set Contraseña=@Contrasena where IDUsuario=@IDUsuario
+end
+
+Execute Cambiar_contraseña 5,'12'
+
+create or alter procedure Validar_Acceso
+@Usuario nvarchar(30),
+@Contrasena nvarchar(30),
+@Rol nvarchar(25)
+as
+if exists (select Usuario from Usuario where
+CAST(DECRYPTBYPASSPHRASE(@Contrasena, Contraseña) as nvarchar(30)) = @Contrasena and
+Usuario=@Usuario and Rol=@Rol and Estado='Habilitado')
+select 'Acceso Exitoso' as Resultado,
+(select top 1 IDUsuario from Usuario where Usuario=@Usuario and Rol=@Rol) as IdUsuario,
+(select c.IDCandidato from Candidato c
+inner join Usuario u on c.IDUsuario = u.IDUsuario) as IdCandidato
+else
+select 'Acceso Denegado' as Resultado

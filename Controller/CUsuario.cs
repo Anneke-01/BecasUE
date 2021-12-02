@@ -18,9 +18,9 @@ namespace SistemaBecas.Controller
         {
             return new DUsuario().Validar_Acceso(usuario, contraseña, rol);
         }
-        public static DataTable ObtenerCandidato(int idCandidato)
+        public static DataTable ObtenerCandidato(int idUsuario)
         {
-            return new DUsuario().ObtenerCandidato(idCandidato);
+            return new DUsuario().ObtenerCandidato(idUsuario);
         }
         public static DataTable EditarCandidato(int idUser, string PNombre, String SNombre, String PApellido, String SApellido, String Correo, String NPass, int Pais)
         {

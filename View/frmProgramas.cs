@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaBecas.Controller;
 
 namespace SistemaBecas.View
 {
@@ -27,6 +28,19 @@ namespace SistemaBecas.View
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmProgramas_Load(object sender, EventArgs e)
+        {
+            this.dtProgramas.DataSource = CPrograma.Leer_Programa();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if(this.dtProgramas.SelectedRows.Count == 1)
+            {
+                
+            }
         }
     }
 }

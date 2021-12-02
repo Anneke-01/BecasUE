@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaBecas.Data;
+using SistemaBecas.Controller;
 
 namespace SistemaBecas.View
 {
@@ -26,7 +27,14 @@ namespace SistemaBecas.View
             }
             else
             {
+                CPrograma.Insertar_Programa(txtTituloPrograma.Text, cmbTipoEspecialidad.SelectedItem.ToString(),int.Parse(txtCreditos.Text),int.Parse(txtDiplomados.Text),txtDuracion.Text);
+                txtTituloPrograma.Text = "";
+                cmbTipoEspecialidad.Text = "";
+                txtDiplomados.Text = "";
+                txtCreditos.Text = "";
+                txtDuracion.Text = "";
 
+                MessageBox.Show("Se agregó un nuevo programa.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

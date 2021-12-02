@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\CCandidato.cs" />
+    <Compile Include="Controller\CPrograma.cs" />
     <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Data\DCandidato.cs" />
     <Compile Include="Data\DPrograma.cs" />
@@ -70,11 +71,23 @@
     <Compile Include="View\frmEstudiante.Designer.cs">
       <DependentUpon>frmEstudiante.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmHistorialEstudiante.cs">
+    <Compile Include="View\frmFormularioEstudianteVista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmHistorialEstudiante.Designer.cs">
-      <DependentUpon>frmHistorialEstudiante.cs</DependentUpon>
+    <Compile Include="View\frmFormularioEstudianteVista.Designer.cs">
+      <DependentUpon>frmFormularioEstudianteVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmHistorialAcadémico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmHistorialAcadémico.Designer.cs">
+      <DependentUpon>frmHistorialAcadémico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmHistorialLaboral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmHistorialLaboral.Designer.cs">
+      <DependentUpon>frmHistorialLaboral.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmInicioSesion.cs">
       <SubType>Form</SubType>
@@ -135,8 +148,14 @@
     <EmbeddedResource Include="View\frmEstudiante.resx">
       <DependentUpon>frmEstudiante.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmHistorialEstudiante.resx">
-      <DependentUpon>frmHistorialEstudiante.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmFormularioEstudianteVista.resx">
+      <DependentUpon>frmFormularioEstudianteVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmHistorialAcadémico.resx">
+      <DependentUpon>frmHistorialAcadémico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmHistorialLaboral.resx">
+      <DependentUpon>frmHistorialLaboral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>

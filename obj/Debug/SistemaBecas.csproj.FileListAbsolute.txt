@@ -24,9 +24,11 @@ C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmEstudiante.
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmMessageBoxOk.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmOfertasDisponibles.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmPerfilEstudiante.resources
-C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmHistorialEstudiante.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmCambiarContraseña.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmNPrograma.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmProgramas.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmVisualizarCandidatos.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmNuevoUser.resources
+C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmFormularioEstudianteVista.resources
+C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmHistorialAcadémico.resources
+C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmHistorialLaboral.resources

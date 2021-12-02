@@ -14,11 +14,12 @@ namespace SistemaBecas.View
 {
     public partial class frmEstudiante : Form
     {
-        int IdUser;
-        public frmEstudiante(int idUser)
+        int IdUser, IdCandidato;
+        public frmEstudiante(int idUser, int idCandidato)
         {
             InitializeComponent();
             IdUser = idUser;
+            IdCandidato = idCandidato;
             disfracesDiseño();
         }
 
@@ -65,7 +66,7 @@ namespace SistemaBecas.View
    
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            loadform(new frmPerfilEstudiante(IdUser));
+            loadform(new frmPerfilEstudiante(IdUser, IdCandidato));
             mostrarSubmenu(subMenuPerfil);
         }
 
@@ -79,7 +80,7 @@ namespace SistemaBecas.View
         }
         private void btnLaboral_Click(object sender, EventArgs e)
         {
-            loadform(new frmHistorialEstudiante(IdUser));
+            loadform(new frmFormularioEstudianteVista(IdUser,IdCandidato));
             esconderSubmenu();
 
         }

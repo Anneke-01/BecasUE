@@ -77,7 +77,7 @@ namespace SistemaBecas.Data
             cn.AbrirConexion();
             return tabla;
         }
-        public DataTable ObtenerCandidato(int idCandidato)
+        public DataTable ObtenerCandidato(int idUsuario)
         {
             DataTable DtResultado = new DataTable("Candidato");
             using (SqlConnection SqlCon = new SqlConnection(Conexión.Cn))
@@ -88,11 +88,12 @@ namespace SistemaBecas.Data
                     SqlCommand SqlCmd = new SqlCommand("Obtener_Candidato", SqlCon);
                     SqlCmd.CommandType = CommandType.StoredProcedure;
                     SqlParameter ParDato = new SqlParameter();
-                    ParDato.ParameterName = "@IDCandidato";
+                    ParDato.ParameterName = "@IDUsuario";
                     ParDato.SqlDbType = SqlDbType.Int;
-                    ParDato.Value = idCandidato;
+                    ParDato.Value = idUsuario;
                     SqlCmd.Parameters.Add(ParDato);
-  
+
+                    
                     SqlCmd.Connection.Open();
 
                     SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
@@ -122,6 +123,7 @@ namespace SistemaBecas.Data
                     SqlCommand SqlCmd = new SqlCommand("EditarDatos_Candidatos", SqlCon);
                     SqlCmd.CommandType = CommandType.StoredProcedure;
                     SqlParameter ParDato = new SqlParameter();
+
                     ParDato.ParameterName = "@IDUsuario";
                     ParDato.SqlDbType = SqlDbType.Int;
                     ParDato.Value = idUser;

@@ -39,16 +39,25 @@ namespace SistemaBecas
                     DataRow dr = dato.Rows[0];
                     if (dr["Resultado"].ToString() == "Acceso Exitoso")
                     {
-                        int idUser = int.Parse(dr["IdUsuario"].ToString());                  
+                        int idCandidato = 0;
+                        int idUser = int.Parse(dr["IdUsuario"].ToString());
+                        try
+                        {
+                            idCandidato = int.Parse(dr["IdCandidato"].ToString());
+                        }
+                        catch
+                        {
+                            //MessageBox.Show("F", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         if (TipoUsuario.SelectedItem.ToString() == "Estudiante")
                         {
-                            frmMessageBoxOk ok = new frmMessageBoxOk(0,idUser);
+                            frmMessageBoxOk ok = new frmMessageBoxOk(0,idCandidato,idUser);
                             ok.Show();
                             this.Hide();
                         }
                         else 
                         {
-                            frmMessageBoxOk ok = new frmMessageBoxOk(1,idUser);
+                            frmMessageBoxOk ok = new frmMessageBoxOk(1,idCandidato,idUser);
                             ok.Show();
                             this.Hide();                         
                         }                       
@@ -83,16 +92,25 @@ namespace SistemaBecas
                         DataRow dr = dato.Rows[0];
                         if (dr["Resultado"].ToString() == "Acceso Exitoso")
                         {
+                            int idCandidato = 0;
                             int idUser = int.Parse(dr["IdUsuario"].ToString());
+                            try
+                            {
+                                idCandidato = int.Parse(dr["IdCandidato"].ToString());
+                            }
+                            catch
+                            {
+                                //MessageBox.Show("F", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                             if (TipoUsuario.SelectedItem.ToString() == "Estudiante")
                             {
-                                frmMessageBoxOk ok = new frmMessageBoxOk(0,idUser);
+                                frmMessageBoxOk ok = new frmMessageBoxOk(0, idCandidato, idUser);
                                 ok.Show();
                                 this.Hide();
                             }
                             else
                             {
-                                frmMessageBoxOk ok = new frmMessageBoxOk(1,idUser);
+                                frmMessageBoxOk ok = new frmMessageBoxOk(1, idCandidato, idUser);
                                 ok.Show();
                                 this.Hide();
                             }
@@ -128,16 +146,23 @@ namespace SistemaBecas
 
                         if (dr["Resultado"].ToString() == "Acceso Exitoso")
                         {
+                            int idCandidato = 0;
                             int idUser = int.Parse(dr["IdUsuario"].ToString());
+                            try
+                            {
+                                idCandidato = int.Parse(dr["IdCandidato"].ToString());
+                            }catch{
+                               // MessageBox.Show("F", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                             if (TipoUsuario.SelectedItem.ToString() == "Estudiante")
                             {
-                                frmMessageBoxOk ok = new frmMessageBoxOk(0,idUser);
+                                frmMessageBoxOk ok = new frmMessageBoxOk(0, idCandidato, idUser);
                                 ok.Show();
                                 this.Hide();
                             }
                             else
                             {
-                                frmMessageBoxOk ok = new frmMessageBoxOk(1,idUser);
+                                frmMessageBoxOk ok = new frmMessageBoxOk(1, idCandidato, idUser);
                                 ok.Show();
                                 this.Hide();
                             }

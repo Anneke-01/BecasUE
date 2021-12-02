@@ -19,7 +19,7 @@ namespace SistemaBecas.Data
                 try
                 {
 
-                    SqlCommand SqlCmd = new SqlCommand("ListarDatosCompletosCandidatos", SqlCon);
+                    SqlCommand SqlCmd = new SqlCommand("ListarCandidatos", SqlCon);
                     SqlCmd.CommandType = CommandType.StoredProcedure;
 
 

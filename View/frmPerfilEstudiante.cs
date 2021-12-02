@@ -14,11 +14,12 @@ namespace SistemaBecas.View
 {
     public partial class frmPerfilEstudiante : Form
     {
-        int IdUser;
-        public frmPerfilEstudiante(int idUser)
+        int IdUser, IdCandidato;
+        public frmPerfilEstudiante(int idUser, int idCandidato)
         {
             InitializeComponent();
             IdUser = idUser;
+            IdCandidato = idCandidato;
         }
 
         private void frmPerfilEstudiante_Load(object sender, EventArgs e)
@@ -32,6 +33,8 @@ namespace SistemaBecas.View
         private void mostrarDatos()
         {
             DataTable respuesta = CUsuario.ObtenerCandidato(IdUser);
+            //Console.WriteLine(respuesta.Rows.Count);
+            //Console.WriteLine(respuesta.Columns.Count);
             if (respuesta.Rows.Count > 0)
             {
                 DataRow dr = respuesta.Rows[0];
@@ -42,9 +45,7 @@ namespace SistemaBecas.View
                 txtCorreo.Text = dr["Correo"].ToString();
                 txtPasaporte.Text = dr["NoPasaporte"].ToString();
                 cmbPais.SelectedIndex = cmbPais.FindStringExact(dr["NombrePais"].ToString());
-
-
-
+               
 
             }
 
