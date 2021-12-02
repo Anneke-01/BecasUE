@@ -34,15 +34,16 @@ namespace SistemaBecas.View
         }
         private void disfracesDiseño()
         {
-            panelSubMenuProgramas.Visible = false;
+            panelSubMenuVer.Visible = false;
             panelSubmenuOfertas.Visible = false;
         }
         private void esconderSubmenu()
         {
-            if(panelSubMenuProgramas.Visible == true)
+            if(panelSubMenuVer.Visible == true)
             {
-                panelSubMenuProgramas.Visible = false;
+                panelSubMenuVer.Visible = false;
             }
+            
             if(panelSubmenuOfertas.Visible == true)
             {
                 panelSubmenuOfertas.Visible = false;
@@ -73,13 +74,13 @@ namespace SistemaBecas.View
 
         private void btnCrearPrograma_Click(object sender, EventArgs e)
         {
-            //loadform(new frmPrograma());
-            mostrarSubmenu(panelSubMenuProgramas);
+            loadform(new frmProgramas());
+            
         }
 
         private void btnverP_Click(object sender, EventArgs e)
         {
-            loadform(new frmPrograma());
+            loadform(new frmProgramas());
             esconderSubmenu();
         }
 
@@ -101,6 +102,31 @@ namespace SistemaBecas.View
         private void panelprincipal_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+            mostrarSubmenu(panelSubMenuVer);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            esconderSubmenu();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCandidatos_Click(object sender, EventArgs e)
+        {
+            loadform(new frmVisualizarCandidatos());
+        }
+
+        private void btnCrearUser_Click(object sender, EventArgs e)
+        {
+            loadform(new frmNuevoUser());
         }
     }
 }

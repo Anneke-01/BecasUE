@@ -11,9 +11,9 @@ using SistemaBecas.Data;
 
 namespace SistemaBecas.View
 {
-    public partial class frmPrograma : Form
+    public partial class frmNPrograma : Form
     {
-        public frmPrograma()
+        public frmNPrograma()
         {
             InitializeComponent();
         }
@@ -32,7 +32,7 @@ namespace SistemaBecas.View
 
         private void frmPrograma_Load(object sender, EventArgs e)
         {
-            ListarEspecialidad();
+           
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -44,12 +44,6 @@ namespace SistemaBecas.View
         {
            
         }
-        private void ListarEspecialidad()
-        {
-            DPrograma dp= new DPrograma();
-            cmbTipoEspecialidad.DataSource = dp.ListarEspecialidad();
-            cmbTipoEspecialidad.DisplayMember = "TipoEspecialidad";
-            cmbTipoEspecialidad.ValueMember = "TipoEspecialidad";
-        }
+       
     }
 }

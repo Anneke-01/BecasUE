@@ -1,6 +1,6 @@
 ﻿namespace SistemaBecas.View
 {
-    partial class frmPrograma
+    partial class frmNPrograma
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrograma));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNPrograma));
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,6 +44,8 @@
             this.txtTituloPrograma = new System.Windows.Forms.TextBox();
             this.btnguardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,30 +160,34 @@
             // 
             // txtDuracion
             // 
+            this.txtDuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDuracion.Location = new System.Drawing.Point(271, 220);
             this.txtDuracion.Name = "txtDuracion";
-            this.txtDuracion.Size = new System.Drawing.Size(187, 20);
+            this.txtDuracion.Size = new System.Drawing.Size(187, 26);
             this.txtDuracion.TabIndex = 5;
             // 
             // txtDiplomados
             // 
+            this.txtDiplomados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiplomados.Location = new System.Drawing.Point(271, 170);
             this.txtDiplomados.Name = "txtDiplomados";
-            this.txtDiplomados.Size = new System.Drawing.Size(187, 20);
+            this.txtDiplomados.Size = new System.Drawing.Size(187, 26);
             this.txtDiplomados.TabIndex = 4;
             // 
             // txtCreditos
             // 
+            this.txtCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCreditos.Location = new System.Drawing.Point(271, 120);
             this.txtCreditos.Name = "txtCreditos";
-            this.txtCreditos.Size = new System.Drawing.Size(187, 20);
+            this.txtCreditos.Size = new System.Drawing.Size(187, 26);
             this.txtCreditos.TabIndex = 3;
             // 
             // txtTituloPrograma
             // 
+            this.txtTituloPrograma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTituloPrograma.Location = new System.Drawing.Point(271, 20);
             this.txtTituloPrograma.Name = "txtTituloPrograma";
-            this.txtTituloPrograma.Size = new System.Drawing.Size(187, 20);
+            this.txtTituloPrograma.Size = new System.Drawing.Size(187, 26);
             this.txtTituloPrograma.TabIndex = 1;
             // 
             // btnguardar
@@ -216,18 +222,39 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // frmPrograma
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(694, 27);
+            this.panel2.TabIndex = 24;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Navy;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 528);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(694, 27);
+            this.panel3.TabIndex = 25;
+            // 
+            // frmNPrograma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(694, 536);
+            this.ClientSize = new System.Drawing.Size(694, 555);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmPrograma";
+            this.Name = "frmNPrograma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrograma";
             this.Load += new System.EventHandler(this.frmPrograma_Load);
             this.panel1.ResumeLayout(false);
@@ -253,5 +280,7 @@
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cmbTipoEspecialidad;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

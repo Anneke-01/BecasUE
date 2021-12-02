@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SistemaBecas.View
 {
-    public partial class frmProgramasDiponibles : Form
+    public partial class frmVisualizarCandidatos : Form
     {
-        public frmProgramasDiponibles()
+        public frmVisualizarCandidatos()
         {
             InitializeComponent();
-        }
-
-        private void frmProgramasDiponibles_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

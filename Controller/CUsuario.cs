@@ -26,6 +26,10 @@ namespace SistemaBecas.Controller
         {
             return new DUsuario().EditarCandidato(idUser, PNombre,SNombre,PApellido,SApellido,Correo,NPass,Pais);
         }
+        public static DataTable Insertar_Usuario(string usuario, string contraseña, string rol)
+        {
+            return new DUsuario().Insertar_Usuario(usuario, contraseña, rol);
+        }
 
     }
 }

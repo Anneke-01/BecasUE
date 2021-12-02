@@ -25,7 +25,7 @@ namespace SistemaBecas.Data
         public int diplomado { get => Diplomados; set => Diplomados = value; }
         public int duracion { get => Duracion; set => Duracion = value; }
 
-        private SqlDataReader leerFilas;
+        //private SqlDataReader leerFilas;
         private Conexión cn = new Conexión();
         private SqlCommand cm = new SqlCommand();
 
@@ -64,18 +64,6 @@ namespace SistemaBecas.Data
         }
 
 
-        public DataTable ListarEspecialidad()
-        {
-
-            DataTable tabla = new DataTable();
-            cm.Connection = cn.AbrirConexion();
-            cm.CommandText = "Listar_Especialidad";
-            cm.CommandType = CommandType.StoredProcedure;
-            leerFilas = cm.ExecuteReader();
-            tabla.Load(leerFilas);
-            leerFilas.Close();
-            cn.AbrirConexion();
-            return tabla;
-        }
+        
     }
 }

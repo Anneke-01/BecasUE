@@ -105,19 +105,12 @@ alter table Oferta add IDUniversidad int not null foreign key references Univers
 alter table Oferta add IDPlanificacion int not null foreign key references Planificacion(IDPlanificacion)
 alter table Solicitud add IDOferta int not null foreign key references Oferta(IDOferta)
 
-
-select * from Usuario
-insert into Usuario values ('Anneke','123','Habilitado',GETDATE(), GETDATE(), 'TRUE')
-
+-- Procedimiento para insertar usuarios
 alter procedure Insertar_Usuario
 @Usuario nvarchar(30), @Contraseña nvarchar(30),@Rol nvarchar(25)
 as insert into Usuario(Usuario,Contraseña,Rol,Estado,FechaAcceso,FechaModificacion)
 values (@Usuario, ENCRYPTBYPASSPHRASE(@Contraseña, @Contraseña), @Rol,'Habilitado',
 GETDATE(),GETDATE())
-
-Execute Insertar_Usuario 'Anneke','123','Administrador'
-Execute Insertar_Usuario 'Anneke','123','Estudiante'
-select * from Usuario
 
 create or alter procedure Validar_Acceso
 @Usuario nvarchar(30),
@@ -132,53 +125,34 @@ select 'Acceso Exitoso' as Resultado,
 else
 select 'Acceso Denegado' as Resultado
 
-Execute Validar_Acceso 'Anneke','123','Estudiante'
 
-select * from Usuario
---- No insertar datos repetidos con unique constraint en la columna Usuario
-create login AdminBecas with password = 'Becas2021*'
-sp_adduser AdminBecas,AdminBecas
-Grant execute on Validar_Acceso to AdminBecas
-SELECT * FROM Usuario
-
-SELECT LEN(Contraseña) FROM Usuario WHERE IDUsuario = 1
-SELECT CAST(DECRYPTBYPASSPHRASE('123', Contraseña) AS nvarchar) FROM Usuario WHERE IDUsuario = 1
-
+/*PROCEDIMIENTO PARA LISTAR PAISES*/
 create procedure Listar_Pais
 as
 select * from Pais order by NombrePais asc
 
 /*PROCEDIMIENTOS ALMACENADOS PARA PROGRAMAS*/
+
+create procedure Leer_Programas
+as select TituloPrograma,TipoEspecialidad,Creditos,Diplomados,Duracion from Programa 
+-------------------------------------------
 create procedure Insertar_Programas
 @TituloPrograma nvarchar(70), @TipoEspecialidad nvarchar(40), @Creditos int,
 @Diplomados int, @Duracion nvarchar(15)
 as insert into Programa(TituloPrograma,TipoEspecialidad,Creditos,Diplomados,Duracion)
 values (@TituloPrograma,@TipoEspecialidad,@Creditos,@Diplomados,@Duracion)
-
-
+----------------------------------
 create procedure Editar_Programas
 @IDPrograma int, @TituloPrograma nvarchar(70), @TipoEspecialidad nvarchar(40), @Creditos int,
 @Diplomados int,@Duracion nvarchar(15)
 as update Programa set TituloPrograma=@TituloPrograma, TipoEspecialidad=@TipoEspecialidad,
 Creditos=@Creditos, Diplomados=@Diplomados,Duracion=@Duracion
 where IDPrograma=@IDPrograma
-
+-------------------------------------
 create procedure Eliminar_Programa
 @IDPrograma int 
 as delete from Programa where IDPrograma=@IDPrograma
-
-alter procedure Listar_Especialidad
-as
-select distinct TipoEspecialidad from Programa order by TipoEspecialidad asc 
-
-/* pruebas */
-execute Listar_Especialidad
-Execute Insertar_Programas 'Prueba','jasjd',2,3,'12 meses'
-Execute Editar_Programas 22,'asdsd','ana',2,1,'14 Meses'
-Execute Eliminar_Programa 22
- select * from Programa
 ---------------------------
-
  /*PROCEDIMIENTOS ALMACENADOS PARA CANDIDATOS*/
  create procedure Insertar_Candidatos
  @PrimerNombre nvarchar(50),@SegundoNombre nvarchar(50),@PrimerApellido nvarchar(50),
@@ -186,7 +160,9 @@ Execute Eliminar_Programa 22
 as insert into Candidato 
 values(@PrimerNombre,@SegundoNombre,@PrimerApellido,@SegundoApellido,
 @Correo,@NoPasaporte,@IDUsuario,@IDPais)
+---------------------
 
+--------------
 alter procedure EditarDatos_Candidatos
 @IDUsuario int, @PrimerNombre nvarchar(50), @SegundoNombre nvarchar(50), @PrimerApellido nvarchar(50),
 @SegundoApellido nvarchar(50),@Correo nvarchar(50), @NoPasaporte nvarchar(50), @IDPais int
@@ -194,22 +170,78 @@ as update Candidato set  PrimerNombre=@PrimerNombre, SegundoNombre=@SegundoNombr
 SegundoApellido=@SegundoApellido, Correo=@Correo,NoPasaporte=@NoPasaporte,IDPais=@IDPais 
 where IDUsuario=@IDUsuario
 
-create procedure Listar_Candidatos
-as select * from Candidato order by PrimerNombre asc
-
-------------- PRUEBAS
-Execute Insertar_Candidatos 'Anneke', 'Paulina','Morales','López','annekemorales@gmail.com','C1359690',5,7
-Select * from Candidato
-Execute EditarDatos_Candidatos 5, 'Ana','Paulina','Mora','Colapso','anamorales@gmail.com','C1359690',5,7
-Execute Listar_Candidatos
-
-
-/* PROCEDIMIENTO ALMACENADOS PARA CANDIDATO */
-
+----
 alter procedure Obtener_Candidato
 @IDCandidato int
 as select c.*, p.NombrePais from Candidato c
 inner join Pais p on c.IDPais = p.IDPais
-where IDUsuario=@IDCandidato 
+where IDUsuario=@IDCandidato
+----
+create procedure ListarDatosCompletosCandidatos
+as
+select c.PrimerNombre,c.SegundoNombre,c.PrimerApellido,c.SegundoApellido,
+c.Correo,c.NoPasaporte,p.NombrePais, ha.TituloObtenido,ha.FechaInicio,ha.FechaFin, hl.Puesto, hl.Entidad,hl.FechaInicio,
+hl.FechaFin
+from HistorialAcademico ha 
+inner join Candidato c on c.IDCandidato=ha.IDCandidato
+inner join HistorialLaboral hl on c.IDCandidato=hl.IDCandidato
+inner join Pais p on p.IDPais = c.IDPais order by c.IDCandidato asc
+----
 
-Execute Obtener_Candidato 5
+create procedure InsertarHistorial_Academico
+@IDCandidato int,@TituloObtenido nvarchar(75),@FechaInicio date,@FechaFin date
+as insert into HistorialAcademico values(@IDCandidato,@TituloObtenido,@FechaInicio,@FechaFin)
+
+
+
+
+------------- PRUEBAS
+Execute Insertar_Candidatos 'Anneke', 'Paulina','Morales','López','annekemorales@gmail.com','C1359690',5,7
+Select * from Candidato
+Execute EditarDatos_Candidatos 5, 'Ana','Paulina','Mora','Colapso','anamorales@gmail.com','C1359690',7
+Execute Listar_Candidatos
+
+
+
+
+
+
+create or alter procedure Insertar_HistorialAcademico
+@IDCandidato int,@TituloOBtenido nvarchar(75),@FechaInicio date,@FechaFin date
+as
+insert into HistorialAcademico values(@IDCandidato,@TituloOBtenido,@FechaInicio,@FechaFin) 
+
+Execute Insertar_HistorialAcademico 1,'Bachiller', '2020-03-03','2020-03-03'
+
+Insert into HistorialAcademico values(1,'Bachiller','2005-03-03','2018-12-01')
+Insert into HistorialLaboral values('Gerente general','UNI','2005-03-03','2018-12-01',1)
+
+
+--select c.PrimerNombre,c.SegundoNombre,c.PrimerApellido,c.SegundoApellido,
+--c.Correo,c.NoPasaporte,p.NombrePais, ha.TituloObtenido,ha.FechaInicio,ha.FechaFin, hl.Puesto, hl.Entidad,hl.FechaInicio,
+--hl.FechaFin
+--from HistorialAcademico ha 
+--inner join Candidato c on c.IDCandidato=ha.IDCandidato
+--inner join HistorialLaboral hl on c.IDCandidato=hl.IDCandidato
+--inner join Pais p on p.IDPais = c.IDPais order by c.IDCandidato asc
+
+/* pruebas */
+
+Execute Insertar_Programas 'Prueba','jasjd',2,3,'12 meses'
+Execute Editar_Programas 22,'asdsd','ana',2,1,'14 Meses'
+Execute Eliminar_Programa 22
+ select * from Programa
+
+Execute Validar_Acceso 'Anneke','123','Estudiante'
+Execute Insertar_Usuario 'Anneke','123','Administrador'
+Execute Insertar_Usuario 'Anneke','123','Estudiante'
+select * from Usuario
+
+--- No insertar datos repetidos con unique constraint en la columna Usuario
+create login AdminBecas with password = 'Becas2021*'
+sp_adduser AdminBecas,AdminBecas
+Grant execute on Validar_Acceso to AdminBecas
+SELECT * FROM Usuario
+
+SELECT LEN(Contraseña) FROM Usuario WHERE IDUsuario = 1
+SELECT CAST(DECRYPTBYPASSPHRASE('123', Contraseña) AS nvarchar) FROM Usuario WHERE IDUsuario = 5

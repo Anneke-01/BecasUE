@@ -174,6 +174,7 @@
             this.TipoUsuario.TabIndex = 7;
             this.TipoUsuario.Tag = "";
             this.TipoUsuario.UseWaitCursor = true;
+            this.TipoUsuario.SelectedIndexChanged += new System.EventHandler(this.TipoUsuario_SelectedIndexChanged);
             this.TipoUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TipoUsuario_KeyPress);
             // 
             // panel1

@@ -88,6 +88,12 @@
     <Compile Include="View\frmMessageBoxOk.Designer.cs">
       <DependentUpon>frmMessageBoxOk.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmNuevoUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmNuevoUser.Designer.cs">
+      <DependentUpon>frmNuevoUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmOfertasDisponibles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,17 +106,23 @@
     <Compile Include="View\frmPerfilEstudiante.Designer.cs">
       <DependentUpon>frmPerfilEstudiante.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmPrograma.cs">
+    <Compile Include="View\frmNPrograma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmPrograma.Designer.cs">
-      <DependentUpon>frmPrograma.cs</DependentUpon>
+    <Compile Include="View\frmNPrograma.Designer.cs">
+      <DependentUpon>frmNPrograma.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmProgramasDiponibles.cs">
+    <Compile Include="View\frmProgramas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmProgramasDiponibles.Designer.cs">
-      <DependentUpon>frmProgramasDiponibles.cs</DependentUpon>
+    <Compile Include="View\frmProgramas.Designer.cs">
+      <DependentUpon>frmProgramas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmVisualizarCandidatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmVisualizarCandidatos.Designer.cs">
+      <DependentUpon>frmVisualizarCandidatos.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="View\frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
@@ -139,17 +151,23 @@
     <EmbeddedResource Include="View\frmMessageBoxOk.resx">
       <DependentUpon>frmMessageBoxOk.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmNuevoUser.resx">
+      <DependentUpon>frmNuevoUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmOfertasDisponibles.resx">
       <DependentUpon>frmOfertasDisponibles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPerfilEstudiante.resx">
       <DependentUpon>frmPerfilEstudiante.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmPrograma.resx">
-      <DependentUpon>frmPrograma.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmNPrograma.resx">
+      <DependentUpon>frmNPrograma.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmProgramasDiponibles.resx">
-      <DependentUpon>frmProgramasDiponibles.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmProgramas.resx">
+      <DependentUpon>frmProgramas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmVisualizarCandidatos.resx">
+      <DependentUpon>frmVisualizarCandidatos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

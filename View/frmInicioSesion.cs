@@ -181,5 +181,10 @@ namespace SistemaBecas
         {
 
         }
+
+        private void TipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

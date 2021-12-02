@@ -192,5 +192,53 @@ namespace SistemaBecas.Data
             return DtResultado;
         }
 
+        public DataTable Insertar_Usuario(string usuario, string contraseña,string rol)
+        {
+            DataTable DtResultado = new DataTable("InsertarUsuario");
+            using (SqlConnection SqlCon = new SqlConnection(Conexión.Cn))
+            {
+                try
+                {
+
+                    SqlCommand SqlCmd = new SqlCommand("Insertar_Usuario", SqlCon);
+                    SqlCmd.CommandType = CommandType.StoredProcedure;
+                    SqlParameter ParDato = new SqlParameter();
+                    ParDato.ParameterName = "@Usuario";
+                    ParDato.SqlDbType = SqlDbType.NVarChar;
+                    ParDato.Size = 30;
+                    ParDato.Value = usuario;
+                    SqlCmd.Parameters.Add(ParDato);
+
+                    SqlParameter ParDato1 = new SqlParameter();
+                    ParDato1.ParameterName = "@Contraseña";
+                    ParDato1.SqlDbType = SqlDbType.NVarChar;
+                    ParDato1.Size = 30;
+                    ParDato1.Value = contraseña;
+                    SqlCmd.Parameters.Add(ParDato1);
+
+                    SqlParameter ParDato2 = new SqlParameter();
+                    ParDato2.ParameterName = "@Rol";
+                    ParDato2.SqlDbType = SqlDbType.NVarChar;
+                    ParDato2.Size = 25;
+                    ParDato2.Value = rol;
+                    SqlCmd.Parameters.Add(ParDato2);    
+
+                    SqlCmd.Connection.Open();
+
+                    SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                    SqlDat.Fill(DtResultado);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.GetBaseException().Message);
+                    DtResultado = null;
+
+                }
+            }
+
+            return DtResultado;
+        }
+
     }
 }

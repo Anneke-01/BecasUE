@@ -22,9 +22,11 @@ C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.exe
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.pdb
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmEstudiante.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmMessageBoxOk.resources
-C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmPrograma.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmOfertasDisponibles.resources
-C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmProgramasDiponibles.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmPerfilEstudiante.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmHistorialEstudiante.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmCambiarContraseña.resources
+C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmNPrograma.resources
+C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmProgramas.resources
+C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmVisualizarCandidatos.resources
+C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmNuevoUser.resources

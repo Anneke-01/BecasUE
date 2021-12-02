@@ -34,9 +34,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnOfertas = new System.Windows.Forms.Button();
-            this.panelSubMenuProgramas = new System.Windows.Forms.Panel();
-            this.btnverP = new System.Windows.Forms.Button();
-            this.btnCrearP = new System.Windows.Forms.Button();
             this.btnPrograma = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -48,21 +45,28 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.panelprincipal = new System.Windows.Forms.Panel();
+            this.btnVer = new System.Windows.Forms.Button();
+            this.panelSubMenuVer = new System.Windows.Forms.Panel();
+            this.btnCandidatos = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnCrearUser = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelSubmenuOfertas.SuspendLayout();
-            this.panelSubMenuProgramas.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panelSubMenuVer.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.btnCrearUser);
+            this.panel1.Controls.Add(this.panelSubMenuVer);
+            this.panel1.Controls.Add(this.btnVer);
             this.panel1.Controls.Add(this.panelSubmenuOfertas);
             this.panel1.Controls.Add(this.btnOfertas);
-            this.panel1.Controls.Add(this.panelSubMenuProgramas);
             this.panel1.Controls.Add(this.btnPrograma);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
@@ -77,7 +81,7 @@
             this.panelSubmenuOfertas.Controls.Add(this.button2);
             this.panelSubmenuOfertas.Controls.Add(this.button1);
             this.panelSubmenuOfertas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubmenuOfertas.Location = new System.Drawing.Point(0, 392);
+            this.panelSubmenuOfertas.Location = new System.Drawing.Point(0, 310);
             this.panelSubmenuOfertas.Name = "panelSubmenuOfertas";
             this.panelSubmenuOfertas.Size = new System.Drawing.Size(256, 81);
             this.panelSubmenuOfertas.TabIndex = 5;
@@ -95,6 +99,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Crear Ofertas";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -118,7 +123,7 @@
             this.btnOfertas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOfertas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOfertas.ForeColor = System.Drawing.Color.White;
-            this.btnOfertas.Location = new System.Drawing.Point(0, 338);
+            this.btnOfertas.Location = new System.Drawing.Point(0, 256);
             this.btnOfertas.Name = "btnOfertas";
             this.btnOfertas.Size = new System.Drawing.Size(256, 54);
             this.btnOfertas.TabIndex = 4;
@@ -126,45 +131,6 @@
             this.btnOfertas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOfertas.UseVisualStyleBackColor = true;
             this.btnOfertas.Click += new System.EventHandler(this.btnOfertas_Click);
-            // 
-            // panelSubMenuProgramas
-            // 
-            this.panelSubMenuProgramas.Controls.Add(this.btnverP);
-            this.panelSubMenuProgramas.Controls.Add(this.btnCrearP);
-            this.panelSubMenuProgramas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuProgramas.Location = new System.Drawing.Point(0, 256);
-            this.panelSubMenuProgramas.Name = "panelSubMenuProgramas";
-            this.panelSubMenuProgramas.Size = new System.Drawing.Size(256, 82);
-            this.panelSubMenuProgramas.TabIndex = 3;
-            // 
-            // btnverP
-            // 
-            this.btnverP.BackColor = System.Drawing.Color.DarkBlue;
-            this.btnverP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnverP.FlatAppearance.BorderSize = 0;
-            this.btnverP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnverP.ForeColor = System.Drawing.Color.White;
-            this.btnverP.Location = new System.Drawing.Point(0, 0);
-            this.btnverP.Name = "btnverP";
-            this.btnverP.Size = new System.Drawing.Size(256, 38);
-            this.btnverP.TabIndex = 0;
-            this.btnverP.Text = "Ver programas";
-            this.btnverP.UseVisualStyleBackColor = false;
-            this.btnverP.Click += new System.EventHandler(this.btnverP_Click);
-            // 
-            // btnCrearP
-            // 
-            this.btnCrearP.BackColor = System.Drawing.Color.DarkBlue;
-            this.btnCrearP.FlatAppearance.BorderSize = 0;
-            this.btnCrearP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearP.ForeColor = System.Drawing.Color.White;
-            this.btnCrearP.Location = new System.Drawing.Point(0, 56);
-            this.btnCrearP.Name = "btnCrearP";
-            this.btnCrearP.Size = new System.Drawing.Size(256, 26);
-            this.btnCrearP.TabIndex = 1;
-            this.btnCrearP.Text = "Crear programa";
-            this.btnCrearP.UseVisualStyleBackColor = false;
-            this.btnCrearP.Click += new System.EventHandler(this.btnCrearP_Click);
             // 
             // btnPrograma
             // 
@@ -261,7 +227,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(256, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(666, 36);
+            this.panel2.Size = new System.Drawing.Size(783, 36);
             this.panel2.TabIndex = 1;
             // 
             // btnExit
@@ -301,15 +267,89 @@
             this.panelprincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelprincipal.Location = new System.Drawing.Point(256, 36);
             this.panelprincipal.Name = "panelprincipal";
-            this.panelprincipal.Size = new System.Drawing.Size(666, 657);
+            this.panelprincipal.Size = new System.Drawing.Size(783, 657);
             this.panelprincipal.TabIndex = 2;
             this.panelprincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelprincipal_Paint);
+            // 
+            // btnVer
+            // 
+            this.btnVer.BackColor = System.Drawing.Color.Navy;
+            this.btnVer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVer.FlatAppearance.BorderSize = 0;
+            this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVer.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnVer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVer.Location = new System.Drawing.Point(0, 391);
+            this.btnVer.Name = "btnVer";
+            this.btnVer.Size = new System.Drawing.Size(256, 54);
+            this.btnVer.TabIndex = 6;
+            this.btnVer.Text = "Visualizar";
+            this.btnVer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVer.UseVisualStyleBackColor = false;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
+            // 
+            // panelSubMenuVer
+            // 
+            this.panelSubMenuVer.Controls.Add(this.button4);
+            this.panelSubMenuVer.Controls.Add(this.btnCandidatos);
+            this.panelSubMenuVer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuVer.Location = new System.Drawing.Point(0, 445);
+            this.panelSubMenuVer.Name = "panelSubMenuVer";
+            this.panelSubMenuVer.Size = new System.Drawing.Size(256, 83);
+            this.panelSubMenuVer.TabIndex = 7;
+            // 
+            // btnCandidatos
+            // 
+            this.btnCandidatos.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnCandidatos.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCandidatos.FlatAppearance.BorderSize = 0;
+            this.btnCandidatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCandidatos.ForeColor = System.Drawing.Color.White;
+            this.btnCandidatos.Location = new System.Drawing.Point(0, 45);
+            this.btnCandidatos.Name = "btnCandidatos";
+            this.btnCandidatos.Size = new System.Drawing.Size(256, 38);
+            this.btnCandidatos.TabIndex = 1;
+            this.btnCandidatos.Text = "Visualizar Candidatos";
+            this.btnCandidatos.UseVisualStyleBackColor = false;
+            this.btnCandidatos.Click += new System.EventHandler(this.btnCandidatos_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DarkBlue;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(256, 38);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Visualizar Solicitudes";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnCrearUser
+            // 
+            this.btnCrearUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCrearUser.FlatAppearance.BorderSize = 0;
+            this.btnCrearUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearUser.ForeColor = System.Drawing.Color.White;
+            this.btnCrearUser.Location = new System.Drawing.Point(0, 528);
+            this.btnCrearUser.Name = "btnCrearUser";
+            this.btnCrearUser.Size = new System.Drawing.Size(256, 54);
+            this.btnCrearUser.TabIndex = 8;
+            this.btnCrearUser.Text = "Crear nuevo usuario";
+            this.btnCrearUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCrearUser.UseVisualStyleBackColor = true;
+            this.btnCrearUser.Click += new System.EventHandler(this.btnCrearUser_Click);
             // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 693);
+            this.ClientSize = new System.Drawing.Size(1039, 693);
             this.Controls.Add(this.panelprincipal);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -319,13 +359,13 @@
             this.Text = "frmAdmin";
             this.panel1.ResumeLayout(false);
             this.panelSubmenuOfertas.ResumeLayout(false);
-            this.panelSubMenuProgramas.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panelSubMenuVer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -344,12 +384,14 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnPrograma;
         private System.Windows.Forms.Button btnOfertas;
-        private System.Windows.Forms.Panel panelSubMenuProgramas;
-        private System.Windows.Forms.Button btnCrearP;
-        private System.Windows.Forms.Button btnverP;
         private System.Windows.Forms.Panel panelSubmenuOfertas;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelprincipal;
+        private System.Windows.Forms.Panel panelSubMenuVer;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCandidatos;
+        private System.Windows.Forms.Button btnVer;
+        private System.Windows.Forms.Button btnCrearUser;
     }
 }
