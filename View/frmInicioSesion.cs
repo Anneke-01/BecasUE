@@ -18,9 +18,13 @@ namespace SistemaBecas
         {
             InitializeComponent();
             TipoUsuario.SelectedIndex = 0;
+            
+
         }
-        private void btnSesion_Click(object sender, EventArgs e)
+
+        public void btnSesion_Click(object sender, EventArgs e)
         {
+            
             if (txtUsuario.Text == "" || txtContraseña.Text == "" || TipoUsuario.SelectedItem == null)
             {
                 
@@ -28,29 +32,25 @@ namespace SistemaBecas
             }
             else
             {
-                
                 DataTable dato = CUsuario.Validar_Acceso(this.txtUsuario.Text, this.txtContraseña.Text, this.TipoUsuario.SelectedItem.ToString());
                 if (dato.Rows.Count > 0)
                 {
+                    
                     DataRow dr = dato.Rows[0];
                     if (dr["Resultado"].ToString() == "Acceso Exitoso")
                     {
-                        //MessageBox.Show("Bienvenido al Sistema", "Sistema de Becas", MessageBoxButtons.OK, MessageBoxIcon.Information);      
-                        frmMessageBoxOk ok = new frmMessageBoxOk();
-                        ok.Show();
-                        this.Hide();
+                                   
                         if (TipoUsuario.SelectedItem.ToString() == "Estudiante")
                         {
-
-                            //frmEstudiante fc = new frmEstudiante();
-                            //fc.Show();
-                            //this.Hide();
-                        }
-                        else
-                        {
-                            frmAdmin fa = new frmAdmin();
-                            fa.Show();
+                            frmMessageBoxOk ok = new frmMessageBoxOk(0);
+                            ok.Show();
                             this.Hide();
+                        }
+                        else 
+                        {
+                            frmMessageBoxOk ok = new frmMessageBoxOk(1);
+                            ok.Show();
+                            this.Hide();                         
                         }                       
                     }
                     else
@@ -61,15 +61,17 @@ namespace SistemaBecas
 
             }
         }
-       
-       
 
+  
         private void TipoUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
+
+
                 if (txtUsuario.Text == "" || txtContraseña.Text == "" || TipoUsuario.SelectedItem == null)
                 {
+
                     MessageBox.Show("Debes rellenar todos los campos.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
@@ -77,24 +79,21 @@ namespace SistemaBecas
                     DataTable dato = CUsuario.Validar_Acceso(this.txtUsuario.Text, this.txtContraseña.Text, this.TipoUsuario.SelectedItem.ToString());
                     if (dato.Rows.Count > 0)
                     {
+
                         DataRow dr = dato.Rows[0];
                         if (dr["Resultado"].ToString() == "Acceso Exitoso")
                         {
-                            //MessageBox.Show("Bienvenido al Sistema", "Sistema de Becas", MessageBoxButtons.OK, MessageBoxIcon.Information);      
-                            frmMessageBoxOk ok = new frmMessageBoxOk();
-                            ok.Show();
-                            this.Hide();
+
                             if (TipoUsuario.SelectedItem.ToString() == "Estudiante")
                             {
-
-                                frmEstudiante fc = new frmEstudiante();
-                                fc.Show();
+                                frmMessageBoxOk ok = new frmMessageBoxOk(0);
+                                ok.Show();
                                 this.Hide();
                             }
                             else
                             {
-                                frmAdmin fa = new frmAdmin();
-                                fa.Show();
+                                frmMessageBoxOk ok = new frmMessageBoxOk(1);
+                                ok.Show();
                                 this.Hide();
                             }
                         }
@@ -112,8 +111,11 @@ namespace SistemaBecas
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
+
+
                 if (txtUsuario.Text == "" || txtContraseña.Text == "" || TipoUsuario.SelectedItem == null)
                 {
+
                     MessageBox.Show("Debes rellenar todos los campos.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
@@ -121,24 +123,21 @@ namespace SistemaBecas
                     DataTable dato = CUsuario.Validar_Acceso(this.txtUsuario.Text, this.txtContraseña.Text, this.TipoUsuario.SelectedItem.ToString());
                     if (dato.Rows.Count > 0)
                     {
+
                         DataRow dr = dato.Rows[0];
                         if (dr["Resultado"].ToString() == "Acceso Exitoso")
                         {
-                            //MessageBox.Show("Bienvenido al Sistema", "Sistema de Becas", MessageBoxButtons.OK, MessageBoxIcon.Information);      
-                            frmMessageBoxOk ok = new frmMessageBoxOk();
-                            ok.Show();
-                            this.Hide();
+
                             if (TipoUsuario.SelectedItem.ToString() == "Estudiante")
                             {
-
-                                frmEstudiante fc = new frmEstudiante();
-                                fc.Show();
+                                frmMessageBoxOk ok = new frmMessageBoxOk(0);
+                                ok.Show();
                                 this.Hide();
                             }
                             else
                             {
-                                frmAdmin fa = new frmAdmin();
-                                fa.Show();
+                                frmMessageBoxOk ok = new frmMessageBoxOk(1);
+                                ok.Show();
                                 this.Hide();
                             }
                         }
@@ -175,6 +174,11 @@ namespace SistemaBecas
         {
             if (char.IsLetter(e.KeyChar)) e.Handled = false;
             MessageBox.Show("Solo se puede rellenar con letras. ", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void frmInicioSesion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

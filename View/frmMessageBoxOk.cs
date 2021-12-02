@@ -7,19 +7,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaBecas.View;
+
 
 namespace SistemaBecas.View
 {
     public partial class frmMessageBoxOk : Form
     {
-        public frmMessageBoxOk()
+        int variable;
+        public frmMessageBoxOk(int v)
         {
             InitializeComponent();
+            variable = v;
         }
+        
 
-        private void btnOk_Click(object sender, EventArgs e)
+        public void btnOk_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+
+            if(variable == 0)
+            {
+                frmEstudiante fc = new frmEstudiante();
+                fc.Show();
+                this.Hide();
+            }
+            else
+            {
+                frmAdmin ad = new frmAdmin();
+                ad.Show();
+                this.Hide();
+            }
+
         }
+        
+        
     }
 }

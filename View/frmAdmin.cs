@@ -90,5 +90,10 @@ namespace SistemaBecas.View
         {
             esconderSubmenu();
         }
+
+        private void btnCrearP_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

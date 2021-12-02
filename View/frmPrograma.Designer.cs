@@ -36,14 +36,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtTituloPrograma = new System.Windows.Forms.TextBox();
-            this.txtCreditos = new System.Windows.Forms.TextBox();
-            this.txtDiplomados = new System.Windows.Forms.TextBox();
-            this.txtDuracion = new System.Windows.Forms.TextBox();
+            this.cmbTipoEspecialidad = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtDuracion = new System.Windows.Forms.TextBox();
+            this.txtDiplomados = new System.Windows.Forms.TextBox();
+            this.txtCreditos = new System.Windows.Forms.TextBox();
+            this.txtTituloPrograma = new System.Windows.Forms.TextBox();
             this.btnguardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.TipoEspecialidad = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,7 +109,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.TipoEspecialidad);
+            this.panel1.Controls.Add(this.cmbTipoEspecialidad);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtDuracion);
             this.panel1.Controls.Add(this.txtDiplomados);
@@ -125,33 +125,26 @@
             this.panel1.Size = new System.Drawing.Size(574, 316);
             this.panel1.TabIndex = 21;
             // 
-            // txtTituloPrograma
+            // cmbTipoEspecialidad
             // 
-            this.txtTituloPrograma.Location = new System.Drawing.Point(271, 20);
-            this.txtTituloPrograma.Name = "txtTituloPrograma";
-            this.txtTituloPrograma.Size = new System.Drawing.Size(187, 20);
-            this.txtTituloPrograma.TabIndex = 1;
-            // 
-            // txtCreditos
-            // 
-            this.txtCreditos.Location = new System.Drawing.Point(271, 120);
-            this.txtCreditos.Name = "txtCreditos";
-            this.txtCreditos.Size = new System.Drawing.Size(187, 20);
-            this.txtCreditos.TabIndex = 3;
-            // 
-            // txtDiplomados
-            // 
-            this.txtDiplomados.Location = new System.Drawing.Point(271, 170);
-            this.txtDiplomados.Name = "txtDiplomados";
-            this.txtDiplomados.Size = new System.Drawing.Size(187, 20);
-            this.txtDiplomados.TabIndex = 4;
-            // 
-            // txtDuracion
-            // 
-            this.txtDuracion.Location = new System.Drawing.Point(271, 220);
-            this.txtDuracion.Name = "txtDuracion";
-            this.txtDuracion.Size = new System.Drawing.Size(187, 20);
-            this.txtDuracion.TabIndex = 5;
+            this.cmbTipoEspecialidad.BackColor = System.Drawing.Color.White;
+            this.cmbTipoEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoEspecialidad.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTipoEspecialidad.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.cmbTipoEspecialidad.FormattingEnabled = true;
+            this.cmbTipoEspecialidad.ItemHeight = 21;
+            this.cmbTipoEspecialidad.Items.AddRange(new object[] {
+            "Grado",
+            "Posgrado",
+            "Máster",
+            "Doctorado"});
+            this.cmbTipoEspecialidad.Location = new System.Drawing.Point(271, 67);
+            this.cmbTipoEspecialidad.Name = "cmbTipoEspecialidad";
+            this.cmbTipoEspecialidad.Size = new System.Drawing.Size(187, 29);
+            this.cmbTipoEspecialidad.TabIndex = 2;
+            this.cmbTipoEspecialidad.Tag = "";
+            this.cmbTipoEspecialidad.UseWaitCursor = true;
+            this.cmbTipoEspecialidad.SelectedIndexChanged += new System.EventHandler(this.cmbTipoEspecialidad_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -162,6 +155,34 @@
             this.label6.Size = new System.Drawing.Size(56, 20);
             this.label6.TabIndex = 26;
             this.label6.Text = "Meses";
+            // 
+            // txtDuracion
+            // 
+            this.txtDuracion.Location = new System.Drawing.Point(271, 220);
+            this.txtDuracion.Name = "txtDuracion";
+            this.txtDuracion.Size = new System.Drawing.Size(187, 20);
+            this.txtDuracion.TabIndex = 5;
+            // 
+            // txtDiplomados
+            // 
+            this.txtDiplomados.Location = new System.Drawing.Point(271, 170);
+            this.txtDiplomados.Name = "txtDiplomados";
+            this.txtDiplomados.Size = new System.Drawing.Size(187, 20);
+            this.txtDiplomados.TabIndex = 4;
+            // 
+            // txtCreditos
+            // 
+            this.txtCreditos.Location = new System.Drawing.Point(271, 120);
+            this.txtCreditos.Name = "txtCreditos";
+            this.txtCreditos.Size = new System.Drawing.Size(187, 20);
+            this.txtCreditos.TabIndex = 3;
+            // 
+            // txtTituloPrograma
+            // 
+            this.txtTituloPrograma.Location = new System.Drawing.Point(271, 20);
+            this.txtTituloPrograma.Name = "txtTituloPrograma";
+            this.txtTituloPrograma.Size = new System.Drawing.Size(187, 20);
+            this.txtTituloPrograma.TabIndex = 1;
             // 
             // btnguardar
             // 
@@ -193,26 +214,7 @@
             this.btnCancelar.TabIndex = 23;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
-            // TipoEspecialidad
-            // 
-            this.TipoEspecialidad.BackColor = System.Drawing.Color.White;
-            this.TipoEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TipoEspecialidad.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TipoEspecialidad.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.TipoEspecialidad.FormattingEnabled = true;
-            this.TipoEspecialidad.ItemHeight = 21;
-            this.TipoEspecialidad.Items.AddRange(new object[] {
-            "Grado",
-            "Posgrado",
-            "Máster",
-            "Doctorado"});
-            this.TipoEspecialidad.Location = new System.Drawing.Point(271, 67);
-            this.TipoEspecialidad.Name = "TipoEspecialidad";
-            this.TipoEspecialidad.Size = new System.Drawing.Size(187, 29);
-            this.TipoEspecialidad.TabIndex = 2;
-            this.TipoEspecialidad.Tag = "";
-            this.TipoEspecialidad.UseWaitCursor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmPrograma
             // 
@@ -250,6 +252,6 @@
         private System.Windows.Forms.TextBox txtTituloPrograma;
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.ComboBox TipoEspecialidad;
+        private System.Windows.Forms.ComboBox cmbTipoEspecialidad;
     }
 }

@@ -11,6 +11,10 @@ namespace SistemaBecas.Data
 {
     class DUsuario
     {
+
+        private SqlDataReader leerFilas;
+        private Conexión cn = new Conexión();
+        private SqlCommand cm = new SqlCommand();
         public DataTable Validar_Acceso(string usuario, string contraseña, string rol)
         {
             DataTable DtResultado = new DataTable("Inicio_Sesión");
@@ -75,5 +79,21 @@ namespace SistemaBecas.Data
             return DtResultado;
 
         }
+
+        public DataTable ListarPais()
+        {
+
+            DataTable tabla = new DataTable();
+            cm.Connection = cn.AbrirConexion();
+            cm.CommandText = "Listar_Pais";
+            cm.CommandType = CommandType.StoredProcedure;
+            leerFilas = cm.ExecuteReader();
+            tabla.Load(leerFilas);
+            leerFilas.Close();
+            cn.AbrirConexion();
+            return tabla;
+        }
+
+
     }
 }

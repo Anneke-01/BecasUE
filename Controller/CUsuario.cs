@@ -16,5 +16,6 @@ namespace SistemaBecas.Controller
         {
             return new DUsuario().Validar_Acceso(usuario, contraseña, rol);
         }
+        
     }
 }

@@ -76,11 +76,23 @@
     <Compile Include="View\frmMessageBoxOk.Designer.cs">
       <DependentUpon>frmMessageBoxOk.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmOfertasDisponibles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmOfertasDisponibles.Designer.cs">
+      <DependentUpon>frmOfertasDisponibles.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmPrograma.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmPrograma.Designer.cs">
       <DependentUpon>frmPrograma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmProgramasDiponibles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmProgramasDiponibles.Designer.cs">
+      <DependentUpon>frmProgramasDiponibles.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="View\frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
@@ -103,8 +115,14 @@
     <EmbeddedResource Include="View\frmMessageBoxOk.resx">
       <DependentUpon>frmMessageBoxOk.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmOfertasDisponibles.resx">
+      <DependentUpon>frmOfertasDisponibles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmPrograma.resx">
       <DependentUpon>frmPrograma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmProgramasDiponibles.resx">
+      <DependentUpon>frmProgramasDiponibles.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

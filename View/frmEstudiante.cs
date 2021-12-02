@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaBecas.Data;
 
 namespace SistemaBecas.View
 {
@@ -19,7 +20,7 @@ namespace SistemaBecas.View
 
         private void frmEstudiante_Load(object sender, EventArgs e)
         {
-
+            ListarPais();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -35,6 +36,19 @@ namespace SistemaBecas.View
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void ListarPais()
+        {
+            DUsuario dPais = new DUsuario();
+            cmbPais.DataSource = dPais.ListarPais();
+            cmbPais.DisplayMember = "NombrePais";
+            cmbPais.ValueMember = "IDPais";
+        }
+
+        private void cmbPais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

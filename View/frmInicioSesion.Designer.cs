@@ -303,6 +303,7 @@
             this.Text = "frmInicioSesion";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.UseWaitCursor = true;
+            this.Load += new System.EventHandler(this.frmInicioSesion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

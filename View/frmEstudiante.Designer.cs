@@ -48,13 +48,21 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbPais = new System.Windows.Forms.ComboBox();
+            this.txtPasaporte = new System.Windows.Forms.TextBox();
             this.textPNombre = new System.Windows.Forms.TextBox();
             this.txtSNombre = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtPasaporte = new System.Windows.Forms.TextBox();
             this.txtSApellido = new System.Windows.Forms.TextBox();
             this.txtPApellido = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnPerfil = new System.Windows.Forms.Button();
+            this.panelPerfil = new System.Windows.Forms.Panel();
+            this.btnAcademic = new System.Windows.Forms.Button();
+            this.btnLaboral = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnSolicitudes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,11 +70,16 @@
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panelPerfil.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.btnSolicitudes);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.panelPerfil);
+            this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -272,7 +285,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 270);
+            this.label6.Location = new System.Drawing.Point(19, 320);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(138, 20);
@@ -291,6 +304,8 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.cmbPais);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.txtPasaporte);
             this.panel5.Controls.Add(this.textPNombre);
@@ -307,6 +322,32 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(616, 410);
             this.panel5.TabIndex = 12;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(19, 270);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 20);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Pais";
+            // 
+            // cmbPais
+            // 
+            this.cmbPais.FormattingEnabled = true;
+            this.cmbPais.Location = new System.Drawing.Point(286, 270);
+            this.cmbPais.Name = "cmbPais";
+            this.cmbPais.Size = new System.Drawing.Size(215, 24);
+            this.cmbPais.TabIndex = 7;
+            this.cmbPais.SelectedIndexChanged += new System.EventHandler(this.cmbPais_SelectedIndexChanged);
+            // 
+            // txtPasaporte
+            // 
+            this.txtPasaporte.Location = new System.Drawing.Point(286, 220);
+            this.txtPasaporte.Name = "txtPasaporte";
+            this.txtPasaporte.Size = new System.Drawing.Size(215, 22);
+            this.txtPasaporte.TabIndex = 5;
             // 
             // textPNombre
             // 
@@ -326,18 +367,11 @@
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(286, 270);
+            this.txtCorreo.Location = new System.Drawing.Point(286, 320);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(308, 22);
             this.txtCorreo.TabIndex = 6;
-            // 
-            // txtPasaporte
-            // 
-            this.txtPasaporte.Location = new System.Drawing.Point(286, 220);
-            this.txtPasaporte.Name = "txtPasaporte";
-            this.txtPasaporte.Size = new System.Drawing.Size(215, 22);
-            this.txtPasaporte.TabIndex = 5;
             // 
             // txtSApellido
             // 
@@ -364,6 +398,83 @@
             this.label8.Size = new System.Drawing.Size(245, 45);
             this.label8.TabIndex = 14;
             this.label8.Text = "Perfil General";
+            // 
+            // btnPerfil
+            // 
+            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.ForeColor = System.Drawing.Color.White;
+            this.btnPerfil.Location = new System.Drawing.Point(0, 159);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(256, 42);
+            this.btnPerfil.TabIndex = 3;
+            this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.UseVisualStyleBackColor = true;
+            // 
+            // panelPerfil
+            // 
+            this.panelPerfil.Controls.Add(this.btnLaboral);
+            this.panelPerfil.Controls.Add(this.btnAcademic);
+            this.panelPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelPerfil.Location = new System.Drawing.Point(0, 201);
+            this.panelPerfil.Name = "panelPerfil";
+            this.panelPerfil.Size = new System.Drawing.Size(256, 88);
+            this.panelPerfil.TabIndex = 4;
+            // 
+            // btnAcademic
+            // 
+            this.btnAcademic.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnAcademic.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAcademic.FlatAppearance.BorderSize = 0;
+            this.btnAcademic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcademic.ForeColor = System.Drawing.Color.White;
+            this.btnAcademic.Location = new System.Drawing.Point(0, 0);
+            this.btnAcademic.Name = "btnAcademic";
+            this.btnAcademic.Size = new System.Drawing.Size(256, 42);
+            this.btnAcademic.TabIndex = 0;
+            this.btnAcademic.Text = "Historial Académico";
+            this.btnAcademic.UseVisualStyleBackColor = false;
+            // 
+            // btnLaboral
+            // 
+            this.btnLaboral.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnLaboral.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLaboral.FlatAppearance.BorderSize = 0;
+            this.btnLaboral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLaboral.ForeColor = System.Drawing.Color.White;
+            this.btnLaboral.Location = new System.Drawing.Point(0, 46);
+            this.btnLaboral.Name = "btnLaboral";
+            this.btnLaboral.Size = new System.Drawing.Size(256, 42);
+            this.btnLaboral.TabIndex = 1;
+            this.btnLaboral.Text = "Historial Laboral";
+            this.btnLaboral.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(0, 289);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(256, 42);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Ver Ofertas";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btnSolicitudes
+            // 
+            this.btnSolicitudes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSolicitudes.FlatAppearance.BorderSize = 0;
+            this.btnSolicitudes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSolicitudes.ForeColor = System.Drawing.Color.White;
+            this.btnSolicitudes.Location = new System.Drawing.Point(0, 331);
+            this.btnSolicitudes.Name = "btnSolicitudes";
+            this.btnSolicitudes.Size = new System.Drawing.Size(256, 42);
+            this.btnSolicitudes.TabIndex = 6;
+            this.btnSolicitudes.Text = "Solicitudes";
+            this.btnSolicitudes.UseVisualStyleBackColor = true;
             // 
             // frmEstudiante
             // 
@@ -395,6 +506,7 @@
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panelPerfil.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,5 +540,13 @@
         private System.Windows.Forms.TextBox txtSApellido;
         private System.Windows.Forms.TextBox txtPApellido;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cmbPais;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnPerfil;
+        private System.Windows.Forms.Panel panelPerfil;
+        private System.Windows.Forms.Button btnLaboral;
+        private System.Windows.Forms.Button btnAcademic;
+        private System.Windows.Forms.Button btnSolicitudes;
+        private System.Windows.Forms.Button button3;
     }
 }

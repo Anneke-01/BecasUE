@@ -100,8 +100,7 @@ NumeroCalle int not null,
 Distrito nvarchar(40) not null,
 Telefono nvarchar(15) not null
 )
-
-
+alter table Universidad add IDPais int not null foreign key references Pais(IDPais)
 alter table Oferta add IDUniversidad int not null foreign key references Universidad(IDUniversidad)
 alter table Oferta add IDPlanificacion int not null foreign key references Planificacion(IDPlanificacion)
 alter table Solicitud add IDOferta int not null foreign key references Oferta(IDOferta)
@@ -111,9 +110,7 @@ select * from Usuario
 insert into Usuario values ('Anneke','123','Habilitado',GETDATE(), GETDATE(), 'TRUE')
 
 alter procedure Insertar_Usuario
-@Usuario nvarchar(30),
-@Contraseña nvarchar(30),
-@Rol nvarchar(25)
+@Usuario nvarchar(30), @Contraseña nvarchar(30),@Rol nvarchar(25)
 as insert into Usuario(Usuario,Contraseña,Rol,Estado,FechaAcceso,FechaModificacion)
 values (@Usuario, ENCRYPTBYPASSPHRASE(@Contraseña, @Contraseña), @Rol,'Habilitado',
 GETDATE(),GETDATE())
@@ -143,105 +140,56 @@ SELECT * FROM Usuario
 
 SELECT LEN(Contraseña) FROM Usuario WHERE IDUsuario = 1
 SELECT CAST(DECRYPTBYPASSPHRASE('123', Contraseña) AS nvarchar) FROM Usuario WHERE IDUsuario = 1
+create procedure Listar_Pais
+as
+select * from Pais order by NombrePais asc
 
+/*PROCEDIMIENTOS ALMACENADOS PARA PROGRAMAS*/
 create procedure Insertar_Programas
-@TituloPrograma nvarchar(70),
-@TipoEspecialidad nvarchar(40),
-@Creditos int,
-@Diplomados int,
-@Duracion nvarchar(15)
+@TituloPrograma nvarchar(70), @TipoEspecialidad nvarchar(40), @Creditos int,
+@Diplomados int, @Duracion nvarchar(15)
 as insert into Programa(TituloPrograma,TipoEspecialidad,Creditos,Diplomados,Duracion)
 values (@TituloPrograma,@TipoEspecialidad,@Creditos,@Diplomados,@Duracion)
 
-Execute Insertar_Programas 'Especialista Universitario en Enseñanza de Español como Lengua Extranjera','Máster',2,1,'12 Meses'
-Execute Insertar_Programas 'Ciencias de la Actividad Física y Deporte', 'Doctorado',1,1,'24 Meses'
-Execute Insertar_Programas 'Ingeniería Mecánica: Diseño y Fabricación', 'Doctorado', 2,1, '24 Meses'
-Execute Insertar_Programas 'Doctorado en Neurociencias', 'Doctorado', 2,2, '36 Meses'
-Execute Insertar_Programas 'Experto en Mamografía con Contraste', 'Posgrado', 2,2,'6 Meses'
-Execute Insertar_Programas 'Experto en Enfermería en el Soporte Vital Avanzado y paciente crítico', 'Posgrado', 2,2,'1 Mes'
-Execute Insertar_Programas 'MBA Dirección y Gestión de Entidades Deportivas', 'Máster', 1,1, '2 Mes'
-Execute Insertar_Programas 'Experto Universitario de Monitorización y Comunicación', 'Posgrado',18,1,'6 Meses'
-Execute Insertar_Programas 'Diploma de Especialización Universitaria en Mantenimiento Electrónico', 'Posgrado',5,2,'6 Meses'
-Execute Insertar_Programas 'Biología de las Plantas', 'Doctorado',3,2,'7 Meses'
-Execute Insertar_Programas 'Diseño y Creación Digital (UOC)', 'Grado', 180,2,'36 Meses'
-Execute Insertar_Programas 'Mención en Artes Plásticas del Grado en Educación Primaria', 'Grado',30,3,'12 Meses'
-Execute Insertar_Programas 'Carrera Senior Videogame Programmer','Grado', 180,2,'48 Meses'
-Execute Insertar_Programas 'Educación Primaria','Grado',240,3,'48 Meses'
-Execute Insertar_Programas 'Diseño Gráfico', 'Grado',180,2,'48 Meses'
-Execute Insertar_Programas 'Criminología', 'Grado',180,2,'48 Meses'
-Execute Insertar_Programas 'Administración de Empresas', 'Grado', 180,2,'48 Meses'
-Execute Insertar_Programas 'Comunicación', 'Grado', 240,2, '36 Meses'
-Execute Insertar_Programas 'Carrera de Senior Videogame Artist', 'Grado',180,3,'48 Meses'
-Execute Insertar_Programas 'Ciencias Biomédicas', 'Grado',240,3,'48 Meses'
 
-Select * from Programa
+create procedure Editar_Programas
+@IDPrograma int, @TituloPrograma nvarchar(70), @TipoEspecialidad nvarchar(40), @Creditos int,
+@Diplomados int,@Duracion nvarchar(15)
+as update Programa set TituloPrograma=@TituloPrograma, TipoEspecialidad=@TipoEspecialidad,
+Creditos=@Creditos, Diplomados=@Diplomados,Duracion=@Duracion
+where IDPrograma=@IDPrograma
 
-insert into Pais(NombrePais) values('Colombia')
-insert into Pais(NombrePais) values('Francia')
-insert into Pais(NombrePais) values('España')
-insert into Pais(NombrePais) values('Portugal')
-insert into Pais(NombrePais) values('China')
-insert into Pais(NombrePais) values('Nicaragua')
-insert into Pais(NombrePais) values('Costa Rica')
-insert into Pais(NombrePais) values('Honduras')
-insert into Pais(NombrePais) values('Guatemala')
-insert into Pais(NombrePais) values('Panamá')
-insert into Pais(NombrePais) values('República Dominicana')
-insert into Pais(NombrePais) values('Puerto Rico')
-insert into Pais(NombrePais) values('México')
-insert into Pais(NombrePais) values('Estados Unidos')
-insert into Pais(NombrePais) values('Canadá')
-insert into Pais(NombrePais) values('Belice')
-insert into Pais(NombrePais) values('El Salvador')
-insert into Pais(NombrePais) values('Uruguay')
-insert into Pais(NombrePais) values('Paraguay')
-insert into Pais(NombrePais) values('Argentina')
-insert into Pais(NombrePais) values('Chile')
-insert into Pais(NombrePais) values('Perú')
-insert into Pais(NombrePais) values('Venezuela')
-insert into Pais(NombrePais) values('Ecuador')
-insert into Pais(NombrePais) values('Armenia')
-insert into Pais(NombrePais) values('Finlandia')
-insert into Pais(NombrePais) values('Singapur')
-insert into Pais(NombrePais) values('Ucrania')
-insert into Pais(NombrePais) values('Trinidad y Tobago')
-insert into Pais(NombrePais) values('Indonesia')
-insert into Pais(NombrePais) values('Brasil')
-insert into Pais(NombrePais) values('Vietnam')
-insert into Pais(NombrePais) values('Jamaica')
-insert into Pais(NombrePais) values('Polonia')
-insert into Pais(NombrePais) values('Bolivia')
-insert into Pais(NombrePais) values('Rusia')
-insert into Pais(NombrePais) values('Filipinas')
-insert into Pais(NombrePais) values('Eslovenia')
-insert into Pais(NombrePais) values('Malasia')
-insert into Pais(NombrePais) values('Japón')
+create procedure Eliminar_Programa
+@IDPrograma int 
+as delete from Programa where IDPrograma=@IDPrograma
 
-insert into Ciudad(NombreCiudad) values('San Luis')
-insert into Ciudad(NombreCiudad) values('Paris')
-insert into Ciudad(NombreCiudad) values('Wucheng')
-insert into Ciudad(NombreCiudad) values('Kouqian')
-insert into Ciudad(NombreCiudad) values('Youlongchuan')
-insert into Ciudad(NombreCiudad) values('Juncalito Abajo')
-insert into Ciudad(NombreCiudad) values('Tuanjie')
-insert into Ciudad(NombreCiudad) values('Canalete')
-insert into Ciudad(NombreCiudad) values('Tijuana')
-insert into Ciudad(NombreCiudad) values('Queretaro')
-insert into Ciudad(NombreCiudad) values('Quito')
-insert into Ciudad(NombreCiudad) values('Metz')
-insert into Ciudad(NombreCiudad) values('Tours')
-insert into Ciudad(NombreCiudad) values('Purificación')
-insert into Ciudad(NombreCiudad) values('Managua')
-insert into Ciudad(NombreCiudad) values('Ciudad de Panamá')
-insert into Ciudad(NombreCiudad) values('San José')
-insert into Ciudad(NombreCiudad) values('Tegucigalpa')
-insert into Ciudad(NombreCiudad) values('San Salvador')
-insert into Ciudad(NombreCiudad) values('Stepanivka')
-insert into Ciudad(NombreCiudad) values('Gojō')
-insert into Ciudad(NombreCiudad) values('Kirs')
-insert into Ciudad(NombreCiudad) values('Gojō')
-insert into Ciudad(NombreCiudad) values('Syrskoye')
-insert into Ciudad(NombreCiudad) values('Buenos Aires')
-insert into Ciudad(NombreCiudad) values('Santiago')
-insert into Ciudad(NombreCiudad) values('Mendoza')
-insert into Ciudad(NombreCiudad) values('Santa Rita')
+alter procedure Listar_Especialidad
+as
+select distinct TipoEspecialidad from Programa order by TipoEspecialidad asc 
+
+/* pruebas */
+execute Listar_Especialidad
+Execute Insertar_Programas 'Prueba','jasjd',2,3,'12 meses'
+Execute Editar_Programas 22,'asdsd','ana',2,1,'14 Meses'
+Execute Eliminar_Programa 22
+ select * from Programa
+---------------------------
+
+ /*PROCEDIMIENTOS ALMACENADOS PARA CANDIDATOS*/
+ create procedure Insertar_Candidatos
+ @PrimerNombre nvarchar(50),@SegundoNombre nvarchar(50),@PrimerApellido nvarchar(50),
+ @SegundoApellido nvarchar(50),@Correo nvarchar(50),@NoPasaporte nvarchar(50),@IDUsuario int,@IDPais int
+as insert into Candidato 
+values(@PrimerNombre,@SegundoNombre,@PrimerApellido,@SegundoApellido,
+@Correo,@NoPasaporte,@IDUsuario,@IDPais)
+
+
+------------- PRUEBAS
+Execute Insertar_Candidatos 'Anneke', 'Paulina','Morales','López','annekemorales@gmail.com','C1359690',5,7
+
+create procedure EditarDatos_Candidatos
+@IDCandidato int, @PrimerNombre nvarchar(50), @SegundoNombre nvarchar(50), @PrimerApellido nvarchar(50),
+@SegundoApellido nvarchar(50),@Correo nvarchar(50), @NoPasaporte nvarchar(50), @IDUsuario int, @IDPais int
+as update Candidato set  PrimerNombre=@PrimerNombre, SegundoNombre=@SegundoNombre,PrimerApellido=@PrimerApellido,
+SegundoApellido=@SegundoApellido, Correo=@Correo,NoPasaporte=@NoPasaporte,IDPais=@IDPais 
+where IDCandidato=@IDCandidato
