@@ -57,6 +57,7 @@
             this.label8.Size = new System.Drawing.Size(392, 45);
             this.label8.TabIndex = 0;
             this.label8.Text = "Crear nuevo programa";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label1
             // 
@@ -67,6 +68,7 @@
             this.label1.Size = new System.Drawing.Size(144, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Título del programa";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -77,6 +79,7 @@
             this.label2.Size = new System.Drawing.Size(153, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tipo de especialidad";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -87,6 +90,7 @@
             this.label3.Size = new System.Drawing.Size(68, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Créditos";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -97,6 +101,7 @@
             this.label4.Size = new System.Drawing.Size(93, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Diplomados";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -107,6 +112,7 @@
             this.label5.Size = new System.Drawing.Size(73, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Duración";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel1
             // 
@@ -125,6 +131,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(574, 316);
             this.panel1.TabIndex = 21;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // cmbTipoEspecialidad
             // 
@@ -156,6 +163,7 @@
             this.label6.Size = new System.Drawing.Size(56, 20);
             this.label6.TabIndex = 26;
             this.label6.Text = "Meses";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtDuracion
             // 
@@ -164,6 +172,7 @@
             this.txtDuracion.Name = "txtDuracion";
             this.txtDuracion.Size = new System.Drawing.Size(187, 26);
             this.txtDuracion.TabIndex = 5;
+            this.txtDuracion.TextChanged += new System.EventHandler(this.txtDuracion_TextChanged);
             // 
             // txtDiplomados
             // 
@@ -172,6 +181,7 @@
             this.txtDiplomados.Name = "txtDiplomados";
             this.txtDiplomados.Size = new System.Drawing.Size(187, 26);
             this.txtDiplomados.TabIndex = 4;
+            this.txtDiplomados.TextChanged += new System.EventHandler(this.txtDiplomados_TextChanged);
             // 
             // txtCreditos
             // 
@@ -180,6 +190,7 @@
             this.txtCreditos.Name = "txtCreditos";
             this.txtCreditos.Size = new System.Drawing.Size(187, 26);
             this.txtCreditos.TabIndex = 3;
+            this.txtCreditos.TextChanged += new System.EventHandler(this.txtCreditos_TextChanged);
             // 
             // txtTituloPrograma
             // 
@@ -188,6 +199,7 @@
             this.txtTituloPrograma.Name = "txtTituloPrograma";
             this.txtTituloPrograma.Size = new System.Drawing.Size(187, 26);
             this.txtTituloPrograma.TabIndex = 1;
+            this.txtTituloPrograma.TextChanged += new System.EventHandler(this.txtTituloPrograma_TextChanged);
             // 
             // btnguardar
             // 

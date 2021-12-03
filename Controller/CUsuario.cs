@@ -30,6 +30,10 @@ namespace SistemaBecas.Controller
         {
             return new DUsuario().Insertar_Usuario(usuario, contraseña, rol);
         }
+        public static DataTable Cambiar_Contrasena(int idUsuario, string contraseña, string nuevaContra)
+        {
+            return new DUsuario().Cambiar_Contrasena(idUsuario, contraseña, nuevaContra);
+        }
 
     }
 }

@@ -99,6 +99,16 @@ namespace SistemaBecas.View
             mostrarDatos();
         }
 
+        private void cmbPais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

@@ -242,5 +242,52 @@ namespace SistemaBecas.Data
             return DtResultado;
         }
 
+        public DataTable Cambiar_Contrasena(int idUsuario, string contraseña, string nuevaContra)
+        {
+            DataTable DtResultado = new DataTable("CambiarContraseña");
+            using (SqlConnection SqlCon = new SqlConnection(Conexión.Cn))
+            {
+                try
+                {
+
+                    SqlCommand SqlCmd = new SqlCommand("CambiarContraseña", SqlCon);
+                    SqlCmd.CommandType = CommandType.StoredProcedure;
+                    SqlParameter ParDato = new SqlParameter();
+                    ParDato.ParameterName = "@IDUsuario";
+                    ParDato.SqlDbType = SqlDbType.Int;
+                    ParDato.Value = idUsuario;
+                    SqlCmd.Parameters.Add(ParDato);
+
+                    SqlParameter ParDato1 = new SqlParameter();
+                    ParDato1.ParameterName = "@Contrasena";
+                    ParDato1.SqlDbType = SqlDbType.NVarChar;
+                    ParDato1.Size = 30;
+                    ParDato1.Value = contraseña;
+                    SqlCmd.Parameters.Add(ParDato1);
+
+                    SqlParameter ParDato2 = new SqlParameter();
+                    ParDato2.ParameterName = "@NuevaContrasenia";
+                    ParDato2.SqlDbType = SqlDbType.NVarChar;
+                    ParDato2.Size = 30;
+                    ParDato2.Value = nuevaContra;
+                    SqlCmd.Parameters.Add(ParDato2);
+
+                    SqlCmd.Connection.Open();
+
+                    SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                    SqlDat.Fill(DtResultado);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.GetBaseException().Message);
+                    DtResultado = null;
+
+                }
+            }
+
+            return DtResultado;
+        }
+
     }
 }

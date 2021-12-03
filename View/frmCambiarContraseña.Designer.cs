@@ -30,14 +30,14 @@
         {
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtRepitPass = new System.Windows.Forms.TextBox();
+            this.txtNewPass = new System.Windows.Forms.TextBox();
+            this.txtCurrentPass = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,9 +53,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtRepitPass);
+            this.panel1.Controls.Add(this.txtNewPass);
+            this.panel1.Controls.Add(this.txtCurrentPass);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -66,6 +66,60 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(515, 270);
             this.panel1.TabIndex = 2;
+            // 
+            // txtRepitPass
+            // 
+            this.txtRepitPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRepitPass.Location = new System.Drawing.Point(224, 142);
+            this.txtRepitPass.Name = "txtRepitPass";
+            this.txtRepitPass.Size = new System.Drawing.Size(227, 26);
+            this.txtRepitPass.TabIndex = 46;
+            // 
+            // txtNewPass
+            // 
+            this.txtNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPass.Location = new System.Drawing.Point(224, 88);
+            this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.Size = new System.Drawing.Size(227, 26);
+            this.txtNewPass.TabIndex = 45;
+            // 
+            // txtCurrentPass
+            // 
+            this.txtCurrentPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCurrentPass.Location = new System.Drawing.Point(224, 34);
+            this.txtCurrentPass.Name = "txtCurrentPass";
+            this.txtCurrentPass.Size = new System.Drawing.Size(227, 26);
+            this.txtCurrentPass.TabIndex = 44;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 145);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(145, 20);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Repetir contraseña";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(14, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 20);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Nueva Contraseña";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 20);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Contraseña actual";
             // 
             // btnCancelar
             // 
@@ -81,6 +135,7 @@
             this.btnCancelar.TabIndex = 40;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -91,64 +146,11 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(205, 195);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(246, 31);
+            this.btnGuardar.Size = new System.Drawing.Size(254, 31);
             this.btnGuardar.TabIndex = 39;
             this.btnGuardar.Text = "Establecer nueva contraseña";
             this.btnGuardar.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 20);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "Contraseña actual";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 20);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Nueva Contraseña";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 145);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 20);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "Repetir contraseña";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(224, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 26);
-            this.textBox1.TabIndex = 44;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(224, 88);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(227, 26);
-            this.textBox2.TabIndex = 45;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(224, 142);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(227, 26);
-            this.textBox3.TabIndex = 46;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // frmCambiarContraseña
             // 
@@ -172,9 +174,9 @@
 
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRepitPass;
+        private System.Windows.Forms.TextBox txtNewPass;
+        private System.Windows.Forms.TextBox txtCurrentPass;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

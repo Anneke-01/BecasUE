@@ -46,6 +46,7 @@
             this.txtSApellido = new System.Windows.Forms.TextBox();
             this.txtPApellido = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.btnCancelar);
             this.panel5.Controls.Add(this.btnGuardar);
             this.panel5.Controls.Add(this.btnEditar);
             this.panel5.Controls.Add(this.label9);
@@ -130,6 +132,7 @@
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(215, 28);
             this.cmbPais.TabIndex = 7;
+            this.cmbPais.SelectedIndexChanged += new System.EventHandler(this.cmbPais_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -249,6 +252,20 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Primer Apellido";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(180)))), ((int)(((byte)(63)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(173, 350);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(94, 43);
+            this.btnCancelar.TabIndex = 19;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // frmPerfilEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,5 +304,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

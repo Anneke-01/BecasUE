@@ -64,7 +64,9 @@ namespace SistemaBecas.View
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            frmInicioSesion fi = new frmInicioSesion();
+            fi.Show();
+            this.Hide();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -127,6 +129,11 @@ namespace SistemaBecas.View
         private void btnCrearUser_Click(object sender, EventArgs e)
         {
             loadform(new frmNuevoUser());
+        }
+
+        private void btnCrearPlanificacion_Click(object sender, EventArgs e)
+        {
+            loadform(new frmNPlanificacion());
         }
     }
 }

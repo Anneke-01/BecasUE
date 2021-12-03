@@ -27,5 +27,10 @@ namespace SistemaBecas.View
         {
             this.dtVerCandidatos.DataSource = CCandidato.Mostrar_Candidatos();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

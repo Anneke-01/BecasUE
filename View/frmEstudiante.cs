@@ -92,7 +92,9 @@ namespace SistemaBecas.View
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            frmInicioSesion fi = new frmInicioSesion();
+            fi.Show();
+            this.Hide();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

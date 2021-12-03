@@ -47,11 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\CCandidato.cs" />
+    <Compile Include="Controller\CPlanificacion.cs" />
     <Compile Include="Controller\CPrograma.cs" />
     <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Data\DCandidato.cs" />
+    <Compile Include="Data\DPlanificacion.cs" />
     <Compile Include="Data\DPrograma.cs" />
     <Compile Include="Data\Conexión.cs" />
+    <Compile Include="Data\DUniversidad.cs" />
     <Compile Include="Data\DUsuario.cs" />
     <Compile Include="View\frmAdmin.cs">
       <SubType>Form</SubType>
@@ -103,11 +106,23 @@
     <Compile Include="View\frmMessageBoxOk.Designer.cs">
       <DependentUpon>frmMessageBoxOk.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmNPlanificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmNPlanificacion.Designer.cs">
+      <DependentUpon>frmNPlanificacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmNuevoUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmNuevoUser.Designer.cs">
       <DependentUpon>frmNuevoUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmOfertas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmOfertas.Designer.cs">
+      <DependentUpon>frmOfertas.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmOfertasDisponibles.cs">
       <SubType>Form</SubType>
@@ -126,6 +141,12 @@
     </Compile>
     <Compile Include="View\frmNPrograma.Designer.cs">
       <DependentUpon>frmNPrograma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmPlanificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPlanificacion.Designer.cs">
+      <DependentUpon>frmPlanificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmProgramas.cs">
       <SubType>Form</SubType>
@@ -172,8 +193,14 @@
     <EmbeddedResource Include="View\frmMessageBoxOk.resx">
       <DependentUpon>frmMessageBoxOk.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmNPlanificacion.resx">
+      <DependentUpon>frmNPlanificacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmNuevoUser.resx">
       <DependentUpon>frmNuevoUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmOfertas.resx">
+      <DependentUpon>frmOfertas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmOfertasDisponibles.resx">
       <DependentUpon>frmOfertasDisponibles.cs</DependentUpon>
@@ -183,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmNPrograma.resx">
       <DependentUpon>frmNPrograma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPlanificacion.resx">
+      <DependentUpon>frmPlanificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmProgramas.resx">
       <DependentUpon>frmProgramas.cs</DependentUpon>

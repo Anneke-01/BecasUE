@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Controller",
+    "\\Data"
   ],
   "SelectedNode": "\\SistemaBecas.sln",
   "PreviewInSolutionExplorer": false

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbTipoUser = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtRepetirContra = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -38,8 +40,6 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbTipoUser = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(515, 317);
             this.panel1.TabIndex = 4;
+            // 
+            // cmbTipoUser
+            // 
+            this.cmbTipoUser.FormattingEnabled = true;
+            this.cmbTipoUser.Items.AddRange(new object[] {
+            "Estudiante",
+            "Administrador"});
+            this.cmbTipoUser.Location = new System.Drawing.Point(224, 199);
+            this.cmbTipoUser.Name = "cmbTipoUser";
+            this.cmbTipoUser.Size = new System.Drawing.Size(227, 28);
+            this.cmbTipoUser.TabIndex = 48;
+            this.cmbTipoUser.SelectedIndexChanged += new System.EventHandler(this.cmbTipoUser_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 199);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 20);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Rol";
             // 
             // txtRepetirContra
             // 
@@ -129,6 +151,7 @@
             this.btnCancelar.TabIndex = 40;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -154,28 +177,6 @@
             this.label8.Size = new System.Drawing.Size(263, 45);
             this.label8.TabIndex = 3;
             this.label8.Text = "Nuevo Usuario";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 199);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 20);
-            this.label4.TabIndex = 47;
-            this.label4.Text = "Rol";
-            // 
-            // cmbTipoUser
-            // 
-            this.cmbTipoUser.FormattingEnabled = true;
-            this.cmbTipoUser.Items.AddRange(new object[] {
-            "Estudiante",
-            "Administrador"});
-            this.cmbTipoUser.Location = new System.Drawing.Point(224, 199);
-            this.cmbTipoUser.Name = "cmbTipoUser";
-            this.cmbTipoUser.Size = new System.Drawing.Size(227, 28);
-            this.cmbTipoUser.TabIndex = 48;
-            this.cmbTipoUser.SelectedIndexChanged += new System.EventHandler(this.cmbTipoUser_SelectedIndexChanged);
             // 
             // frmNuevoUser
             // 

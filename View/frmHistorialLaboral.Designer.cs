@@ -76,6 +76,7 @@
             this.btnCancelar.TabIndex = 60;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -91,6 +92,7 @@
             this.btnGuardar.TabIndex = 59;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtEntidad
             // 
@@ -192,6 +194,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmHistorialLaboral";
             this.Text = "frmHistorialLaboral";
+            this.Load += new System.EventHandler(this.frmHistorialLaboral_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
