@@ -2,7 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Controller",
-    "\\Data"
+    "\\Data",
+    "\\View"
   ],
   "SelectedNode": "\\SistemaBecas.sln",
   "PreviewInSolutionExplorer": false

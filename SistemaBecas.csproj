@@ -118,6 +118,12 @@
     <Compile Include="View\frmNuevoUser.Designer.cs">
       <DependentUpon>frmNuevoUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmNUniversidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmNUniversidad.Designer.cs">
+      <DependentUpon>frmNUniversidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmOfertas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,18 @@
     </Compile>
     <Compile Include="View\frmProgramas.Designer.cs">
       <DependentUpon>frmProgramas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmVerUniversidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmVerUniversidades.Designer.cs">
+      <DependentUpon>frmVerUniversidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmVerUsuarios1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmVerUsuarios1.Designer.cs">
+      <DependentUpon>frmVerUsuarios1.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmVisualizarCandidatos.cs">
       <SubType>Form</SubType>
@@ -199,6 +217,9 @@
     <EmbeddedResource Include="View\frmNuevoUser.resx">
       <DependentUpon>frmNuevoUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmNUniversidad.resx">
+      <DependentUpon>frmNUniversidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmOfertas.resx">
       <DependentUpon>frmOfertas.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +237,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmProgramas.resx">
       <DependentUpon>frmProgramas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmVerUniversidades.resx">
+      <DependentUpon>frmVerUniversidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmVerUsuarios1.resx">
+      <DependentUpon>frmVerUsuarios1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmVisualizarCandidatos.resx">
       <DependentUpon>frmVisualizarCandidatos.cs</DependentUpon>

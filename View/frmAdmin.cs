@@ -34,17 +34,17 @@ namespace SistemaBecas.View
         }
         private void disfracesDiseño()
         {
-            panelSubMenuVer.Visible = false;
+            panelUsuarios.Visible = false;
             panelSubmenuOfertas.Visible = false;
         }
         private void esconderSubmenu()
         {
-            if(panelSubMenuVer.Visible == true)
+            if (panelUsuarios.Visible == true)
             {
-                panelSubMenuVer.Visible = false;
+                panelUsuarios.Visible = false;
             }
-            
-            if(panelSubmenuOfertas.Visible == true)
+
+            if (panelSubmenuOfertas.Visible == true)
             {
                 panelSubmenuOfertas.Visible = false;
             }
@@ -80,60 +80,76 @@ namespace SistemaBecas.View
             
         }
 
-        private void btnverP_Click(object sender, EventArgs e)
-        {
-            loadform(new frmProgramas());
-            esconderSubmenu();
-        }
+        
 
         private void btnOfertas_Click(object sender, EventArgs e)
         {
             mostrarSubmenu(panelSubmenuOfertas);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+   
+
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            esconderSubmenu();
+            Application.Exit();
         }
 
-        private void btnCrearP_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelprincipal_Paint(object sender, PaintEventArgs e)
+        private void frmAdmin_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnVer_Click(object sender, EventArgs e)
-        {
-            mostrarSubmenu(panelSubMenuVer);
-        }
+        
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            esconderSubmenu();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCandidatos_Click(object sender, EventArgs e)
-        {
-            loadform(new frmVisualizarCandidatos());
-        }
-
-        private void btnCrearUser_Click(object sender, EventArgs e)
+        private void BtnAgregarUsuario_Click(object sender, EventArgs e)
         {
             loadform(new frmNuevoUser());
+            esconderSubmenu();
         }
 
-        private void btnCrearPlanificacion_Click(object sender, EventArgs e)
+        private void btnVerUser_Click(object sender, EventArgs e)
         {
-            loadform(new frmNPlanificacion());
+            loadform(new frmVerUsuarios1());
+            esconderSubmenu();
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            mostrarSubmenu(panelUsuarios);
+        }
+
+        private void btnVerOfertas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAgregarUsuario_Click_1(object sender, EventArgs e)
+        {
+            loadform(new frmNuevoUser());
+            esconderSubmenu();
+        }
+
+        private void btnVerUser_Click_1(object sender, EventArgs e)
+        {
+            loadform(new frmVerUsuarios1());
+            esconderSubmenu();
+        }
+
+        private void btnCrearOferta_Click(object sender, EventArgs e)
+        {
+            loadform(new frmOfertas());
+            esconderSubmenu();
+        }
+
+        private void btnUniversidad_Click(object sender, EventArgs e)
+        {
+            loadform(new frmVerUniversidades());
+        }
+
+        private void btnPlanificación_Click(object sender, EventArgs e)
+        {
+            loadform(new frmPlanificacion());
+
         }
     }
 }

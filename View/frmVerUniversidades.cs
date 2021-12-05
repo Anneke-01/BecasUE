@@ -10,26 +10,13 @@ using System.Windows.Forms;
 
 namespace SistemaBecas.View
 {
-    public partial class frmPlanificacion : Form
+    public partial class frmVerUniversidades : Form
     {
-        public frmPlanificacion()
+        public frmVerUniversidades()
         {
             InitializeComponent();
-            panelPlanificación.Visible = false;
+            panelUniversidad.Visible = false;
             btnExit.Visible = false;
-        }
-
-        private void frmPlanificacion_Load(object sender, EventArgs e)
-        {
-
-        }
-        public void AccionDeshabilitar()
-        {
-            btnEditar.Enabled = false;
-            btnGuardar.Enabled = false;
-            btnNuevo.Enabled = false;
-            panelPlanificación.Visible = true;
-            btnExit.Visible = true;
 
         }
 
@@ -38,9 +25,18 @@ namespace SistemaBecas.View
             this.Close();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void frmVerUniversidades_Load(object sender, EventArgs e)
         {
-            this.Close();
+
+        }
+        public void AccionDeshabilitar()
+        {
+            btnEditar.Enabled = false;
+            btnGuardar.Enabled = false;
+            btnNuevo.Enabled = false;
+            panelUniversidad.Visible = true;
+            btnExit.Visible = true;
+
         }
     }
 }

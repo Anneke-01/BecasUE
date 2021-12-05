@@ -45,72 +45,18 @@ namespace SistemaBecas.View
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            //this.Close();
+            this.Dispose();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
-        private void cmbTipoEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnMinimizar_Click(object sender, EventArgs e)
         {
-           
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTituloPrograma_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCreditos_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDiplomados_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDuracion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

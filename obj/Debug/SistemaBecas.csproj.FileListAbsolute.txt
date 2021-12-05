@@ -35,3 +35,6 @@ C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmHistorialLa
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmNPlanificacion.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmPlanificacion.resources
 C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmOfertas.resources
+C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmVerUsuarios1.resources
+C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmNUniversidad.resources
+C:\Users\usuario\source\repos\BecasUE\obj\Debug\SistemaBecas.View.frmVerUniversidades.resources

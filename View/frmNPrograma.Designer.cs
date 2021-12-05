@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNPrograma));
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,7 +46,10 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label8
@@ -57,7 +61,6 @@
             this.label8.Size = new System.Drawing.Size(392, 45);
             this.label8.TabIndex = 0;
             this.label8.Text = "Crear nuevo programa";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label1
             // 
@@ -68,7 +71,6 @@
             this.label1.Size = new System.Drawing.Size(144, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Título del programa";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -79,7 +81,6 @@
             this.label2.Size = new System.Drawing.Size(153, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tipo de especialidad";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -90,7 +91,6 @@
             this.label3.Size = new System.Drawing.Size(68, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Créditos";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -101,7 +101,6 @@
             this.label4.Size = new System.Drawing.Size(93, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Diplomados";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -112,7 +111,6 @@
             this.label5.Size = new System.Drawing.Size(73, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Duración";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel1
             // 
@@ -131,7 +129,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(574, 316);
             this.panel1.TabIndex = 21;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // cmbTipoEspecialidad
             // 
@@ -152,7 +149,6 @@
             this.cmbTipoEspecialidad.TabIndex = 2;
             this.cmbTipoEspecialidad.Tag = "";
             this.cmbTipoEspecialidad.UseWaitCursor = true;
-            this.cmbTipoEspecialidad.SelectedIndexChanged += new System.EventHandler(this.cmbTipoEspecialidad_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -163,7 +159,6 @@
             this.label6.Size = new System.Drawing.Size(56, 20);
             this.label6.TabIndex = 26;
             this.label6.Text = "Meses";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtDuracion
             // 
@@ -172,7 +167,6 @@
             this.txtDuracion.Name = "txtDuracion";
             this.txtDuracion.Size = new System.Drawing.Size(187, 26);
             this.txtDuracion.TabIndex = 5;
-            this.txtDuracion.TextChanged += new System.EventHandler(this.txtDuracion_TextChanged);
             // 
             // txtDiplomados
             // 
@@ -181,7 +175,6 @@
             this.txtDiplomados.Name = "txtDiplomados";
             this.txtDiplomados.Size = new System.Drawing.Size(187, 26);
             this.txtDiplomados.TabIndex = 4;
-            this.txtDiplomados.TextChanged += new System.EventHandler(this.txtDiplomados_TextChanged);
             // 
             // txtCreditos
             // 
@@ -190,7 +183,6 @@
             this.txtCreditos.Name = "txtCreditos";
             this.txtCreditos.Size = new System.Drawing.Size(187, 26);
             this.txtCreditos.TabIndex = 3;
-            this.txtCreditos.TextChanged += new System.EventHandler(this.txtCreditos_TextChanged);
             // 
             // txtTituloPrograma
             // 
@@ -199,7 +191,6 @@
             this.txtTituloPrograma.Name = "txtTituloPrograma";
             this.txtTituloPrograma.Size = new System.Drawing.Size(187, 26);
             this.txtTituloPrograma.TabIndex = 1;
-            this.txtTituloPrograma.TextChanged += new System.EventHandler(this.txtTituloPrograma_TextChanged);
             // 
             // btnguardar
             // 
@@ -235,10 +226,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.Controls.Add(this.btnExit);
+            this.panel2.Controls.Add(this.btnMinimizar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(694, 27);
+            this.panel2.Size = new System.Drawing.Size(694, 39);
             this.panel2.TabIndex = 24;
             // 
             // panel3
@@ -249,6 +242,39 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(694, 27);
             this.panel3.TabIndex = 25;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(57)))), ((int)(((byte)(67)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(635, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(56, 33);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.TabStop = false;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.UseWaitCursor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
+            this.btnMinimizar.Location = new System.Drawing.Point(571, 3);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(58, 33);
+            this.btnMinimizar.TabIndex = 4;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.UseWaitCursor = true;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // frmNPrograma
             // 
@@ -269,6 +295,7 @@
             this.Load += new System.EventHandler(this.frmPrograma_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,5 +319,7 @@
         private System.Windows.Forms.ComboBox cmbTipoEspecialidad;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnMinimizar;
     }
 }

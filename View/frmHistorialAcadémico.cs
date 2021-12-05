@@ -41,7 +41,15 @@ namespace SistemaBecas.View
 
 
         }
-        
+        public frmHistorialAcadémico(int idUser, int idCandidato, int id)
+        {
+            InitializeComponent();
+            IdUser = idUser;
+            IdCandidato = idCandidato;
+            Id = id;
+
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             

@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstudiante));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnOfertas = new System.Windows.Forms.Button();
             this.subMenuPerfil = new System.Windows.Forms.Panel();
+            this.btnDatosGenerales = new System.Windows.Forms.Button();
             this.btnLaboral = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -39,11 +41,9 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
-            this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.btnDatosGenerales = new System.Windows.Forms.Button();
-            this.btnOfertas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.subMenuPerfil.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -67,6 +67,20 @@
             this.panel1.Size = new System.Drawing.Size(256, 631);
             this.panel1.TabIndex = 0;
             // 
+            // btnOfertas
+            // 
+            this.btnOfertas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOfertas.FlatAppearance.BorderSize = 0;
+            this.btnOfertas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOfertas.ForeColor = System.Drawing.Color.White;
+            this.btnOfertas.Location = new System.Drawing.Point(0, 295);
+            this.btnOfertas.Name = "btnOfertas";
+            this.btnOfertas.Size = new System.Drawing.Size(256, 42);
+            this.btnOfertas.TabIndex = 5;
+            this.btnOfertas.Text = "Ver Ofertas";
+            this.btnOfertas.UseVisualStyleBackColor = true;
+            this.btnOfertas.Click += new System.EventHandler(this.btnOfertas_Click);
+            // 
             // subMenuPerfil
             // 
             this.subMenuPerfil.Controls.Add(this.btnDatosGenerales);
@@ -77,6 +91,23 @@
             this.subMenuPerfil.Size = new System.Drawing.Size(256, 94);
             this.subMenuPerfil.TabIndex = 4;
             // 
+            // btnDatosGenerales
+            // 
+            this.btnDatosGenerales.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnDatosGenerales.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDatosGenerales.FlatAppearance.BorderSize = 0;
+            this.btnDatosGenerales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDatosGenerales.ForeColor = System.Drawing.Color.White;
+            this.btnDatosGenerales.Image = ((System.Drawing.Image)(resources.GetObject("btnDatosGenerales.Image")));
+            this.btnDatosGenerales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDatosGenerales.Location = new System.Drawing.Point(0, 0);
+            this.btnDatosGenerales.Name = "btnDatosGenerales";
+            this.btnDatosGenerales.Size = new System.Drawing.Size(256, 43);
+            this.btnDatosGenerales.TabIndex = 2;
+            this.btnDatosGenerales.Text = "Cambiar Contraseña";
+            this.btnDatosGenerales.UseVisualStyleBackColor = false;
+            this.btnDatosGenerales.Click += new System.EventHandler(this.btnDatosGenerales_Click);
+            // 
             // btnLaboral
             // 
             this.btnLaboral.BackColor = System.Drawing.Color.DarkBlue;
@@ -84,6 +115,8 @@
             this.btnLaboral.FlatAppearance.BorderSize = 0;
             this.btnLaboral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLaboral.ForeColor = System.Drawing.Color.White;
+            this.btnLaboral.Image = ((System.Drawing.Image)(resources.GetObject("btnLaboral.Image")));
+            this.btnLaboral.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLaboral.Location = new System.Drawing.Point(0, 51);
             this.btnLaboral.Name = "btnLaboral";
             this.btnLaboral.Size = new System.Drawing.Size(256, 43);
@@ -97,6 +130,7 @@
             this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPerfil.FlatAppearance.BorderSize = 0;
             this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.ForeColor = System.Drawing.Color.White;
             this.btnPerfil.Location = new System.Drawing.Point(0, 159);
             this.btnPerfil.Name = "btnPerfil";
@@ -178,41 +212,6 @@
             this.panel2.Size = new System.Drawing.Size(719, 36);
             this.panel2.TabIndex = 1;
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.DarkBlue;
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(57)))), ((int)(((byte)(67)))));
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(605, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(56, 36);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.TabStop = false;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.UseWaitCursor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.BackColor = System.Drawing.Color.DarkBlue;
-            this.btnMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(661, 0);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(58, 36);
-            this.btnMinimizar.TabIndex = 1;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.UseVisualStyleBackColor = false;
-            this.btnMinimizar.UseWaitCursor = true;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
             // panelPrincipal
             // 
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -222,34 +221,38 @@
             this.panelPrincipal.TabIndex = 12;
             this.panelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPrincipal_Paint);
             // 
-            // btnDatosGenerales
+            // btnExit
             // 
-            this.btnDatosGenerales.BackColor = System.Drawing.Color.DarkBlue;
-            this.btnDatosGenerales.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDatosGenerales.FlatAppearance.BorderSize = 0;
-            this.btnDatosGenerales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDatosGenerales.ForeColor = System.Drawing.Color.White;
-            this.btnDatosGenerales.Location = new System.Drawing.Point(0, 0);
-            this.btnDatosGenerales.Name = "btnDatosGenerales";
-            this.btnDatosGenerales.Size = new System.Drawing.Size(256, 43);
-            this.btnDatosGenerales.TabIndex = 2;
-            this.btnDatosGenerales.Text = "Cambiar Contraseña";
-            this.btnDatosGenerales.UseVisualStyleBackColor = false;
-            this.btnDatosGenerales.Click += new System.EventHandler(this.btnDatosGenerales_Click);
+            this.btnExit.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(57)))), ((int)(((byte)(67)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(660, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(56, 33);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.TabStop = false;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.UseWaitCursor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
-            // btnOfertas
+            // btnMinimizar
             // 
-            this.btnOfertas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOfertas.FlatAppearance.BorderSize = 0;
-            this.btnOfertas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOfertas.ForeColor = System.Drawing.Color.White;
-            this.btnOfertas.Location = new System.Drawing.Point(0, 295);
-            this.btnOfertas.Name = "btnOfertas";
-            this.btnOfertas.Size = new System.Drawing.Size(256, 42);
-            this.btnOfertas.TabIndex = 5;
-            this.btnOfertas.Text = "Ver Ofertas";
-            this.btnOfertas.UseVisualStyleBackColor = true;
-            this.btnOfertas.Click += new System.EventHandler(this.btnOfertas_Click);
+            this.btnMinimizar.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
+            this.btnMinimizar.Location = new System.Drawing.Point(596, 3);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(58, 33);
+            this.btnMinimizar.TabIndex = 4;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.UseWaitCursor = true;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click_1);
             // 
             // frmEstudiante
             // 
@@ -289,13 +292,13 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnMinimizar;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Panel subMenuPerfil;
         private System.Windows.Forms.Button btnLaboral;
         private System.Windows.Forms.Button btnDatosGenerales;
         private System.Windows.Forms.Button btnOfertas;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnMinimizar;
     }
 }

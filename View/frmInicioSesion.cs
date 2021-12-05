@@ -138,21 +138,28 @@ namespace SistemaBecas
                 }
                 else
                 {
+                    
                     DataTable dato = CUsuario.Validar_Acceso(this.txtUsuario.Text, this.txtContraseña.Text, this.TipoUsuario.SelectedItem.ToString());
+                    Console.WriteLine(dato.Rows.Count);
                     if (dato.Rows.Count > 0)
                     {
-
+                       
                         DataRow dr = dato.Rows[0];
-
-                        if (dr["Resultado"].ToString() == "Acceso Exitoso")
+                        if (dr["Resultado"].ToString() == "Usuario deshabilitado")
+                        {
+                            MessageBox.Show("Usuario deshabilitado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else if (dr["Resultado"].ToString() == "Acceso Exitoso")
                         {
                             int idCandidato = 0;
                             int idUser = int.Parse(dr["IdUsuario"].ToString());
                             try
                             {
                                 idCandidato = int.Parse(dr["IdCandidato"].ToString());
-                            }catch{
-                               // MessageBox.Show("F", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            catch
+                            {
+                                // MessageBox.Show("F", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             if (TipoUsuario.SelectedItem.ToString() == "Estudiante")
                             {

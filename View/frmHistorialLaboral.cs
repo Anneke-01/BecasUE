@@ -13,12 +13,20 @@ namespace SistemaBecas.View
 {
     public partial class frmHistorialLaboral : Form
     {
-        int IdUser, IdCandidato;
+        int IdUser, IdCandidato, Id;
         public frmHistorialLaboral(int idUser, int idCandidato)
         {
             InitializeComponent();
             IdUser = idUser;
             IdCandidato = idCandidato;
+        }
+        public frmHistorialLaboral(int idUser, int idCandidato, int id)
+        {
+            InitializeComponent();
+            IdUser = idUser;
+            IdCandidato = idCandidato;
+            Id = id;
+
         }
 
         private void frmHistorialLaboral_Load(object sender, EventArgs e)

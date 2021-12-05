@@ -107,6 +107,12 @@ create or alter procedure Validar_Acceso
 as
 if exists (select Usuario from Usuario where
 CAST(DECRYPTBYPASSPHRASE(@Contrasena, Contraseña) as nvarchar(30)) = @Contrasena and
+Usuario=@Usuario and Rol=@Rol and Estado='Deshabilitado')
+begin
+select 'Usuario deshabilitado' as Resultado
+end
+else if exists (select Usuario from Usuario where
+CAST(DECRYPTBYPASSPHRASE(@Contrasena, Contraseña) as nvarchar(30)) = @Contrasena and
 Usuario=@Usuario and Rol=@Rol and Estado='Habilitado')
 begin
 declare @IdUsuario int
@@ -120,6 +126,37 @@ begin
 select 'Acceso Denegado' as Resultado
 end
 
+Create procedure Cambiar_Estado
+@ID int
+as
+if((Select Estado from Usuario where IDUsuario=@ID)= 'Habilitado')
+update Usuario set Estado = 'Deshabilitado' where IDUsuario=@ID
+else
+update Usuario set Estado = 'Habilitado' where IDUsuario=@ID
+
+Create procedure Buscar_Usuario
+@Dato varchar(60)
+as
+SELECT TOP (50) [IDUsuario]
+,[Usuario] as [Usuario]
+,[Rol],[Estado]
+,[FechaAcceso] as [Fecha de Acceso]
+,[FechaModificacion] as [Fecha de modificación]
+FROM Usuario
+where 
+[Usuario] like @Dato +'%' or
+[Rol] like @Dato +'%' or
+[Estado] like @Dato +'%' or   
+[FechaAcceso] like @Dato +'%' or   
+[FechaModificacion] like @Dato +'%' 
+ 
+ Execute Buscar_Usuario an
+
+Execute Cambiar_Estado 17
+
+Execute Validar_Acceso 'Cristel','123','Estudiante'
+select * from Usuario
+Execute Validar_Acceso 'Anneke','123','Administrador'
 /*PROCEDIMIENTO PARA LISTAR PAISES*/
 create procedure Listar_Pais
 as
@@ -244,9 +281,15 @@ create or alter procedure Editar_HistorialAcademico
 as update HistorialAcademico set TituloObtenido=@TituloObtenido,FechaInicio=@FechaInicio,FechaFin=@FechaFin
 where IDHistAcademico=@ID
 
+create or alter procedure Eliminar_HistorialAcademico
+@ID int
+as delete from HistorialAcademico  where IDHistAcademico=@ID
+
 Execute InsertarHistorial_Academico 3,'Técnico','2005-02-02','2019-02-02'
 Execute Editar_HistorialAcademico 5,'Técnico','2001-01-01','2018-01-01'
 select * from HistorialAcademico
+Execute Eliminar_HistorialAcademico 14
+
 
 create or alter procedure Editar_HistorialLaboral
 @ID int,
@@ -254,8 +297,16 @@ create or alter procedure Editar_HistorialLaboral
 as update HistorialLaboral set Puesto=@Puesto,Entidad=@Entidad,FechaInicio=@FechaInicio,
 FechaFin=@FechaFin where IDHistLaboral=@ID
 
+select * from Usuario
+select IDUsuario from Usuario 
+update Usuario set Estado='Deshabilitado' where IDUsuario= 17
+create or alter procedure Eliminar_HistorialLaboral
+@ID int
+as delete from HistorialLaboral  where IDHistLaboral=@ID
+
 select * from HistorialLaboral
 Execute Editar_HistorialLaboral 4,'HALA','MAdrid','2020-04-04','2020-04-04'
+Execute Eliminar_HistorialLaboral 4
 
 create or alter procedure ListarHistorialAcademico
 @IDCandidato int
@@ -298,7 +349,7 @@ delete from HistorialLaboral where IDCandidato = 2
 
 
 
-create or alter procedure CambiarContraseña
+create procedure CambiarContraseña
 @IDUsuario int,
 @Contrasena nvarchar(30),
 @NuevaContrasenia nvarchar(30)
@@ -314,6 +365,7 @@ else
 begin
 select 'Credenciales incorrectos.' as Resultado
 end
+use BecasEstudioUE
 
 select * from Usuario
 Execute CambiarContraseña 13,'1234','12345'

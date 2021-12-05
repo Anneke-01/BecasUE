@@ -47,5 +47,10 @@ namespace SistemaBecas.View
         {
             this.Close();
         }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

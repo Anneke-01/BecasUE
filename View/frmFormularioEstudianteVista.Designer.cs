@@ -134,6 +134,7 @@
             this.btnEliminar.TabIndex = 44;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEliminarl
             // 
@@ -149,6 +150,7 @@
             this.btnEliminarl.TabIndex = 48;
             this.btnEliminarl.Text = "Eliminar";
             this.btnEliminarl.UseVisualStyleBackColor = false;
+            this.btnEliminarl.Click += new System.EventHandler(this.btnEliminarl_Click);
             // 
             // btnAgregarl
             // 

@@ -58,7 +58,7 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(20, 95);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(515, 317);
+            this.panel1.Size = new System.Drawing.Size(811, 267);
             this.panel1.TabIndex = 4;
             // 
             // cmbTipoUser
@@ -67,7 +67,7 @@
             this.cmbTipoUser.Items.AddRange(new object[] {
             "Estudiante",
             "Administrador"});
-            this.cmbTipoUser.Location = new System.Drawing.Point(224, 199);
+            this.cmbTipoUser.Location = new System.Drawing.Point(563, 30);
             this.cmbTipoUser.Name = "cmbTipoUser";
             this.cmbTipoUser.Size = new System.Drawing.Size(227, 28);
             this.cmbTipoUser.TabIndex = 48;
@@ -77,7 +77,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 199);
+            this.label4.Location = new System.Drawing.Point(396, 91);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 20);
             this.label4.TabIndex = 47;
@@ -86,23 +86,25 @@
             // txtRepetirContra
             // 
             this.txtRepetirContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRepetirContra.Location = new System.Drawing.Point(224, 142);
+            this.txtRepetirContra.Location = new System.Drawing.Point(563, 82);
             this.txtRepetirContra.Name = "txtRepetirContra";
+            this.txtRepetirContra.PasswordChar = '*';
             this.txtRepetirContra.Size = new System.Drawing.Size(227, 26);
             this.txtRepetirContra.TabIndex = 46;
             // 
             // txtContraseña
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(224, 88);
+            this.txtContraseña.Location = new System.Drawing.Point(161, 85);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(227, 26);
             this.txtContraseña.TabIndex = 45;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(224, 34);
+            this.txtUsuario.Location = new System.Drawing.Point(161, 32);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(227, 26);
             this.txtUsuario.TabIndex = 44;
@@ -111,7 +113,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 145);
+            this.label3.Location = new System.Drawing.Point(396, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 20);
             this.label3.TabIndex = 43;
@@ -145,7 +147,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(177, 270);
+            this.btnCancelar.Location = new System.Drawing.Point(518, 162);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(96, 31);
             this.btnCancelar.TabIndex = 40;
@@ -160,7 +162,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(304, 270);
+            this.btnGuardar.Location = new System.Drawing.Point(643, 162);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(147, 31);
             this.btnGuardar.TabIndex = 39;
@@ -182,7 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 427);
+            this.ClientSize = new System.Drawing.Size(867, 398);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

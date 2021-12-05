@@ -49,5 +49,10 @@ namespace SistemaBecas.View
         {
             this.Close();
         }
+
+        private void txtCurrentPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

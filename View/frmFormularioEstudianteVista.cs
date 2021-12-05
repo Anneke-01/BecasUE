@@ -65,6 +65,36 @@ namespace SistemaBecas.View
             this.Close();
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dtHistoAC.SelectedRows.Count == 1)
+            {
+                int id = Convert.ToInt32(this.dtHistoAC.CurrentRow.Cells["ID"].Value);               
+                frmHistorialAcadémico fm = new frmHistorialAcadémico(IdUser, IdCandidato, id);
+                fm.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccione al menos una fila", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEliminarl_Click(object sender, EventArgs e)
+        {
+            if (dtHistoAC.SelectedRows.Count == 1)
+            {
+                int id = Convert.ToInt32(this.dtHistoAC.CurrentRow.Cells["ID"].Value);
+                frmHistorialLaboral fm = new frmHistorialLaboral(IdUser, IdCandidato, id);
+                fm.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccione al menos una fila", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnEditarl_Click(object sender, EventArgs e)
         {
             //frmHistorialLaboral fl = new frmHistorialLaboral();

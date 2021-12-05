@@ -97,12 +97,15 @@ namespace SistemaBecas.View
             this.Hide();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        
+
+        
+        private void btnExit_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
-        private void btnMinimizar_Click(object sender, EventArgs e)
+        private void btnMinimizar_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
