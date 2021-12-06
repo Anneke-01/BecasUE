@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaBecas.Controller;
 
 namespace SistemaBecas.View
 {
@@ -39,8 +40,9 @@ namespace SistemaBecas.View
             txtEstado.Enabled = false;
             txtPais.Enabled = false;
             txtCiudad.Enabled = false;
-            txtTel.Enabled = false;
+            txtTelefono.Enabled = false;
             txtUniversidades.Enabled = false;
+            
         }
 
         
@@ -57,24 +59,50 @@ namespace SistemaBecas.View
         private void btnProm_Click(object sender, EventArgs e)
         {
             frmProgramas fp = new frmProgramas();
-            fp.Show();
             fp.AccionDeshabilitar();
+            fp.ShowDialog();
             
+            if (fp.DialogResult == DialogResult.OK)
+            {
+
+                this.txtTPro.Text = fp.dtProgramas.Rows[fp.dtProgramas.CurrentRow.Index].Cells[0].Value.ToString();
+                this.txtEspecialidad.Text = fp.dtProgramas.Rows[fp.dtProgramas.CurrentRow.Index].Cells[1].Value.ToString();
+                this.txtCreditos.Text = fp.dtProgramas.Rows[fp.dtProgramas.CurrentRow.Index].Cells[2].Value.ToString();
+                this.txtDiplomados.Text = fp.dtProgramas.Rows[fp.dtProgramas.CurrentRow.Index].Cells[3].Value.ToString();
+                this.txtDuracion.Text = fp.dtProgramas.Rows[fp.dtProgramas.CurrentRow.Index].Cells[4].Value.ToString();
+
+
+
+            }
             
         }
 
         private void btnU_Click(object sender, EventArgs e)
         {
             frmVerUniversidades fu = new frmVerUniversidades();
-            fu.Show();
             fu.AccionDeshabilitar();
+            fu.ShowDialog();
+            
+            if(fu.DialogResult == DialogResult.OK)
+            {
+                this.txtUniversidad.Text = fu.dtUniversidades.Rows[fu.dtUniversidades.CurrentRow.Index].Cells[1].Value.ToString();
+                this.txtCiudad.Text = fu.dtUniversidades.Rows[fu.dtUniversidades.CurrentRow.Index].Cells[2].Value.ToString();         
+                this.txtTelefono.Text = fu.dtUniversidades.Rows[fu.dtUniversidades.CurrentRow.Index].Cells[3].Value.ToString();
+                this.txtPais.Text = fu.dtUniversidades.Rows[fu.dtUniversidades.CurrentRow.Index].Cells[4].Value.ToString();
+                this.txtDir.Text = fu.dtUniversidades.Rows[fu.dtUniversidades.CurrentRow.Index].Cells[5].Value.ToString();
+            }
         }
 
         private void btnPlan_Click(object sender, EventArgs e)
         {
             frmPlanificacion frmp = new frmPlanificacion();
-            frmp.Show();
             frmp.AccionDeshabilitar();
+            frmp.ShowDialog();
+            
+            if (frmp.DialogResult == DialogResult.OK)
+            {
+
+            }
         }
     }
 }

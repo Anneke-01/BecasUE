@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNPlanificacion));
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,14 +49,17 @@
             this.dtCierre = new System.Windows.Forms.DateTimePicker();
             this.dtApertura = new System.Windows.Forms.DateTimePicker();
             this.dtAnio = new System.Windows.Forms.DateTimePicker();
+            this.panelUniversidad = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panelUniversidad.SuspendLayout();
             this.SuspendLayout();
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(28, 9);
+            this.label8.Location = new System.Drawing.Point(28, 59);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(439, 45);
             this.label8.TabIndex = 24;
@@ -118,7 +122,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(324, 479);
+            this.btnCancelar.Location = new System.Drawing.Point(324, 547);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(116, 43);
             this.btnCancelar.TabIndex = 27;
@@ -133,7 +137,7 @@
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.ForeColor = System.Drawing.Color.White;
             this.btnguardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnguardar.Location = new System.Drawing.Point(473, 479);
+            this.btnguardar.Location = new System.Drawing.Point(473, 547);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(116, 43);
             this.btnguardar.TabIndex = 26;
@@ -160,7 +164,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(36, 66);
+            this.panel1.Location = new System.Drawing.Point(36, 130);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(574, 397);
             this.panel1.TabIndex = 25;
@@ -190,10 +194,11 @@
             this.cmbPais.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cmbPais.Location = new System.Drawing.Point(271, 308);
+            this.cmbPais.Location = new System.Drawing.Point(271, 310);
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(200, 28);
             this.cmbPais.TabIndex = 36;
+            this.cmbPais.SelectedIndexChanged += new System.EventHandler(this.cmbPais_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -267,21 +272,52 @@
             this.dtAnio.Size = new System.Drawing.Size(200, 26);
             this.dtAnio.TabIndex = 27;
             // 
+            // panelUniversidad
+            // 
+            this.panelUniversidad.BackColor = System.Drawing.Color.Navy;
+            this.panelUniversidad.Controls.Add(this.btnExit);
+            this.panelUniversidad.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelUniversidad.Location = new System.Drawing.Point(0, 0);
+            this.panelUniversidad.Name = "panelUniversidad";
+            this.panelUniversidad.Size = new System.Drawing.Size(655, 39);
+            this.panelUniversidad.TabIndex = 56;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(57)))), ((int)(((byte)(67)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(592, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(56, 33);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.TabStop = false;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.UseWaitCursor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // frmNPlanificacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 548);
+            this.ClientSize = new System.Drawing.Size(655, 653);
+            this.Controls.Add(this.panelUniversidad);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNPlanificacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNPlanificacion";
             this.Load += new System.EventHandler(this.frmNPlanificacion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelUniversidad.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,5 +345,7 @@
         private System.Windows.Forms.ComboBox cmbPais;
         private System.Windows.Forms.TextBox txtCantu;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panelUniversidad;
+        private System.Windows.Forms.Button btnExit;
     }
 }

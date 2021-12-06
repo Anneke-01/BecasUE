@@ -18,12 +18,13 @@ namespace SistemaBecas.View
             InitializeComponent();
             panelProgramas.Visible = false;         
             btnExit.Visible = false;
+            btnSeleccionar.Visible = false;
         }
 
         public void btnNuevo_Click(object sender, EventArgs e)
         {
             frmNPrograma np = new frmNPrograma();
-            np.Show();
+            np.ShowDialog();
             this.Hide();
         }
 
@@ -52,7 +53,7 @@ namespace SistemaBecas.View
             btnNuevo.Enabled = false;
             panelProgramas.Visible = true;        
             btnExit.Visible = true;
-            
+            btnSeleccionar.Visible = true;
 
         }
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -67,7 +68,30 @@ namespace SistemaBecas.View
 
         private void frmProgramas_Load_1(object sender, EventArgs e)
         {
+            this.dtProgramas.DataSource = CPrograma.Leer_Programa();
+        }
 
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if(this.dtProgramas.Rows.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
+
+        private void dtProgramas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            this.dtProgramas.DataSource = CPrograma.Buscar_Programa(txtBuscar.Text);
         }
     }
 }

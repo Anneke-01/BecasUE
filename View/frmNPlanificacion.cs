@@ -52,5 +52,15 @@ namespace SistemaBecas.View
         {
 
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmbPais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

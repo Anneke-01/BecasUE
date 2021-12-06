@@ -42,5 +42,24 @@ namespace SistemaBecas.View
         {
             this.Close();
         }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (this.dtPlan.Rows.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmNPlanificacion frmNP = new frmNPlanificacion();
+            frmNP.ShowDialog();
+        }
     }
 }

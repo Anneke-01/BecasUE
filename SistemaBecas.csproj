@@ -47,10 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\CCandidato.cs" />
+    <Compile Include="Controller\CCiudad.cs" />
     <Compile Include="Controller\CPlanificacion.cs" />
     <Compile Include="Controller\CPrograma.cs" />
+    <Compile Include="Controller\CUniversidad.cs" />
     <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Data\DCandidato.cs" />
+    <Compile Include="Data\DCiudad.cs" />
     <Compile Include="Data\DPlanificacion.cs" />
     <Compile Include="Data\DPrograma.cs" />
     <Compile Include="Data\Conexión.cs" />

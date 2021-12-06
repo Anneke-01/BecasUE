@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtViewUsuarios = new System.Windows.Forms.DataGridView();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtViewUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -47,14 +47,14 @@
             this.label8.TabIndex = 3;
             this.label8.Text = "Usuarios del sistema";
             // 
-            // dataGridView1
+            // dtViewUsuarios
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 180);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(762, 264);
-            this.dataGridView1.TabIndex = 6;
+            this.dtViewUsuarios.BackgroundColor = System.Drawing.Color.DarkBlue;
+            this.dtViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtViewUsuarios.Location = new System.Drawing.Point(32, 180);
+            this.dtViewUsuarios.Name = "dtViewUsuarios";
+            this.dtViewUsuarios.Size = new System.Drawing.Size(762, 264);
+            this.dtViewUsuarios.TabIndex = 6;
             // 
             // btnCancelar
             // 
@@ -86,6 +86,7 @@
             this.btnGuardar.TabIndex = 63;
             this.btnGuardar.Text = "Deshabilitar usuario";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label1
             // 
@@ -103,6 +104,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(555, 20);
             this.txtBuscar.TabIndex = 67;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // frmVerUsuarios1
             // 
@@ -113,13 +115,13 @@
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtViewUsuarios);
             this.Controls.Add(this.label8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVerUsuarios1";
             this.Text = "frmVerUsuarios1";
             this.Load += new System.EventHandler(this.frmVerUsuarios1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtViewUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,7 +130,7 @@
         #endregion
 
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtViewUsuarios;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label1;

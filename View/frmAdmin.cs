@@ -109,7 +109,7 @@ namespace SistemaBecas.View
 
         private void btnVerUser_Click(object sender, EventArgs e)
         {
-            loadform(new frmVerUsuarios1());
+            loadform(new frmVerUsuarios1(IdUser));
             esconderSubmenu();
         }
 
@@ -131,7 +131,7 @@ namespace SistemaBecas.View
 
         private void btnVerUser_Click_1(object sender, EventArgs e)
         {
-            loadform(new frmVerUsuarios1());
+            loadform(new frmVerUsuarios1(IdUser));
             esconderSubmenu();
         }
 

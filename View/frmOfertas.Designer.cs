@@ -28,30 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDiplomados = new System.Windows.Forms.TextBox();
+            this.txtCreditos = new System.Windows.Forms.TextBox();
+            this.txtDuracion = new System.Windows.Forms.TextBox();
+            this.txtEspecialidad = new System.Windows.Forms.TextBox();
+            this.txtTPro = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtTPro = new System.Windows.Forms.TextBox();
-            this.txtEspecialidad = new System.Windows.Forms.TextBox();
-            this.txtDuracion = new System.Windows.Forms.TextBox();
-            this.txtCreditos = new System.Windows.Forms.TextBox();
-            this.txtDiplomados = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtUniversidad = new System.Windows.Forms.TextBox();
-            this.txtDir = new System.Windows.Forms.TextBox();
-            this.txtPais = new System.Windows.Forms.TextBox();
-            this.txtTel = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtCiudad = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtanio = new System.Windows.Forms.TextBox();
+            this.txtUniversidades = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtPaisP = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCierre = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,20 +56,15 @@
             this.txtCreacion = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtUniversidades = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtanio = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtPaisP = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.dtFinal = new System.Windows.Forms.DateTimePicker();
+            this.dtInicio = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
             this.txtFinanciamiento = new System.Windows.Forms.TextBox();
             this.txtMonto = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.btnProm = new System.Windows.Forms.Button();
             this.btnU = new System.Windows.Forms.Button();
@@ -81,44 +72,23 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.dtInicio = new System.Windows.Forms.DateTimePicker();
-            this.dtFinal = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtUniversidad = new System.Windows.Forms.TextBox();
+            this.txtDir = new System.Windows.Forms.TextBox();
+            this.txtPais = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCiudad = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(11, 70);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 16);
-            this.label10.TabIndex = 35;
-            this.label10.Text = "Dirección";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(11, 30);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 16);
-            this.label11.TabIndex = 36;
-            this.label11.Text = "Nombre";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(471, 70);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 16);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Ciudad";
             // 
             // groupBox1
             // 
@@ -140,6 +110,46 @@
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Programa";
+            // 
+            // txtDiplomados
+            // 
+            this.txtDiplomados.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiplomados.Location = new System.Drawing.Point(310, 70);
+            this.txtDiplomados.Name = "txtDiplomados";
+            this.txtDiplomados.Size = new System.Drawing.Size(54, 24);
+            this.txtDiplomados.TabIndex = 42;
+            // 
+            // txtCreditos
+            // 
+            this.txtCreditos.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCreditos.Location = new System.Drawing.Point(464, 67);
+            this.txtCreditos.Name = "txtCreditos";
+            this.txtCreditos.Size = new System.Drawing.Size(54, 24);
+            this.txtCreditos.TabIndex = 41;
+            // 
+            // txtDuracion
+            // 
+            this.txtDuracion.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDuracion.Location = new System.Drawing.Point(645, 67);
+            this.txtDuracion.Name = "txtDuracion";
+            this.txtDuracion.Size = new System.Drawing.Size(132, 24);
+            this.txtDuracion.TabIndex = 40;
+            // 
+            // txtEspecialidad
+            // 
+            this.txtEspecialidad.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEspecialidad.Location = new System.Drawing.Point(105, 67);
+            this.txtEspecialidad.Name = "txtEspecialidad";
+            this.txtEspecialidad.Size = new System.Drawing.Size(81, 24);
+            this.txtEspecialidad.TabIndex = 39;
+            // 
+            // txtTPro
+            // 
+            this.txtTPro.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTPro.Location = new System.Drawing.Point(145, 27);
+            this.txtTPro.Name = "txtTPro";
+            this.txtTPro.Size = new System.Drawing.Size(501, 24);
+            this.txtTPro.TabIndex = 38;
             // 
             // label6
             // 
@@ -191,134 +201,6 @@
             this.label2.TabIndex = 33;
             this.label2.Text = "Título del programa";
             // 
-            // txtTPro
-            // 
-            this.txtTPro.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTPro.Location = new System.Drawing.Point(145, 27);
-            this.txtTPro.Name = "txtTPro";
-            this.txtTPro.Size = new System.Drawing.Size(501, 24);
-            this.txtTPro.TabIndex = 38;
-            this.txtTPro.Text = "Especialista Universitario en Enseñanza de Español como Lengua Extranj";
-            // 
-            // txtEspecialidad
-            // 
-            this.txtEspecialidad.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEspecialidad.Location = new System.Drawing.Point(105, 67);
-            this.txtEspecialidad.Name = "txtEspecialidad";
-            this.txtEspecialidad.Size = new System.Drawing.Size(81, 24);
-            this.txtEspecialidad.TabIndex = 39;
-            this.txtEspecialidad.Text = "Doctorado";
-            // 
-            // txtDuracion
-            // 
-            this.txtDuracion.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDuracion.Location = new System.Drawing.Point(645, 67);
-            this.txtDuracion.Name = "txtDuracion";
-            this.txtDuracion.Size = new System.Drawing.Size(132, 24);
-            this.txtDuracion.TabIndex = 40;
-            // 
-            // txtCreditos
-            // 
-            this.txtCreditos.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCreditos.Location = new System.Drawing.Point(464, 67);
-            this.txtCreditos.Name = "txtCreditos";
-            this.txtCreditos.Size = new System.Drawing.Size(54, 24);
-            this.txtCreditos.TabIndex = 41;
-            // 
-            // txtDiplomados
-            // 
-            this.txtDiplomados.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiplomados.Location = new System.Drawing.Point(310, 70);
-            this.txtDiplomados.Name = "txtDiplomados";
-            this.txtDiplomados.Size = new System.Drawing.Size(54, 24);
-            this.txtDiplomados.TabIndex = 42;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Lavender;
-            this.groupBox2.Controls.Add(this.txtCiudad);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.txtTel);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.txtPais);
-            this.groupBox2.Controls.Add(this.txtDir);
-            this.groupBox2.Controls.Add(this.txtUniversidad);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 184);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(833, 114);
-            this.groupBox2.TabIndex = 40;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Universidad";
-            // 
-            // txtUniversidad
-            // 
-            this.txtUniversidad.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUniversidad.Location = new System.Drawing.Point(81, 30);
-            this.txtUniversidad.Name = "txtUniversidad";
-            this.txtUniversidad.Size = new System.Drawing.Size(325, 24);
-            this.txtUniversidad.TabIndex = 38;
-            this.txtUniversidad.Text = "Universidad Nacional de Ingeniería";
-            // 
-            // txtDir
-            // 
-            this.txtDir.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDir.Location = new System.Drawing.Point(82, 70);
-            this.txtDir.Name = "txtDir";
-            this.txtDir.Size = new System.Drawing.Size(364, 24);
-            this.txtDir.TabIndex = 39;
-            this.txtDir.Text = "Barrio Memorial Sandino, Del Sombrero 5C al lago";
-            // 
-            // txtPais
-            // 
-            this.txtPais.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPais.Location = new System.Drawing.Point(523, 27);
-            this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(73, 24);
-            this.txtPais.TabIndex = 40;
-            this.txtPais.Text = "Nicaragua";
-            // 
-            // txtTel
-            // 
-            this.txtTel.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTel.Location = new System.Drawing.Point(679, 31);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(98, 24);
-            this.txtTel.TabIndex = 43;
-            this.txtTel.Text = "(505)22790705";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(611, 31);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 16);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "Teléfono";
-            // 
-            // txtCiudad
-            // 
-            this.txtCiudad.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCiudad.Location = new System.Drawing.Point(524, 67);
-            this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Size = new System.Drawing.Size(73, 24);
-            this.txtCiudad.TabIndex = 45;
-            this.txtCiudad.Text = "Managua";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(471, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 16);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "País";
-            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Lavender;
@@ -346,6 +228,60 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Planificación";
             // 
+            // txtanio
+            // 
+            this.txtanio.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtanio.Location = new System.Drawing.Point(561, 56);
+            this.txtanio.Name = "txtanio";
+            this.txtanio.Size = new System.Drawing.Size(46, 24);
+            this.txtanio.TabIndex = 61;
+            // 
+            // txtUniversidades
+            // 
+            this.txtUniversidades.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUniversidades.Location = new System.Drawing.Point(561, 27);
+            this.txtUniversidades.Name = "txtUniversidades";
+            this.txtUniversidades.Size = new System.Drawing.Size(28, 24);
+            this.txtUniversidades.TabIndex = 59;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(438, 27);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(121, 16);
+            this.label18.TabIndex = 60;
+            this.label18.Text = "Cant. universidades";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(617, 63);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(48, 16);
+            this.label17.TabIndex = 58;
+            this.label17.Text = "Estado";
+            // 
+            // txtPaisP
+            // 
+            this.txtPaisP.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaisP.Location = new System.Drawing.Point(662, 30);
+            this.txtPaisP.Name = "txtPaisP";
+            this.txtPaisP.Size = new System.Drawing.Size(104, 24);
+            this.txtPaisP.TabIndex = 57;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(617, 34);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(31, 16);
+            this.label16.TabIndex = 56;
+            this.label16.Text = "País";
+            // 
             // txtEstado
             // 
             this.txtEstado.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -353,7 +289,16 @@
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(100, 24);
             this.txtEstado.TabIndex = 55;
-            this.txtEstado.Text = "Inactivo";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(438, 60);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(31, 16);
+            this.label19.TabIndex = 47;
+            this.label19.Text = "Año";
             // 
             // label8
             // 
@@ -406,7 +351,6 @@
             this.txtCreacion.Name = "txtCreacion";
             this.txtCreacion.Size = new System.Drawing.Size(82, 24);
             this.txtCreacion.TabIndex = 49;
-            this.txtCreacion.Text = "20/202/2021";
             // 
             // label14
             // 
@@ -428,73 +372,6 @@
             this.label15.TabIndex = 46;
             this.label15.Text = "Fecha de apertura";
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(617, 34);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(31, 16);
-            this.label16.TabIndex = 56;
-            this.label16.Text = "País";
-            // 
-            // txtUniversidades
-            // 
-            this.txtUniversidades.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUniversidades.Location = new System.Drawing.Point(561, 27);
-            this.txtUniversidades.Name = "txtUniversidades";
-            this.txtUniversidades.Size = new System.Drawing.Size(28, 24);
-            this.txtUniversidades.TabIndex = 59;
-            this.txtUniversidades.Text = "12";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(617, 63);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(48, 16);
-            this.label17.TabIndex = 58;
-            this.label17.Text = "Estado";
-            // 
-            // txtanio
-            // 
-            this.txtanio.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtanio.Location = new System.Drawing.Point(561, 56);
-            this.txtanio.Name = "txtanio";
-            this.txtanio.Size = new System.Drawing.Size(46, 24);
-            this.txtanio.TabIndex = 61;
-            this.txtanio.Text = "2021";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(438, 27);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(121, 16);
-            this.label18.TabIndex = 60;
-            this.label18.Text = "Cant. universidades";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(438, 60);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(31, 16);
-            this.label19.TabIndex = 47;
-            this.label19.Text = "Año";
-            // 
-            // txtPaisP
-            // 
-            this.txtPaisP.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaisP.Location = new System.Drawing.Point(662, 30);
-            this.txtPaisP.Name = "txtPaisP";
-            this.txtPaisP.Size = new System.Drawing.Size(104, 24);
-            this.txtPaisP.TabIndex = 57;
-            this.txtPaisP.Text = "Nicaragua";
-            // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Lavender;
@@ -514,25 +391,23 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Oferta";
             // 
-            // label13
+            // dtFinal
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(11, 42);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(94, 16);
-            this.label13.TabIndex = 58;
-            this.label13.Text = "Fecha de inicio";
+            this.dtFinal.CalendarFont = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFinal.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFinal.Location = new System.Drawing.Point(342, 36);
+            this.dtFinal.Name = "dtFinal";
+            this.dtFinal.Size = new System.Drawing.Size(111, 24);
+            this.dtFinal.TabIndex = 64;
             // 
-            // label20
+            // dtInicio
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(213, 42);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(128, 16);
-            this.label20.TabIndex = 55;
-            this.label20.Text = "Fecha de finalización";
+            this.dtInicio.CalendarFont = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtInicio.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtInicio.Location = new System.Drawing.Point(105, 36);
+            this.dtInicio.Name = "dtInicio";
+            this.dtInicio.Size = new System.Drawing.Size(97, 24);
+            this.dtInicio.TabIndex = 63;
             // 
             // label21
             // 
@@ -571,6 +446,26 @@
             this.label22.Size = new System.Drawing.Size(165, 16);
             this.label22.TabIndex = 59;
             this.label22.Text = "Monto de financiamiento $";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(11, 42);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(94, 16);
+            this.label13.TabIndex = 58;
+            this.label13.Text = "Fecha de inicio";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(213, 42);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(128, 16);
+            this.label20.TabIndex = 55;
+            this.label20.Text = "Fecha de finalización";
             // 
             // label23
             // 
@@ -670,23 +565,116 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // dtInicio
+            // label10
             // 
-            this.dtInicio.CalendarFont = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtInicio.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtInicio.Location = new System.Drawing.Point(105, 36);
-            this.dtInicio.Name = "dtInicio";
-            this.dtInicio.Size = new System.Drawing.Size(97, 24);
-            this.dtInicio.TabIndex = 63;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(11, 70);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 16);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "Dirección";
             // 
-            // dtFinal
+            // label12
             // 
-            this.dtFinal.CalendarFont = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFinal.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFinal.Location = new System.Drawing.Point(342, 36);
-            this.dtFinal.Name = "dtFinal";
-            this.dtFinal.Size = new System.Drawing.Size(111, 24);
-            this.dtFinal.TabIndex = 64;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(397, 75);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(49, 16);
+            this.label12.TabIndex = 37;
+            this.label12.Text = "Ciudad";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(11, 30);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 16);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Nombre";
+            // 
+            // txtUniversidad
+            // 
+            this.txtUniversidad.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUniversidad.Location = new System.Drawing.Point(82, 28);
+            this.txtUniversidad.Name = "txtUniversidad";
+            this.txtUniversidad.Size = new System.Drawing.Size(301, 24);
+            this.txtUniversidad.TabIndex = 38;
+            // 
+            // txtDir
+            // 
+            this.txtDir.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDir.Location = new System.Drawing.Point(82, 70);
+            this.txtDir.Name = "txtDir";
+            this.txtDir.Size = new System.Drawing.Size(301, 24);
+            this.txtDir.TabIndex = 39;
+            // 
+            // txtPais
+            // 
+            this.txtPais.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPais.Location = new System.Drawing.Point(457, 30);
+            this.txtPais.Name = "txtPais";
+            this.txtPais.Size = new System.Drawing.Size(132, 24);
+            this.txtPais.TabIndex = 40;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(401, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 16);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "País";
+            // 
+            // txtCiudad
+            // 
+            this.txtCiudad.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCiudad.Location = new System.Drawing.Point(457, 72);
+            this.txtCiudad.Name = "txtCiudad";
+            this.txtCiudad.Size = new System.Drawing.Size(132, 24);
+            this.txtCiudad.TabIndex = 45;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox2.Controls.Add(this.txtTelefono);
+            this.groupBox2.Controls.Add(this.label27);
+            this.groupBox2.Controls.Add(this.txtCiudad);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.txtPais);
+            this.groupBox2.Controls.Add(this.txtDir);
+            this.groupBox2.Controls.Add(this.txtUniversidad);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(12, 184);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(833, 114);
+            this.groupBox2.TabIndex = 40;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Universidad";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(698, 36);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(107, 24);
+            this.txtTelefono.TabIndex = 51;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(631, 36);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(59, 16);
+            this.label27.TabIndex = 50;
+            this.label27.Text = "Teléfono";
             // 
             // frmOfertas
             // 
@@ -706,23 +694,20 @@
             this.Load += new System.EventHandler(this.frmOfertas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtDiplomados;
         private System.Windows.Forms.TextBox txtCreditos;
@@ -734,14 +719,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtCiudad;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTel;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPais;
-        private System.Windows.Forms.TextBox txtDir;
-        private System.Windows.Forms.TextBox txtUniversidad;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtUniversidades;
         private System.Windows.Forms.Label label17;
@@ -775,5 +752,16 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DateTimePicker dtFinal;
         private System.Windows.Forms.DateTimePicker dtInicio;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtUniversidad;
+        private System.Windows.Forms.TextBox txtDir;
+        private System.Windows.Forms.TextBox txtPais;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCiudad;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.Label label27;
     }
 }

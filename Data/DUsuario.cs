@@ -289,5 +289,90 @@ namespace SistemaBecas.Data
             return DtResultado;
         }
 
+        public DataTable Buscar_Usuario(string dato)
+        {
+            DataTable DtResultado = new DataTable("BuscarUsuario");
+            using (SqlConnection SqlCon = new SqlConnection(Conexión.Cn))
+            {
+                try
+                {
+
+                    SqlCommand SqlCmd = new SqlCommand("Buscar_Usuario", SqlCon);
+                    SqlCmd.CommandType = CommandType.StoredProcedure;
+                    SqlParameter p1 = new SqlParameter();
+                    p1.ParameterName = "@Dato";
+                    p1.SqlDbType = SqlDbType.NVarChar;
+                    p1.Size = 30;
+                    p1.Value = dato;
+                    SqlCmd.Parameters.Add(p1);
+                    SqlCmd.Connection.Open();
+                    SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                    SqlDat.Fill(DtResultado);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.GetBaseException().Message);
+                    DtResultado = null;
+                }
+            }
+            return DtResultado;
+        }
+
+        public DataTable CambiarEstado(int idUsuario)
+        {
+            DataTable DtResultado = new DataTable("CambiarEstado");
+            using (SqlConnection SqlCon = new SqlConnection(Conexión.Cn))
+            {
+                try
+                {
+
+                    SqlCommand SqlCmd = new SqlCommand("Cambiar_Estado", SqlCon);
+                    SqlCmd.CommandType = CommandType.StoredProcedure;
+                    SqlParameter ParDato = new SqlParameter();
+                    ParDato.ParameterName = "@ID";
+                    ParDato.SqlDbType = SqlDbType.Int;
+                    ParDato.Value = idUsuario;
+                    SqlCmd.Parameters.Add(ParDato);
+
+              
+                    SqlCmd.Connection.Open();
+
+                    SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                    SqlDat.Fill(DtResultado);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.GetBaseException().Message);
+                    DtResultado = null;
+
+                }
+            }
+
+            return DtResultado;
+        }
+
+        public DataTable ListarUsuarios()
+        {
+            DataTable DtResultado = new DataTable("ListarUsuarios");
+            using (SqlConnection SqlCon = new SqlConnection(Conexión.Cn))
+            {
+                try
+                {
+
+                    SqlCommand SqlCmd = new SqlCommand("Listar_Usuario", SqlCon);
+                    SqlCmd.CommandType = CommandType.StoredProcedure;
+                    SqlCmd.Connection.Open();
+                    SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                    SqlDat.Fill(DtResultado);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.GetBaseException().Message);
+                    DtResultado = null;
+                }
+            }
+            return DtResultado;
+        }
     }
 }

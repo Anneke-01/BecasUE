@@ -36,11 +36,11 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.dtProgramas = new System.Windows.Forms.DataGridView();
+            this.dtUniversidades = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.panelUniversidad = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtProgramas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtUniversidades)).BeginInit();
             this.panelUniversidad.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(555, 20);
             this.txtBuscar.TabIndex = 53;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnSeleccionar
             // 
@@ -75,6 +76,7 @@
             this.btnSeleccionar.TabIndex = 52;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // btnNuevo
             // 
@@ -90,6 +92,7 @@
             this.btnNuevo.TabIndex = 51;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnCancelar
             // 
@@ -137,14 +140,14 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // dtProgramas
+            // dtUniversidades
             // 
-            this.dtProgramas.BackgroundColor = System.Drawing.Color.Navy;
-            this.dtProgramas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtProgramas.Location = new System.Drawing.Point(21, 189);
-            this.dtProgramas.Name = "dtProgramas";
-            this.dtProgramas.Size = new System.Drawing.Size(761, 312);
-            this.dtProgramas.TabIndex = 47;
+            this.dtUniversidades.BackgroundColor = System.Drawing.Color.Navy;
+            this.dtUniversidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtUniversidades.Location = new System.Drawing.Point(21, 189);
+            this.dtUniversidades.Name = "dtUniversidades";
+            this.dtUniversidades.Size = new System.Drawing.Size(761, 312);
+            this.dtUniversidades.TabIndex = 47;
             // 
             // label8
             // 
@@ -182,6 +185,7 @@
             this.btnExit.TabStop = false;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.UseWaitCursor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmVerUniversidades
             // 
@@ -196,14 +200,14 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.dtProgramas);
+            this.Controls.Add(this.dtUniversidades);
             this.Controls.Add(this.label8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVerUniversidades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVerUniversidades";
             this.Load += new System.EventHandler(this.frmVerUniversidades_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtProgramas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtUniversidades)).EndInit();
             this.panelUniversidad.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -219,9 +223,9 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.DataGridView dtProgramas;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panelUniversidad;
         private System.Windows.Forms.Button btnExit;
+        public System.Windows.Forms.DataGridView dtUniversidades;
     }
 }

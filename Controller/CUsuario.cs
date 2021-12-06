@@ -35,5 +35,19 @@ namespace SistemaBecas.Controller
             return new DUsuario().Cambiar_Contrasena(idUsuario, contraseña, nuevaContra);
         }
 
+        public static DataTable Buscar_Usuario(string dato)
+        {
+            return new DUsuario().Buscar_Usuario(dato);
+        }
+
+        public static DataTable CambiarEstado(int idUsuario)
+        {
+            return new DUsuario().CambiarEstado(idUsuario);
+        }
+        public static DataTable ListarUsuarios()
+        {
+            return new DUsuario().ListarUsuarios();
+        }
+
     }
 }

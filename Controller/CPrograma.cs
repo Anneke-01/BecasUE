@@ -20,5 +20,9 @@ namespace SistemaBecas.Controller
         {
             return new DPrograma().Leer_Programa();
         }
+        public static DataTable Buscar_Programa(string dato)
+        {
+            return new DPrograma().Buscar_Programa(dato);
+        }
     }
 }

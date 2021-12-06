@@ -87,7 +87,28 @@ namespace SistemaBecas.Data
             }
         }
 
+        public DataTable Listar_Pais()
+        {
+            DataTable DtResultado = new DataTable("ListarProducto");
+            using (SqlConnection SqlCon = new SqlConnection(Conexión.Cn))
+            {
+                try
+                {
 
+                    SqlCommand SqlCmd = new SqlCommand("LISTAR_PRODUCTO", SqlCon);
+                    SqlCmd.CommandType = CommandType.StoredProcedure;
+                    SqlCmd.Connection.Open();
+                    SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                    SqlDat.Fill(DtResultado);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.GetBaseException().Message);
+                    DtResultado = null;
+                }
+            }
+            return DtResultado;
+        }
         public DataTable Editar_Planificacion(int id, int año, DateTime fechaApertura, DateTime fechaCierre, DateTime fechaCreacion, DateTime fechaAprobado, string estado, int idpais, int cantidadU)
         {
             DataTable dt = new DataTable("EditarPlanificacion");

@@ -28,65 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNUniversidad));
             this.label8 = new System.Windows.Forms.Label();
-            this.txtDuracion = new System.Windows.Forms.TextBox();
-            this.txtDiplomados = new System.Windows.Forms.TextBox();
-            this.txtCreditos = new System.Windows.Forms.TextBox();
-            this.txtTituloPrograma = new System.Windows.Forms.TextBox();
+            this.txtTel = new System.Windows.Forms.TextBox();
+            this.txtDir = new System.Windows.Forms.TextBox();
+            this.txtNombreU = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
+            this.panelUniversidad = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.cmbPais = new System.Windows.Forms.ComboBox();
+            this.cmbCiudad = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
+            this.panelUniversidad.SuspendLayout();
             this.SuspendLayout();
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 41);
+            this.label8.Location = new System.Drawing.Point(12, 42);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(328, 45);
             this.label8.TabIndex = 22;
             this.label8.Text = "Nueva universidad";
             // 
-            // txtDuracion
+            // txtTel
             // 
-            this.txtDuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDuracion.Location = new System.Drawing.Point(188, 183);
-            this.txtDuracion.Name = "txtDuracion";
-            this.txtDuracion.Size = new System.Drawing.Size(187, 26);
-            this.txtDuracion.TabIndex = 5;
+            this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTel.Location = new System.Drawing.Point(188, 183);
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Size = new System.Drawing.Size(187, 26);
+            this.txtTel.TabIndex = 5;
             // 
-            // txtDiplomados
+            // txtDir
             // 
-            this.txtDiplomados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiplomados.Location = new System.Drawing.Point(188, 125);
-            this.txtDiplomados.Name = "txtDiplomados";
-            this.txtDiplomados.Size = new System.Drawing.Size(548, 26);
-            this.txtDiplomados.TabIndex = 4;
+            this.txtDir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDir.Location = new System.Drawing.Point(188, 125);
+            this.txtDir.Name = "txtDir";
+            this.txtDir.Size = new System.Drawing.Size(548, 26);
+            this.txtDir.TabIndex = 4;
             // 
-            // txtCreditos
+            // txtNombreU
             // 
-            this.txtCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCreditos.Location = new System.Drawing.Point(517, 67);
-            this.txtCreditos.Name = "txtCreditos";
-            this.txtCreditos.Size = new System.Drawing.Size(187, 26);
-            this.txtCreditos.TabIndex = 3;
-            // 
-            // txtTituloPrograma
-            // 
-            this.txtTituloPrograma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTituloPrograma.Location = new System.Drawing.Point(188, 17);
-            this.txtTituloPrograma.Name = "txtTituloPrograma";
-            this.txtTituloPrograma.Size = new System.Drawing.Size(354, 26);
-            this.txtTituloPrograma.TabIndex = 1;
+            this.txtNombreU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreU.Location = new System.Drawing.Point(188, 17);
+            this.txtNombreU.Name = "txtNombreU";
+            this.txtNombreU.Size = new System.Drawing.Size(354, 26);
+            this.txtNombreU.TabIndex = 1;
             // 
             // label1
             // 
@@ -140,12 +136,12 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.cmbCiudad);
+            this.panel1.Controls.Add(this.cmbPais);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtDuracion);
-            this.panel1.Controls.Add(this.txtDiplomados);
-            this.panel1.Controls.Add(this.txtCreditos);
-            this.panel1.Controls.Add(this.txtTituloPrograma);
+            this.panel1.Controls.Add(this.txtTel);
+            this.panel1.Controls.Add(this.txtDir);
+            this.panel1.Controls.Add(this.txtNombreU);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
@@ -155,14 +151,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(770, 254);
             this.panel1.TabIndex = 23;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(188, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 26);
-            this.textBox1.TabIndex = 27;
             // 
             // label6
             // 
@@ -204,20 +192,70 @@
             this.btnguardar.UseVisualStyleBackColor = false;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
+            // panelUniversidad
+            // 
+            this.panelUniversidad.BackColor = System.Drawing.Color.Navy;
+            this.panelUniversidad.Controls.Add(this.btnExit);
+            this.panelUniversidad.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelUniversidad.Location = new System.Drawing.Point(0, 0);
+            this.panelUniversidad.Name = "panelUniversidad";
+            this.panelUniversidad.Size = new System.Drawing.Size(798, 39);
+            this.panelUniversidad.TabIndex = 56;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(57)))), ((int)(((byte)(67)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(739, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(56, 33);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.TabStop = false;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.UseWaitCursor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // cmbPais
+            // 
+            this.cmbPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPais.FormattingEnabled = true;
+            this.cmbPais.Location = new System.Drawing.Point(188, 68);
+            this.cmbPais.Name = "cmbPais";
+            this.cmbPais.Size = new System.Drawing.Size(187, 28);
+            this.cmbPais.TabIndex = 27;
+            // 
+            // cmbCiudad
+            // 
+            this.cmbCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCiudad.FormattingEnabled = true;
+            this.cmbCiudad.Location = new System.Drawing.Point(515, 68);
+            this.cmbCiudad.Name = "cmbCiudad";
+            this.cmbCiudad.Size = new System.Drawing.Size(179, 28);
+            this.cmbCiudad.TabIndex = 28;
+            // 
             // frmNUniversidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(798, 450);
+            this.Controls.Add(this.panelUniversidad);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNUniversidad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNUniversidad";
+            this.Load += new System.EventHandler(this.frmNUniversidad_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelUniversidad.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,10 +264,9 @@
         #endregion
 
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtDuracion;
-        private System.Windows.Forms.TextBox txtDiplomados;
-        private System.Windows.Forms.TextBox txtCreditos;
-        private System.Windows.Forms.TextBox txtTituloPrograma;
+        private System.Windows.Forms.TextBox txtTel;
+        private System.Windows.Forms.TextBox txtDir;
+        private System.Windows.Forms.TextBox txtNombreU;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
@@ -237,8 +274,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnguardar;
+        private System.Windows.Forms.Panel panelUniversidad;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.ComboBox cmbCiudad;
+        private System.Windows.Forms.ComboBox cmbPais;
     }
 }

@@ -37,10 +37,10 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.dtProgramas = new System.Windows.Forms.DataGridView();
+            this.dtPlan = new System.Windows.Forms.DataGridView();
             this.panelPlanificación = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtProgramas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtPlan)).BeginInit();
             this.panelPlanificación.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,6 +85,7 @@
             this.btnSeleccionar.TabIndex = 57;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // btnNuevo
             // 
@@ -100,6 +101,7 @@
             this.btnNuevo.TabIndex = 56;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnCancelar
             // 
@@ -147,14 +149,14 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // dtProgramas
+            // dtPlan
             // 
-            this.dtProgramas.BackgroundColor = System.Drawing.Color.Navy;
-            this.dtProgramas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtProgramas.Location = new System.Drawing.Point(23, 165);
-            this.dtProgramas.Name = "dtProgramas";
-            this.dtProgramas.Size = new System.Drawing.Size(761, 312);
-            this.dtProgramas.TabIndex = 52;
+            this.dtPlan.BackgroundColor = System.Drawing.Color.Navy;
+            this.dtPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtPlan.Location = new System.Drawing.Point(23, 165);
+            this.dtPlan.Name = "dtPlan";
+            this.dtPlan.Size = new System.Drawing.Size(761, 312);
+            this.dtPlan.TabIndex = 52;
             // 
             // panelPlanificación
             // 
@@ -175,7 +177,7 @@
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(763, 6);
+            this.btnExit.Location = new System.Drawing.Point(763, 3);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(56, 33);
             this.btnExit.TabIndex = 5;
@@ -195,7 +197,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.dtProgramas);
+            this.Controls.Add(this.dtPlan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label8);
@@ -204,7 +206,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPlanificacion";
             this.Load += new System.EventHandler(this.frmPlanificacion_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtProgramas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtPlan)).EndInit();
             this.panelPlanificación.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -221,8 +223,8 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.DataGridView dtProgramas;
         private System.Windows.Forms.Panel panelPlanificación;
         private System.Windows.Forms.Button btnExit;
+        public System.Windows.Forms.DataGridView dtPlan;
     }
 }

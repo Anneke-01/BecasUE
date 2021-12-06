@@ -56,12 +56,15 @@
             // 
             // dtProgramas
             // 
+            this.dtProgramas.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.dtProgramas.BackgroundColor = System.Drawing.Color.Navy;
             this.dtProgramas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtProgramas.Location = new System.Drawing.Point(29, 189);
             this.dtProgramas.Name = "dtProgramas";
+            this.dtProgramas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dtProgramas.Size = new System.Drawing.Size(761, 312);
             this.dtProgramas.TabIndex = 3;
+            this.dtProgramas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtProgramas_CellContentClick);
             // 
             // btnCancelar
             // 
@@ -141,6 +144,7 @@
             this.btnSeleccionar.TabIndex = 43;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // txtBuscar
             // 
@@ -148,6 +152,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(555, 20);
             this.txtBuscar.TabIndex = 44;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label1
             // 
@@ -217,7 +222,6 @@
         #endregion
 
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dtProgramas;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnGuardar;
@@ -227,5 +231,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelProgramas;
         private System.Windows.Forms.Button btnExit;
+        public System.Windows.Forms.DataGridView dtProgramas;
     }
 }
