@@ -12,10 +12,35 @@ FechaCierre=@FechaCierre,FechaAprobado=@FechaAprobado,Estado=@Estado,IDPais=@IDP
 CantidadUniversidades=@CantidadUniversidades where IDPlanificacion=@ID
 
 create or alter procedure Mostar_Planificación as
-select Año as [Año], FechaApertura as [Fecha de apertura], FechaCierre as [Fecha de cierre],
+select IDPlanificacion as [ID],Año as [Año], FechaApertura as [Fecha de apertura], FechaCierre as [Fecha de cierre],
 FechaCreacion as [Fecha de creación], FechaApertura as [Fecha de apertura],
 FechaAprobado as [Fecha de aprobado], Estado as [Estado], IDPais as [ID País],
 CantidadUniversidades as [Cantidad de Universidades]
 from Planificacion
+
+Execute Mostar_Planificación
+
+Create procedure Buscar_Planificación
+@Dato varchar(70)
+as
+SELECT TOP (50) [IDPrograma],
+TituloPrograma as [Título del Programa],
+TipoEspecialidad as [Tipo de especialidad],
+Creditos as [Créditos],
+Diplomados as [Diplomados],Duracion as [Duración]
+FROM Planificacion
+where 
+TituloPrograma like @Dato +'%' or
+TipoEspecialidad like @Dato +'%' or
+Creditos like @Dato +'%' or   
+Diplomados like @Dato +'%' or   
+Duracion like @Dato +'%' 
+
+create or alter procedure Mostar_Planificación as
+select p.IDPlanificacion as [ID],p.Año as [Año], p.FechaApertura as [Fecha de apertura], p.FechaCierre as [Fecha de cierre],
+p.FechaCreacion as [Fecha de creación],
+p.FechaAprobado as [Fecha de aprobado], p.Estado as [Estado], pa.NombrePais as [País],
+CantidadUniversidades as [Cantidad de Universidades]
+from Planificacion p inner join Pais pa on pa.IDPais = p.IDPais
 
 Execute Mostar_Planificación

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaBecas.Controller;
 
 namespace SistemaBecas.View
 {
@@ -21,7 +22,7 @@ namespace SistemaBecas.View
 
         private void frmPlanificacion_Load(object sender, EventArgs e)
         {
-
+            this.dtPlan.DataSource = CPlanificacion.Leer_Planificación();
         }
         public void AccionDeshabilitar()
         {

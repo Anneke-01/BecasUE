@@ -87,28 +87,7 @@ namespace SistemaBecas.Data
             }
         }
 
-        public DataTable Listar_Pais()
-        {
-            DataTable DtResultado = new DataTable("ListarProducto");
-            using (SqlConnection SqlCon = new SqlConnection(Conexión.Cn))
-            {
-                try
-                {
-
-                    SqlCommand SqlCmd = new SqlCommand("LISTAR_PRODUCTO", SqlCon);
-                    SqlCmd.CommandType = CommandType.StoredProcedure;
-                    SqlCmd.Connection.Open();
-                    SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
-                    SqlDat.Fill(DtResultado);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.GetBaseException().Message);
-                    DtResultado = null;
-                }
-            }
-            return DtResultado;
-        }
+       
         public DataTable Editar_Planificacion(int id, int año, DateTime fechaApertura, DateTime fechaCierre, DateTime fechaCreacion, DateTime fechaAprobado, string estado, int idpais, int cantidadU)
         {
             DataTable dt = new DataTable("EditarPlanificacion");
@@ -123,7 +102,7 @@ namespace SistemaBecas.Data
                     SqlParameter pid = new SqlParameter();
                     pid.ParameterName = "@ID";
                     pid.SqlDbType = SqlDbType.Int;
-                    pid.Value = año;
+                    pid.Value = id;
                     SqlCmd.Parameters.Add(pid);
 
                     SqlParameter p = new SqlParameter();
@@ -190,6 +169,31 @@ namespace SistemaBecas.Data
                 }
                 return dt;
             }
+        }
+        public DataTable Leer_Planificación()
+        {
+            DataTable DtResultado = new DataTable("");
+            using (SqlConnection SqlCon = new SqlConnection(Conexión.Cn))
+            {
+                try
+                {
+
+                    SqlCommand SqlCmd = new SqlCommand("Mostar_Planificación", SqlCon);
+                    SqlCmd.CommandType = CommandType.StoredProcedure;
+                    SqlCmd.Connection.Open();
+                    SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                    SqlDat.Fill(DtResultado);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.GetBaseException().Message);
+                    DtResultado = null;
+
+                }
+            }
+
+            return DtResultado;
+
         }
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaBecas.Data;
+using SistemaBecas.Controller;
 
 namespace SistemaBecas.View
 {
@@ -24,7 +26,7 @@ namespace SistemaBecas.View
 
         private void frmOfertasDisponibles_Load(object sender, EventArgs e)
         {
-
+            this.dtOfertasDispo.DataSource = COferta.Listar_Oferta();
         }
     }
 }

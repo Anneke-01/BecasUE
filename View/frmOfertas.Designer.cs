@@ -426,7 +426,6 @@
             this.txtFinanciamiento.Name = "txtFinanciamiento";
             this.txtFinanciamiento.Size = new System.Drawing.Size(51, 24);
             this.txtFinanciamiento.TabIndex = 61;
-            this.txtFinanciamiento.Text = "10.000";
             // 
             // txtMonto
             // 
@@ -435,7 +434,6 @@
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(54, 24);
             this.txtMonto.TabIndex = 60;
-            this.txtMonto.Text = "10.000";
             // 
             // label22
             // 

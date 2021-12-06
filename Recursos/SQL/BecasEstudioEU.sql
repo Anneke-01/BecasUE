@@ -6,6 +6,10 @@ create procedure Listar_Pais
 as
 select * from Pais order by NombrePais asc
 
+create procedure Listar_Ciudad
+as
+select * from Ciudad order by NombreCiudad asc
+
 -----------------------
 create or alter procedure Listar_Universidades as
 Select * from Universidad order by NombreUni asc

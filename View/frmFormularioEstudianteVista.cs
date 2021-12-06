@@ -31,7 +31,7 @@ namespace SistemaBecas.View
                 DateTime fechaInicio = Convert.ToDateTime(this.dtHistoAC.CurrentRow.Cells["Fecha de Inicio"].Value);
                 DateTime fechafin = Convert.ToDateTime(this.dtHistoAC.CurrentRow.Cells["Finalización"].Value);
                 frmHistorialAcadémico fm = new frmHistorialAcadémico(IdUser, IdCandidato, id, Titulo,fechaInicio,fechafin);
-                fm.Show();
+                fm.ShowDialog();
                 
             }
             else
@@ -44,14 +44,14 @@ namespace SistemaBecas.View
         private void btn_Click(object sender, EventArgs e)
         {
             frmHistorialAcadémico fa = new frmHistorialAcadémico(IdUser,IdCandidato);
-            fa.Show();
+            fa.ShowDialog();
             this.Hide();
         }
 
         private void btnAgregarl_Click(object sender, EventArgs e)
         {
             frmHistorialLaboral fl = new frmHistorialLaboral(IdUser, IdCandidato);
-            fl.Show();
+            fl.ShowDialog();
             this.Hide();
         }
 

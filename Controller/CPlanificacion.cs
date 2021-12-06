@@ -21,5 +21,9 @@ namespace SistemaBecas.Controller
         {
             return new DPlanificacion().Editar_Planificacion(id, año, fechaApertura, fechaCierre, fechaCreacion, fechaAprobado, estado, idpais, cantidadU);
         }
+        public static DataTable Leer_Planificación()
+        {
+            return new DPlanificacion().Leer_Planificación();
+        }
     }
 }

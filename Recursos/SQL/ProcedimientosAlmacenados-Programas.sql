@@ -1,5 +1,5 @@
 create or alter procedure Leer_Programas
-as select TituloPrograma as [Título del Programa],
+as select IDPrograma,TituloPrograma as [Título del Programa],
 TipoEspecialidad as [Tipo de especialidad],
 Creditos as [Créditos],
 Diplomados as [Diplomados],Duracion as [Duración] from Programa 

@@ -120,7 +120,8 @@ namespace SistemaBecas.View
 
         private void btnVerOfertas_Click(object sender, EventArgs e)
         {
-
+            loadform(new frmOfertasDisponibles());
+            esconderSubmenu();
         }
 
         private void BtnAgregarUsuario_Click_1(object sender, EventArgs e)
