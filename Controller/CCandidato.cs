@@ -47,5 +47,9 @@ namespace SistemaBecas.Controller
         {
             return new DCandidato().Eliminar_HistorialLab(id);
         }
+        public static DataTable Eliminar_HistorialAC(int id)
+        {
+            return new DCandidato().Eliminar_HistorialAC(id);
+        }
     }
 }

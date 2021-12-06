@@ -33,6 +33,8 @@ namespace SistemaBecas.View
                 frmHistorialAcadémico fm = new frmHistorialAcadémico(IdUser, IdCandidato, id, Titulo,fechaInicio,fechafin);
                 fm.ShowDialog();
                 
+                this.dtHistoAC.DataSource = CCandidato.Listar_HistorialAC(IdCandidato);
+
             }
             else
             {
@@ -45,14 +47,14 @@ namespace SistemaBecas.View
         {
             frmHistorialAcadémico fa = new frmHistorialAcadémico(IdUser,IdCandidato);
             fa.ShowDialog();
-            this.Hide();
+            this.dtHistoAC.DataSource = CCandidato.Listar_HistorialAC(IdCandidato);
         }
 
         private void btnAgregarl_Click(object sender, EventArgs e)
         {
             frmHistorialLaboral fl = new frmHistorialLaboral(IdUser, IdCandidato);
             fl.ShowDialog();
-            this.Hide();
+            this.dtHistLab.DataSource = CCandidato.Listar_HistorialLab(IdCandidato);
         }
 
         private void btnCancelarl_Click(object sender, EventArgs e)
@@ -69,9 +71,12 @@ namespace SistemaBecas.View
         {
             if (dtHistoAC.SelectedRows.Count == 1)
             {
-                int id = Convert.ToInt32(this.dtHistoAC.CurrentRow.Cells["ID"].Value);               
-                frmHistorialAcadémico fm = new frmHistorialAcadémico(IdUser, IdCandidato, id);
-                fm.Show();
+
+                int id = Convert.ToInt32(this.dtHistoAC.CurrentRow.Cells["ID"].Value);
+                Console.WriteLine(id);
+                CCandidato.Eliminar_HistorialAC(id);
+                MessageBox.Show("Se eliminó correctamente.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.dtHistoAC.DataSource = CCandidato.Listar_HistorialAC(IdCandidato);
 
             }
             else
@@ -82,11 +87,13 @@ namespace SistemaBecas.View
 
         private void btnEliminarl_Click(object sender, EventArgs e)
         {
-            if (dtHistoAC.SelectedRows.Count == 1)
+            if (dtHistLab.SelectedRows.Count == 1)
             {
-                int id = Convert.ToInt32(this.dtHistoAC.CurrentRow.Cells["ID"].Value);
-                frmHistorialLaboral fm = new frmHistorialLaboral(IdUser, IdCandidato, id);
-                fm.Show();
+                int id = Convert.ToInt32(this.dtHistLab.CurrentRow.Cells["ID"].Value);
+                Console.WriteLine(id);
+                CCandidato.Eliminar_HistorialLab(id);
+                MessageBox.Show("Se eliminó correctamente.", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.dtHistLab.DataSource = CCandidato.Listar_HistorialLab(IdCandidato);
 
             }
             else
@@ -97,9 +104,23 @@ namespace SistemaBecas.View
 
         private void btnEditarl_Click(object sender, EventArgs e)
         {
-            //frmHistorialLaboral fl = new frmHistorialLaboral();
-            //fl.Show();
-            //this.Hide();
+            if (dtHistLab.SelectedRows.Count == 1)
+            {
+                int id = Convert.ToInt32(this.dtHistLab.CurrentRow.Cells["ID"].Value);
+                string puesto = Convert.ToString(this.dtHistLab.CurrentRow.Cells["Puesto"].Value);
+                string entidad = Convert.ToString(this.dtHistLab.CurrentRow.Cells["Entidad"].Value);
+                DateTime fechainicio = Convert.ToDateTime(this.dtHistLab.CurrentRow.Cells["Fecha de Inicio"].Value);
+                DateTime fechafin = Convert.ToDateTime(this.dtHistLab.CurrentRow.Cells["Finalización"].Value);
+                frmHistorialLaboral fm = new frmHistorialLaboral(IdUser, IdCandidato, id, puesto,entidad,fechainicio, fechafin);
+                fm.ShowDialog();
+                
+                this.dtHistLab.DataSource = CCandidato.Listar_HistorialLab(IdCandidato);
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccione al menos una fila", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frmFormularioEstudianteVista_Load(object sender, EventArgs e)

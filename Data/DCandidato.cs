@@ -342,6 +342,36 @@ namespace SistemaBecas.Data
                 return dt;
             }
         }
+        public DataTable Eliminar_HistorialAC(int id)
+        {
+            DataTable dt = new DataTable("Eliminar_HistorialAcademico");
+            using (SqlConnection SqlCon = new SqlConnection(Conexión.Cn))
+            {
+                try
+                {
 
+                    SqlCommand SqlCmd = new SqlCommand("Eliminar_HistorialAcademico", SqlCon);
+                    SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlParameter pid = new SqlParameter();
+                    pid.ParameterName = "@ID";
+                    pid.SqlDbType = SqlDbType.Int;
+                    pid.Value = id;
+                    SqlCmd.Parameters.Add(pid);
+                    SqlCmd.Connection.Open();
+
+                    SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                    SqlDat.Fill(dt);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.GetBaseException().Message);
+
+
+                }
+                return dt;
+            }
+        }
     }
 }

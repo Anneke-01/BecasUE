@@ -101,9 +101,18 @@ select  IDHistAcademico as [ID],TituloObtenido as [Título Obtenido], FechaInicio
 FechaFin as [Finalización]
 from HistorialAcademico where IDCandidato=@IDCandidato
 
-execute ListarHistorialAcademico 3
-select * from HistorialAcademico where IDCandidato = 3
+execute ListarHistorialAcademico 8
+select * from HistorialAcademico where IDCandidato = 8
+Use BecasEstudioUE
+select * from Candidato
 
+create   procedure Eliminar_HistorialAcademico
+@ID int
+as delete from HistorialAcademico  where IDHistAcademico=@ID
+
+create   procedure Eliminar_HistorialLaboral
+@ID int
+as delete from HistorialLaboral  where IDHistLaboral=@ID
 
 create procedure ListarHistorialLaboral
 @IDCandidato int

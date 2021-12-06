@@ -34,11 +34,13 @@
             this.btnVerUser = new System.Windows.Forms.Button();
             this.BtnAgregarUsuario = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
+            this.btnPlanificación = new System.Windows.Forms.Button();
             this.btnUniversidad = new System.Windows.Forms.Button();
             this.panelSubmenuOfertas = new System.Windows.Forms.Panel();
             this.btnCrearOferta = new System.Windows.Forms.Button();
             this.btnVerOfertas = new System.Windows.Forms.Button();
             this.btnOfertas = new System.Windows.Forms.Button();
+            this.btnPrograma = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,8 +51,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.panelprincipal = new System.Windows.Forms.Panel();
-            this.btnPlanificación = new System.Windows.Forms.Button();
-            this.btnPrograma = new System.Windows.Forms.Button();
+            this.btnSolicitudes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelUsuarios.SuspendLayout();
             this.panelSubmenuOfertas.SuspendLayout();
@@ -63,6 +64,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.btnSolicitudes);
             this.panel1.Controls.Add(this.panelUsuarios);
             this.panel1.Controls.Add(this.btnUsuarios);
             this.panel1.Controls.Add(this.btnPlanificación);
@@ -75,7 +77,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 734);
+            this.panel1.Size = new System.Drawing.Size(256, 723);
             this.panel1.TabIndex = 0;
             // 
             // panelUsuarios
@@ -134,6 +136,23 @@
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = true;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // btnPlanificación
+            // 
+            this.btnPlanificación.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPlanificación.FlatAppearance.BorderSize = 0;
+            this.btnPlanificación.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlanificación.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlanificación.ForeColor = System.Drawing.Color.White;
+            this.btnPlanificación.Image = ((System.Drawing.Image)(resources.GetObject("btnPlanificación.Image")));
+            this.btnPlanificación.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlanificación.Location = new System.Drawing.Point(0, 445);
+            this.btnPlanificación.Name = "btnPlanificación";
+            this.btnPlanificación.Size = new System.Drawing.Size(256, 54);
+            this.btnPlanificación.TabIndex = 12;
+            this.btnPlanificación.Text = "Planificación";
+            this.btnPlanificación.UseVisualStyleBackColor = true;
+            this.btnPlanificación.Click += new System.EventHandler(this.btnPlanificación_Click);
             // 
             // btnUniversidad
             // 
@@ -210,12 +229,30 @@
             this.btnOfertas.UseVisualStyleBackColor = true;
             this.btnOfertas.Click += new System.EventHandler(this.btnOfertas_Click);
             // 
+            // btnPrograma
+            // 
+            this.btnPrograma.BackColor = System.Drawing.Color.Navy;
+            this.btnPrograma.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPrograma.FlatAppearance.BorderSize = 0;
+            this.btnPrograma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrograma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrograma.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPrograma.Image = ((System.Drawing.Image)(resources.GetObject("btnPrograma.Image")));
+            this.btnPrograma.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrograma.Location = new System.Drawing.Point(0, 202);
+            this.btnPrograma.Name = "btnPrograma";
+            this.btnPrograma.Size = new System.Drawing.Size(256, 54);
+            this.btnPrograma.TabIndex = 2;
+            this.btnPrograma.Text = "Programas";
+            this.btnPrograma.UseVisualStyleBackColor = false;
+            this.btnPrograma.Click += new System.EventHandler(this.btnCrearPrograma_Click);
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.btnSalir);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 662);
+            this.panel4.Location = new System.Drawing.Point(0, 651);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(256, 72);
             this.panel4.TabIndex = 1;
@@ -328,49 +365,32 @@
             this.panelprincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelprincipal.Location = new System.Drawing.Point(256, 36);
             this.panelprincipal.Name = "panelprincipal";
-            this.panelprincipal.Size = new System.Drawing.Size(880, 698);
+            this.panelprincipal.Size = new System.Drawing.Size(880, 687);
             this.panelprincipal.TabIndex = 2;
             // 
-            // btnPlanificación
+            // btnSolicitudes
             // 
-            this.btnPlanificación.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPlanificación.FlatAppearance.BorderSize = 0;
-            this.btnPlanificación.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlanificación.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlanificación.ForeColor = System.Drawing.Color.White;
-            this.btnPlanificación.Image = ((System.Drawing.Image)(resources.GetObject("btnPlanificación.Image")));
-            this.btnPlanificación.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlanificación.Location = new System.Drawing.Point(0, 445);
-            this.btnPlanificación.Name = "btnPlanificación";
-            this.btnPlanificación.Size = new System.Drawing.Size(256, 54);
-            this.btnPlanificación.TabIndex = 12;
-            this.btnPlanificación.Text = "Planificación";
-            this.btnPlanificación.UseVisualStyleBackColor = true;
-            this.btnPlanificación.Click += new System.EventHandler(this.btnPlanificación_Click);
-            // 
-            // btnPrograma
-            // 
-            this.btnPrograma.BackColor = System.Drawing.Color.Navy;
-            this.btnPrograma.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPrograma.FlatAppearance.BorderSize = 0;
-            this.btnPrograma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrograma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrograma.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPrograma.Image = ((System.Drawing.Image)(resources.GetObject("btnPrograma.Image")));
-            this.btnPrograma.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrograma.Location = new System.Drawing.Point(0, 202);
-            this.btnPrograma.Name = "btnPrograma";
-            this.btnPrograma.Size = new System.Drawing.Size(256, 54);
-            this.btnPrograma.TabIndex = 2;
-            this.btnPrograma.Text = "Programas";
-            this.btnPrograma.UseVisualStyleBackColor = false;
-            this.btnPrograma.Click += new System.EventHandler(this.btnCrearPrograma_Click);
+            this.btnSolicitudes.BackColor = System.Drawing.Color.Navy;
+            this.btnSolicitudes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSolicitudes.FlatAppearance.BorderSize = 0;
+            this.btnSolicitudes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSolicitudes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSolicitudes.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSolicitudes.Image = ((System.Drawing.Image)(resources.GetObject("btnSolicitudes.Image")));
+            this.btnSolicitudes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSolicitudes.Location = new System.Drawing.Point(0, 639);
+            this.btnSolicitudes.Name = "btnSolicitudes";
+            this.btnSolicitudes.Size = new System.Drawing.Size(256, 54);
+            this.btnSolicitudes.TabIndex = 13;
+            this.btnSolicitudes.Text = "Solicitudes";
+            this.btnSolicitudes.UseVisualStyleBackColor = false;
+            this.btnSolicitudes.Click += new System.EventHandler(this.btnSolicitudes_Click);
             // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1136, 734);
+            this.ClientSize = new System.Drawing.Size(1136, 723);
             this.Controls.Add(this.panelprincipal);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -416,5 +436,6 @@
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnPlanificación;
         private System.Windows.Forms.Button btnPrograma;
+        private System.Windows.Forms.Button btnSolicitudes;
     }
 }

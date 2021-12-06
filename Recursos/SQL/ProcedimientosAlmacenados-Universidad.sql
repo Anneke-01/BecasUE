@@ -34,7 +34,8 @@ Insert into Universidad values('North Island College',2,'(518) 3892697',7, ' asj
 Execute Listar_Universidades
 
 create or alter procedure Listar_Universidades as
-select u.IDUniversidad,u.NombreUni,c.NombreCiudad, u.Telefono, p.NombrePais, u.Dirección from Universidad u inner join Ciudad c
+select u.IDUniversidad,u.NombreUni,c.NombreCiudad, u.Telefono, p.NombrePais, u.Dirección 
+from Universidad u inner join Ciudad c
 on c.IDCiudad = u.IDCiudad 
 inner join Pais p on p.IDPais =u.IDPais
 order by IDUniversidad asc

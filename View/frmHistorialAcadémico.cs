@@ -73,6 +73,7 @@ namespace SistemaBecas.View
                     CCandidato.Editar_HistorialA(Id, txtTitulo.Text, dtInicioAcademic.Value, dtFinalAcademic.Value);
                     txtTitulo.Text = "";
                     MessageBox.Show("Se editó correctamente.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
             }
             else
@@ -86,6 +87,7 @@ namespace SistemaBecas.View
                     CCandidato.Insertar_HistorialA(IdCandidato, txtTitulo.Text, dtInicioAcademic.Value, dtFinalAcademic.Value);
                     txtTitulo.Text = "";
                     MessageBox.Show("Se agregó el historial académico.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
             }
             

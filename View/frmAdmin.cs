@@ -152,5 +152,10 @@ namespace SistemaBecas.View
             loadform(new frmPlanificacion());
 
         }
+
+        private void btnSolicitudes_Click(object sender, EventArgs e)
+        {
+            loadform(new frmVerSolicitudes());
+        }
     }
 }

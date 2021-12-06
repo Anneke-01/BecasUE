@@ -21,7 +21,16 @@ namespace SistemaBecas.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if(dtOfertasDispo.SelectedRows.Count == 1)
+            {
+                frmSolicitud sol = new frmSolicitud();
+                sol.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione al menos una fila", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
 
         private void frmOfertasDisponibles_Load(object sender, EventArgs e)

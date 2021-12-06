@@ -41,9 +41,9 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
+            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.subMenuPerfil.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -64,7 +64,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 631);
+            this.panel1.Size = new System.Drawing.Size(256, 713);
             this.panel1.TabIndex = 0;
             // 
             // btnOfertas
@@ -166,7 +166,7 @@
             this.panel3.Controls.Add(this.btnSalir);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 563);
+            this.panel3.Location = new System.Drawing.Point(0, 645);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(256, 68);
@@ -209,17 +209,8 @@
             this.panel2.Location = new System.Drawing.Point(256, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(719, 36);
+            this.panel2.Size = new System.Drawing.Size(826, 36);
             this.panel2.TabIndex = 1;
-            // 
-            // panelPrincipal
-            // 
-            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrincipal.Location = new System.Drawing.Point(256, 36);
-            this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(719, 595);
-            this.panelPrincipal.TabIndex = 12;
-            this.panelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPrincipal_Paint);
             // 
             // btnExit
             // 
@@ -230,7 +221,7 @@
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(660, 3);
+            this.btnExit.Location = new System.Drawing.Point(767, 3);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(56, 33);
             this.btnExit.TabIndex = 5;
@@ -245,7 +236,7 @@
             this.btnMinimizar.FlatAppearance.BorderSize = 0;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(596, 3);
+            this.btnMinimizar.Location = new System.Drawing.Point(703, 3);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(58, 33);
             this.btnMinimizar.TabIndex = 4;
@@ -254,12 +245,21 @@
             this.btnMinimizar.UseWaitCursor = true;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click_1);
             // 
+            // panelPrincipal
+            // 
+            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPrincipal.Location = new System.Drawing.Point(256, 36);
+            this.panelPrincipal.Name = "panelPrincipal";
+            this.panelPrincipal.Size = new System.Drawing.Size(826, 677);
+            this.panelPrincipal.TabIndex = 12;
+            this.panelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPrincipal_Paint);
+            // 
             // frmEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(975, 631);
+            this.ClientSize = new System.Drawing.Size(1082, 713);
             this.ControlBox = false;
             this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.panel2);
